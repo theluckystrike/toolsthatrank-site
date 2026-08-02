@@ -188,6 +188,11 @@ footer nav a{color:var(--mut);border-bottom:1px solid var(--line2)}
 .bt2{font-size:19px;font-weight:600;letter-spacing:-.022em;line-height:1.2}
 .bd{font-size:14.5px;line-height:1.55;color:var(--mut);flex:1}
 .bl{font-family:var(--mono);font-size:12px;color:var(--acc);border-bottom:1px solid rgba(29,107,79,.3);align-self:flex-start;padding-bottom:1px}
+
+.forwho{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:14px}
+.fw{display:flex;flex-direction:column;gap:6px}
+.fwt{font-size:15.5px;font-weight:600;letter-spacing:-.018em;color:var(--ink)}
+.fwd{font-size:14.5px;line-height:1.55;color:var(--mut)}
 @media (hover:hover){.bcard:hover{border-color:#CFCBBE;transform:translateY(-2px)}}
 .bcard{transition:transform 140ms ease,border-color 140ms ease}
 @media (hover:hover){.card:hover{transform:translateY(-2px);border-color:#CFCBBE}}
@@ -248,6 +253,19 @@ html,body{overflow-x:hidden;max-width:100%}
     <button type="button" id="cp" aria-label="Copy install command">copy</button>
   </div>
   <div class="cmdnote">runs the whole pipeline with no keys and no model calls. free, MIT.</div>
+</section>
+
+
+<section class="wht bt bb">
+  <div class="in" style="padding-top:clamp(26px,3.2cqw,38px);padding-bottom:clamp(26px,3.2cqw,38px)">
+    <div class="kicker" style="margin-bottom:14px">Who this is for</div>
+    <div class="forwho">
+      <div class="fw"><span class="fwt">Solo operators</span><span class="fwd">You want a portfolio of small tool sites that earn, and you don't have time to hand-build each one.</span></div>
+      <div class="fw"><span class="fwt">SEO agencies</span><span class="fwd">You need pages a client's legal team won't flinch at, where every figure traces back to a named source.</span></div>
+      <div class="fw"><span class="fwt">Indie hackers</span><span class="fwd">You've watched AI content get de-indexed and you want the opposite problem. Fewer pages, none of them junk.</span></div>
+    </div>
+    <p style="margin:18px 0 0;font-size:14.5px;line-height:1.6;color:var(--faint2);max-width:64ch">It's free and MIT licensed. Stub mode runs end to end with no API keys, no model calls and no signup, so you can judge it before you trust it.</p>
+  </div>
 </section>
 
 <section class="drk bt">
