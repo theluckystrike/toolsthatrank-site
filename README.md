@@ -1,8 +1,10 @@
-# groundtruth.build
+# toolsthatrank.com
 
-Landing site for **GroundTruth**, the SEO pipeline that refuses to guess.
+Landing site for **ToolsThatRank** — the SEO pipeline that refuses to guess.
 
-Static single page. Deployed to Cloudflare Pages on push to `main`.
+Autonomous pipeline that builds genuinely useful web tools (calculators, converters,
+live-data utilities) for any niche, and ships them only when every number has been
+verified against a primary source.
 
-- Product: https://github.com/theluckystrike/groundtruth
-- Site: https://groundtruth.build
+- Engine (MIT): https://github.com/theluckystrike/groundtruth
+- Live: https://toolsthatrank.com
