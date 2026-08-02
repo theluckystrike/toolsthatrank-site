@@ -158,6 +158,27 @@ footer nav a{color:var(--mut);border-bottom:1px solid var(--line2)}
 .mk.ok::after{width:9px;height:1.5px;transform:rotate(-50deg);left:3px;top:5.5px}
 .mk.no::before,.mk.no::after{width:11px;height:1.5px;left:1px;top:6px}
 .mk.no::before{transform:rotate(45deg)} .mk.no::after{transform:rotate(-45deg)}
+
+.eyebrow{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--acc);border:1px solid #C9DED3;background:#EDF4F0;padding:5px 11px;border-radius:999px;margin-bottom:20px}
+.hero-proof{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(50%,132px),1fr));gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:3px;overflow:hidden;margin-top:clamp(26px,3.4cqw,36px);max-width:640px}
+.hp{background:var(--white);padding:15px 16px}
+.hpn{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:clamp(22px,2.9cqw,30px);font-weight:600;letter-spacing:-.03em;line-height:1;color:var(--ink)}
+.hpl{margin-top:6px;font-size:12px;line-height:1.3;color:var(--mut)}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:clamp(22px,2.8cqw,30px)}
+.btn-p,.btn-s{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:3px;
+  font-size:15px;font-weight:500;border-bottom:0}
+.btn-p{background:var(--acc);color:#F6F5F1;border:1px solid var(--acc)}
+.btn-p:hover{background:#175840;color:#fff;border-color:#175840}
+.btn-s{background:transparent;color:var(--ink);border:1px solid var(--line2)}
+.btn-s:hover{border-color:var(--ink);color:var(--ink)}
+
+.creds{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:3px;overflow:hidden;margin-top:18px}
+.cd{background:var(--white);padding:16px 16px}
+.cdn{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:clamp(20px,2.6cqw,26px);font-weight:600;letter-spacing:-.03em;line-height:1;color:var(--ink)}
+.cdl{margin-top:7px;font-size:12.5px;line-height:1.45;color:var(--mut)}
 @media (hover:hover){.card:hover{transform:translateY(-2px);border-color:#CFCBBE}}
 @media (pointer:coarse){nav.top a,footer nav a{min-height:48px;display:inline-flex;align-items:center}summary{min-height:56px;align-items:center}.cmd button{min-height:48px}}
 html,body{overflow-x:hidden;max-width:100%}
@@ -176,32 +197,45 @@ html,body{overflow-x:hidden;max-width:100%}
       <a href="#tools">shipped</a>
       <a href="#how">method</a>
       <a href="#providers">providers</a>
-      <a class="gh" href="https://github.com/theluckystrike/toolsthatrank">github ↗</a>
+      <a class="gh" href="https://github.com/theluckystrike/toolsthatrank" target="_blank" rel="noopener">github ↗</a>
     </nav>
   </div>
 </header>
 
 <div class="status">
   <div class="in">
-    <span style="display:inline-flex;align-items:center;gap:6px"><span class="dot" aria-hidden="true"></span>184/184 checks passing</span>
-    <span class="sep" aria-hidden="true">·</span><span>engine: GroundTruth</span>
-    <span class="sep" aria-hidden="true">·</span><span>MIT</span>
-    <span class="sep" aria-hidden="true">·</span><span>Node 18.17+</span>
-    <span class="sep" aria-hidden="true">·</span><span>last verified <time datetime="2026-08-02">2026-08-02</time></span>
+    <span style="display:inline-flex;align-items:center;gap:6px"><span class="dot" aria-hidden="true"></span>50+ sites live</span>
+    <span class="sep" aria-hidden="true">·</span><span>10M+ impressions / month</span>
+    <span class="sep" aria-hidden="true">·</span><span>10,000 clicks / month</span>
+    <span class="sep" aria-hidden="true">·</span><span>20,000 extension users</span>
+    <span class="sep" aria-hidden="true">·</span><span>shipped by agents, not by hand</span>
   </div>
 </div>
 
 <main id="main">
 
 <section class="in" style="padding-top:clamp(38px,6cqw,80px);padding-bottom:clamp(30px,4cqw,48px)">
-  <h1>The SEO pipeline that <span class="mark">refuses to guess</span></h1>
-  <p class="lede">Every other content pipeline writes first and checks afterwards. This one cannot write a number it has not already fetched, recomputed and re-fetched. When a value will not prove, the run stops.</p>
+  <div class="eyebrow">Fully autonomous · agent-built · MIT engine</div>
+  <h1>Agents build the tools. <span class="mark">Code proves every number.</span></h1>
+  <p class="lede">One command researches a niche, builds a working calculator, verifies every figure against a primary source and ships it. It has already produced <strong style="font-weight:600;color:var(--ink)">50+ live sites</strong> earning <strong style="font-weight:600;color:var(--ink)">10,000 clicks a month</strong>. No hand-written pages. No invented numbers.</p>
+
+  <div class="hero-proof">
+    <div class="hp"><div class="hpn">50+</div><div class="hpl">sites live</div></div>
+    <div class="hp"><div class="hpn">10M+</div><div class="hpl">impressions / mo</div></div>
+    <div class="hp"><div class="hpn">10,000</div><div class="hpl">clicks / mo</div></div>
+    <div class="hp"><div class="hpn">20,000</div><div class="hpl">extension users</div></div>
+  </div>
+
+  <div class="cta-row">
+    <a class="btn-p" href="#tools">See what it shipped</a>
+    <a class="btn-s" href="https://github.com/theluckystrike/toolsthatrank" target="_blank" rel="noopener">Read the source</a>
+  </div>
 
   <div class="cmd" id="install">
     <code><span class="p">$ </span>npx groundtruth --site my-tool --dry-run</code>
     <button type="button" id="cp" aria-label="Copy install command">copy</button>
   </div>
-  <div class="cmdnote">no keys · no model calls · it will refuse to publish. watch it happen.</div>
+  <div class="cmdnote">runs the whole pipeline with no keys and no model calls. free, MIT.</div>
 </section>
 
 <section class="drk bt">
@@ -258,7 +292,7 @@ html,body{overflow-x:hidden;max-width:100%}
   <div class="in sec">
     <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 16px">
       <h2>What it shipped</h2>
-      <span style="font-family:var(--mono);font-size:11px;color:var(--faint2)">6 live · verified 2026-08-02</span>
+      <span style="font-family:var(--mono);font-size:11px;color:var(--faint2)">a sample of 50+ live</span>
     </div>
     <p class="qas" data-keyword="programmatic seo tool pipeline" style="margin:16px 0 0;font-size:16px;line-height:1.6;color:var(--body);max-width:62ch">ToolsThatRank has shipped 6 live tool sites citing primary sources including USGS, HMRC and the IRS, with 184 of 184 checks passing.</p>
     <p class="sub" style="margin-top:10px">Each one is a working calculator or live-data tool, not an article about one. Every figure on them is fetched and recomputed rather than written by a model.</p>
@@ -266,52 +300,58 @@ html,body{overflow-x:hidden;max-width:100%}
     <div class="cards">
       <article class="card">
         <span class="gl" aria-hidden="true">£</span>
-        <span class="nm"><a href="https://ukmoneycalc.com">ukmoneycalc.com</a></span>
+        <span class="nm"><a href="https://ukmoneycalc.com" target="_blank" rel="noopener">ukmoneycalc.com</a></span>
         <span class="ds">Take-home pay, Tax-Free Childcare and salary sacrifice on 2026/27 HMRC rates. 5 live calculators.</span>
         <span class="src">source: gov.uk · HMRC</span>
         <span class="tag live">live</span>
       </article>
       <article class="card">
         <span class="gl" aria-hidden="true">$</span>
-        <span class="nm"><a href="https://taxbreakcalc.com">taxbreakcalc.com</a></span>
+        <span class="nm"><a href="https://taxbreakcalc.com" target="_blank" rel="noopener">taxbreakcalc.com</a></span>
         <span class="ds">The dollar value of each 2026 federal tax break at your income, with caps and phase-outs applied. 4 live.</span>
         <span class="src">source: IRS · OBBBA bill text</span>
         <span class="tag live">live</span>
       </article>
       <article class="card">
         <span class="gl" aria-hidden="true">§</span>
-        <span class="nm"><a href="https://noovertimetax.com">noovertimetax.com</a></span>
+        <span class="nm"><a href="https://noovertimetax.com" target="_blank" rel="noopener">noovertimetax.com</a></span>
         <span class="ds">Federal income tax saved under the overtime deduction, from your rate, hours and MAGI. 4 calculators.</span>
         <span class="src">source: IRS OBBBA guidance</span>
         <span class="tag live">live</span>
       </article>
       <article class="card">
         <span class="gl" aria-hidden="true">◎</span>
-        <span class="nm"><a href="https://examscorecalc.com">examscorecalc.com</a></span>
+        <span class="nm"><a href="https://examscorecalc.com" target="_blank" rel="noopener">examscorecalc.com</a></span>
         <span class="ds">Raw exam points converted to a projected AP, SAT or ACT score, plus what a target needs. 12 calculators.</span>
         <span class="src">source: College Board scoring worksheets</span>
         <span class="tag live">live</span>
       </article>
       <article class="card">
         <span class="gl" aria-hidden="true">◈</span>
-        <span class="nm"><a href="https://goldgramprice.com">goldgramprice.com</a></span>
+        <span class="nm"><a href="https://goldgramprice.com" target="_blank" rel="noopener">goldgramprice.com</a></span>
         <span class="ds">Melt value by weight and karat at live spot, with the 60 to 90 percent a dealer would actually pay.</span>
         <span class="src">source: third-party spot API, unnamed</span>
         <span class="tag live">live</span>
       </article>
       <article class="card">
         <span class="gl" aria-hidden="true">≈</span>
-        <span class="nm"><a href="https://lakelevelnow.com">lakelevelnow.com</a></span>
+        <span class="nm"><a href="https://lakelevelnow.com" target="_blank" rel="noopener">lakelevelnow.com</a></span>
         <span class="ds">Percent full, elevation and 30-day trend for 25 US lakes, with a plain-English boat-launch read.</span>
         <span class="src">source: USGS · CDEC gages</span>
         <span class="tag live">live</span>
       </article>
     </div>
 
-    <div style="margin-top:clamp(24px,3cqw,34px);border:1px solid var(--line);border-radius:3px;background:var(--paper);padding:clamp(18px,2.4cqw,26px)">
-      <div class="kicker" style="margin-bottom:12px">Who builds it</div>
-      <p style="margin:0;font-size:15.5px;line-height:1.6;color:var(--body);max-width:62ch">Built by one operator, Michael Lip, alongside <a href="https://chromewebstore.google.com/detail/belikenative/gchojmpfpbpmpfgdppfdkpchikbcgabp">BeLikeNative</a>, a Chrome extension with <strong style="font-weight:600">20,000 users</strong> and 4.7 stars from 377 ratings, and <a href="https://www.ml0x.com/">ml0x</a>, a guardrail layer for coding agents.</p>
-      <p style="margin:12px 0 0;font-size:14px;line-height:1.6;color:var(--mut);max-width:62ch">Revenue across those products is Stripe-verified and public on <a href="https://trustmrr.com/startup/belikenative">TrustMRR</a>: <span style="font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--ink)">$345 MRR</span> across 40 active subscriptions, <span style="font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--ink)">$967</span> in the last 30 days at <span style="font-family:var(--mono)">+48.5%</span> growth, <span style="font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--ink)">$9,447</span> all time. Figures as of <time datetime="2026-08-01">1 August 2026</time> and live-synced, so check the profile for current numbers.</p>
+    <div style="margin-top:clamp(26px,3.4cqw,38px);border:1px solid var(--line);border-radius:3px;background:var(--paper);padding:clamp(20px,2.6cqw,30px)">
+      <div class="kicker" style="margin-bottom:14px">Who is behind it</div>
+      <p style="margin:0;font-size:16px;line-height:1.6;color:var(--body);max-width:64ch">Built by <a href="https://github.com/theluckystrike" target="_blank" rel="noopener">Michael Lip</a>, a solo developer shipping production software for a decade. The same agentic pipeline runs every property below. None of it is hand-maintained.</p>
+      <div class="creds">
+        <div class="cd"><div class="cdn">50+</div><div class="cdl">sites built and shipped by agents</div></div>
+        <div class="cd"><div class="cdn">10M+</div><div class="cdl">search impressions a month</div></div>
+        <div class="cd"><div class="cdn">20,000</div><div class="cdl">users on <a href="https://chromewebstore.google.com/detail/belikenative/gchojmpfpbpmpfgdppfdkpchikbcgabp" target="_blank" rel="noopener">BeLikeNative</a>, rated 4.7 from 377 reviews</div></div>
+        <div class="cd"><div class="cdn">$9,447</div><div class="cdl">all-time revenue, Stripe-verified on <a href="https://trustmrr.com/startup/belikenative" target="_blank" rel="noopener">TrustMRR</a></div></div>
+      </div>
+      <p style="margin:16px 0 0;font-size:13.5px;line-height:1.6;color:var(--faint2);max-width:64ch">Revenue figures are live-synced from Stripe and were $345 MRR across 40 active subscriptions as of <time datetime="2026-08-01">1 August 2026</time>. Traffic figures are this operator's own Google Search Console totals across the fleet.</p>
     </div>
   </div>
 </section>
@@ -366,7 +406,7 @@ html,body{overflow-x:hidden;max-width:100%}
     <div style="margin-top:clamp(20px,2.6cqw,30px);max-width:72ch">
       <details open>
         <summary><h3 style="display:inline;font-size:15.5px;font-weight:500">How do you stop an LLM from hallucinating numbers?</h3></summary>
-        <p class="qas" data-keyword="stop llm hallucinating numbers">GroundTruth removes the model's permission to write numbers: all 12 trust layers require code to fetch and recompute every figure from its source.</p>
+        <p class="qas" data-keyword="stop llm hallucinating numbers">ToolsThatRank removes the model's permission to write numbers: all 12 trust layers require code to fetch and recompute every figure from its source.</p>
       </details>
       <details>
         <summary><h3 style="display:inline;font-size:15.5px;font-weight:500">Can AI-generated tools rank in Google?</h3></summary>
@@ -399,17 +439,17 @@ html,body{overflow-x:hidden;max-width:100%}
           <span style="color:var(--acc);font-size:14px" aria-hidden="true">◈</span>
           <span style="font-size:14px;font-weight:600;letter-spacing:-.02em">ToolsThatRank</span>
         </div>
-        <p>Engine: GroundTruth · MIT licensed · Node 18.17+. Tool results are computed from published constants and rounded once, at display. Weigh critical quantities on a scale.</p>
+        <p>MIT licensed · Node 18.17+. Every site above was researched, built and shipped by autonomous agents. Tool results are computed from published constants and rounded once, at display.</p>
       </div>
       <nav aria-label="Footer">
         <a href="#proof">proof</a>
         <a href="#tools">shipped</a>
         <a href="#how">method</a>
-        <a href="https://github.com/theluckystrike/toolsthatrank">github</a>
-        <a href="https://www.npmjs.com/package/groundtruth">npm</a>
+        <a href="https://github.com/theluckystrike/toolsthatrank" target="_blank" rel="noopener">github</a>
+        <a href="https://www.npmjs.com/package/groundtruth" target="_blank" rel="noopener">npm</a>
       </nav>
     </div>
-    <div class="copy">© 2026 toolsthatrank.com · 184/184 checks passing · last verified <time datetime="2026-08-02">2026-08-02</time></div>
+    <div class="copy">© 2026 toolsthatrank.com · built and shipped by autonomous agents</div>
   </div>
 </footer>
 </div>
@@ -448,7 +488,7 @@ document.getElementById('cp').addEventListener('click',function(){
     },
     {
       "@type": "SoftwareApplication",
-      "name": "GroundTruth",
+      "name": "ToolsThatRank",
       "url": "https://toolsthatrank.com/",
       "applicationCategory": "DeveloperApplication",
       "operatingSystem": "Any",
@@ -459,7 +499,7 @@ document.getElementById('cp').addEventListener('click',function(){
     {
       "@type": "FAQPage",
       "mainEntity": [
-        { "@type": "Question", "name": "How do you stop an LLM from hallucinating numbers?", "acceptedAnswer": { "@type": "Answer", "text": "GroundTruth removes the model's permission to write numbers: all 12 trust layers require code to fetch and recompute every figure from its source." } },
+        { "@type": "Question", "name": "How do you stop an LLM from hallucinating numbers?", "acceptedAnswer": { "@type": "Answer", "text": "ToolsThatRank removes the model's permission to write numbers: all 12 trust layers require code to fetch and recompute every figure from its source." } },
         { "@type": "Question", "name": "Can AI-generated tools rank in Google?", "acceptedAnswer": { "@type": "Answer", "text": "Google's 2024 core update named scaled content abuse: pages that mainly summarize what others say, at scale, regardless of how they were made. A working calculator is not that. Utility and verified data are what earn the position." } },
         { "@type": "Question", "name": "What is a programmatic SEO pipeline?", "acceptedAnswer": { "@type": "Answer", "text": "A system that generates many pages from one template and a data source. This one refuses to emit a page whose numbers cannot be traced to a primary source, which is why it publishes fewer pages than it starts." } },
         { "@type": "Question", "name": "Is ToolsThatRank free to try?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The engine is MIT licensed and the stub mode runs the full pipeline with no API keys and no model calls." } },
