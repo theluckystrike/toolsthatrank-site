@@ -179,6 +179,17 @@ footer nav a{color:var(--mut);border-bottom:1px solid var(--line2)}
 .cd{background:var(--white);padding:16px 16px}
 .cdn{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:clamp(20px,2.6cqw,26px);font-weight:600;letter-spacing:-.03em;line-height:1;color:var(--ink)}
 .cdl{margin-top:7px;font-size:12.5px;line-height:1.45;color:var(--mut)}
+
+.behind{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:12px;margin-top:clamp(22px,3cqw,32px)}
+.bcard{display:flex;flex-direction:column;gap:9px;padding:clamp(20px,2.6cqw,28px);background:var(--white);
+  border:1px solid var(--line);border-radius:3px;border-bottom:1px solid var(--line);color:var(--ink)}
+.bcard:hover{color:var(--ink)}
+.bk{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc)}
+.bt2{font-size:19px;font-weight:600;letter-spacing:-.022em;line-height:1.2}
+.bd{font-size:14.5px;line-height:1.55;color:var(--mut);flex:1}
+.bl{font-family:var(--mono);font-size:12px;color:var(--acc);border-bottom:1px solid rgba(29,107,79,.3);align-self:flex-start;padding-bottom:1px}
+@media (hover:hover){.bcard:hover{border-color:#CFCBBE;transform:translateY(-2px)}}
+.bcard{transition:transform 140ms ease,border-color 140ms ease}
 @media (hover:hover){.card:hover{transform:translateY(-2px);border-color:#CFCBBE}}
 @media (pointer:coarse){nav.top a,footer nav a{min-height:48px;display:inline-flex;align-items:center}summary{min-height:56px;align-items:center}.cmd button{min-height:48px}}
 html,body{overflow-x:hidden;max-width:100%}
@@ -197,6 +208,7 @@ html,body{overflow-x:hidden;max-width:100%}
       <a href="#tools">shipped</a>
       <a href="#how">method</a>
       <a href="#providers">providers</a>
+      <a href="#behind">who</a>
       <a class="gh" href="https://github.com/theluckystrike/toolsthatrank" target="_blank" rel="noopener">github ↗</a>
     </nav>
   </div>
@@ -398,6 +410,29 @@ html,body{overflow-x:hidden;max-width:100%}
       <div class="hc"><div class="hd" style="color:var(--acc)"><span class="mk ok" aria-hidden="true"></span><span>it does</span></div><h3>Build real utility</h3><p>Working calculators and converters, not articles about calculators. Utility is what earns the ranking.</p></div>
       <div class="hc"><div class="hd" style="color:#8A6414"><span class="mk no" aria-hidden="true"></span><span>it does not</span></div><h3>Manufacture authority</h3><p>Links, brand and time still decide competitive niches. Correctness is necessary. It isn't sufficient.</p></div>
       <div class="hc"><div class="hd" style="color:#8A6414"><span class="mk no" aria-hidden="true"></span><span>it does not</span></div><h3>Publish for you</h3><p>Every clean run stops at a human gate. Deployment's opt in, and it degrades to a preview on any stack.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<section id="behind" class="bt">
+  <div class="in sec">
+    <h2>Who is behind this</h2>
+    <p class="sub">One person, in public. The work happens where you can watch it, not behind a landing page.</p>
+
+    <div class="behind">
+      <a class="bcard" href="https://github.com/theluckystrike" target="_blank" rel="noopener">
+        <span class="bk">GitHub</span>
+        <span class="bt2">theluckystrike</span>
+        <span class="bd">Michael Lip. Code merged into Prefect, Puter and Google's own Chrome extension samples. 65 pull requests landed in projects he doesn't own, across repos holding 237,000+ stars between them.</span>
+        <span class="bl">Open profile</span>
+      </a>
+      <a class="bcard" href="https://discord.gg/QeHxTFbqmC" target="_blank" rel="noopener">
+        <span class="bk">Discord</span>
+        <span class="bt2">Zovo.one community</span>
+        <span class="bd">386 members. Daily build logs, what shipped, what broke, and what the pipeline held back. You can read the whole thing before you decide anything.</span>
+        <span class="bl">Join the server</span>
+      </a>
     </div>
   </div>
 </section>
