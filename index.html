@@ -59,7 +59,6 @@ img{max-width:100%;height:auto}
 .bt{border-top:1px solid var(--line)} .bb{border-bottom:1px solid var(--line)}
 .wht{background:var(--white)} .drk{background:var(--ink);color:#F6F5F1}
 
-main:focus{outline:none}
 .skip{position:absolute;left:-9999px}
 .skip:focus{left:12px;top:12px;z-index:99;background:var(--white);padding:10px 14px;border:1px solid var(--acc)}
 
@@ -86,12 +85,6 @@ h3{margin:0;font-size:17px;font-weight:600;letter-spacing:-.02em;line-height:1.2
 .sub{margin:16px 0 0;font-size:16px;line-height:1.6;color:var(--mut);max-width:58ch}
 .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
 
-.cmd{margin-top:clamp(24px,3.2cqw,34px);display:flex;background:var(--ink);border-radius:3px;overflow:hidden;max-width:640px}
-.cmd code{flex:1;min-width:0;overflow-x:auto;padding:16px 14px;font-family:var(--mono);font-size:12.5px;line-height:1.2;color:#F2F0E9;white-space:nowrap}
-.cmd .p{color:#8C8878}
-.cmd button{flex:none;width:62px;border:0;border-left:1px solid var(--dline);background:#1E1D15;color:#8F8B7A;
-  font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
-.cmd button:hover{background:#2A2820;color:#F2F0E9}
 .cmdnote{margin-top:12px;font-family:var(--mono);font-size:11px;color:var(--faint2)}
 
 .grid{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden}
@@ -221,7 +214,7 @@ footer nav a{color:var(--mut);border-bottom:1px solid var(--line2)}
 @media (hover:hover){.bcard:hover{border-color:#CFCBBE;transform:translateY(-2px)}}
 .bcard{transition:transform 140ms ease,border-color 140ms ease}
 @media (hover:hover){.card:hover{transform:translateY(-2px);border-color:#CFCBBE}}
-@media (pointer:coarse){nav.top a,footer nav a,.card .nm a{min-height:48px;display:inline-flex;align-items:center}summary{min-height:56px;align-items:center}.cmd button{min-height:48px}}
+@media (pointer:coarse){nav.top a,footer nav a,.card .nm a{min-height:48px;display:inline-flex;align-items:center}summary{min-height:56px;align-items:center}}
 html{overflow-x:hidden}
 @media (max-width:520px){nav.top a:not([href^="#"]){display:none}nav.top{gap:4px 12px;font-size:12px}}
 </style>
@@ -238,7 +231,7 @@ html{overflow-x:hidden}
   <div class="in">
     <a class="brand" href="/"><span class="g" aria-hidden="true">◈</span><span class="n">ToolsThatRank</span></a>
     <nav class="top" aria-label="Primary">
-      <a href="#build">get one built</a>
+      <a href="#build">the pipeline</a>
       <a href="#proof">proof</a>
       <a href="#tools">shipped</a>
       <a href="#how">method</a>
@@ -261,9 +254,9 @@ html{overflow-x:hidden}
 <main id="main" tabindex="-1">
 
 <section class="in" style="padding-top:clamp(38px,6cqw,80px);padding-bottom:clamp(30px,4cqw,48px)">
-  <div class="eyebrow">Fully autonomous · agent-built · runs on your machine</div>
+  <div class="eyebrow">Agent-built · human-gated · runs on your machine</div>
   <h1>Agents build the tools. <span class="mark">Code proves every number.</span></h1>
-  <p class="lede">One command researches a niche, builds a working calculator, checks every figure against a primary source and ships it. That's <strong style="font-weight:600;color:var(--ink)">50+ live sites</strong> so far, earning <strong style="font-weight:600;color:var(--ink)">10,000 clicks a month</strong>. Nothing hand-written. No invented numbers.</p>
+  <p class="lede">One command researches a niche, builds a working calculator, checks every figure against a primary source, then stages it for your sign-off. That's <strong style="font-weight:600;color:var(--ink)">50+ live sites</strong> so far, earning <strong style="font-weight:600;color:var(--ink)">10,000 clicks a month</strong>. Nothing hand-written. No invented numbers.</p>
 
   <div class="hero-proof">
     <div class="hp"><div class="hpn">50+</div><div class="hpl">sites live</div></div>
@@ -292,9 +285,9 @@ html{overflow-x:hidden}
           <li>Unlimited sites, unlimited niches. No per-site fee, no seat count, no metering</li>
           <li>Runs on your machine, your API key, your hosting. Nothing routes through me</li>
           <li>14 anti-fabrication layers plus 5 originality layers, on every page it makes</li>
-          <li>Eleven LLM providers behind one environment variable</li>
+          <li>Nine LLM providers behind one environment variable, with Claude proven end to end</li>
           <li>Everything it produces is yours, including the sites, the data and the repos</li>
-          <li>You pay for your own inference and it is small. A site build is a few cents on DeepSeek, one to two dollars through the Anthropic API, and nothing at all against a Claude subscription</li>
+          <li>You pay for your own inference. Against a Claude subscription that is nothing, and the cheaper providers cost a fraction of a dollar per build once you have picked one</li>
         </ul>
       </div>
       <div class="oc">
@@ -316,10 +309,10 @@ html{overflow-x:hidden}
     <h2 style="font-size:clamp(15px,1.5cqw,17px);font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);font-family:var(--mono);margin-bottom:14px">Who this is for</h2>
     <div class="forwho">
       <div class="fw"><h3 class="fwt">Solo operators</h3><span class="fwd">You want a portfolio of small tool sites that earn. Run the pipeline once per niche instead of hand-building each one.</span></div>
-      <div class="fw"><h3 class="fwt">SEO agencies</h3><span class="fwd">You need pages a client's legal team won't flinch at. Every figure traces back to a named source, on every site you run it for.</span></div>
+      <div class="fw"><h3 class="fwt">SEO agencies</h3><span class="fwd">You need pages a client's legal team won't flinch at. Every figure traces back to the source it cites, on every site you run it for.</span></div>
       <div class="fw"><h3 class="fwt">Indie hackers</h3><span class="fwd">You've watched AI content get de-indexed and you want the opposite problem. Fewer pages, none of them junk.</span></div>
     </div>
-    <p style="margin:18px 0 0;font-size:14.5px;line-height:1.6;color:var(--faint2);max-width:64ch">You do not have to take any of this on faith. Six sites it built are linked below, each one live, each figure traceable to a named primary source.</p>
+    <p style="margin:18px 0 0;font-size:14.5px;line-height:1.6;color:var(--faint2);max-width:64ch">You do not have to take any of this on faith. Six sites it built are linked below, each one live, each figure traceable to the source it cites.</p>
   </div>
 </section>
 
@@ -359,8 +352,8 @@ html{overflow-x:hidden}
   <div class="grid g-stat" style="margin-top:clamp(24px,3cqw,36px)">
     <div class="cell"><div class="big">184/184</div><div class="cap">automated checks passing</div></div>
     <div class="cell"><div class="big">14 + 5</div><div class="cap">trust and originality layers</div></div>
-    <div class="cell"><div class="big">11</div><div class="cap">LLM providers wired</div></div>
-    <div class="cell"><div class="big">6 wks</div><div class="cap">age of the sites it built</div></div>
+    <div class="cell"><div class="big">9</div><div class="cap">LLM providers wired, Claude proven end to end</div></div>
+    <div class="cell"><div class="big">6 wks</div><div class="cap">age of the six sites listed below</div></div>
   </div>
 <pre class="term"><span class="c"># what a run looks like. code does the arithmetic, not the model.</span>
 <span class="c">$</span> node orchestrator.mjs --site example-cooking-converter --dry-run
@@ -407,7 +400,7 @@ html{overflow-x:hidden}
       <article class="card">
         <span class="gl" aria-hidden="true">◎</span>
         <span class="nm"><a href="https://examscorecalc.com" target="_blank" rel="noopener">examscorecalc.com</a></span>
-        <span class="ds">Raw exam points converted to a projected AP, SAT or ACT score, plus what a target needs. 12 calculators.</span>
+        <span class="ds">Raw exam points converted to a projected AP, SAT or ACT score, plus what a target needs. 12 calculator pages across 11 exams.</span>
         <span class="src">source: College Board scoring worksheets</span>
         <span class="tag live">live</span>
       </article>
@@ -429,7 +422,7 @@ html{overflow-x:hidden}
 
     <div style="margin-top:clamp(26px,3.4cqw,38px);border:1px solid var(--line);border-radius:3px;background:var(--paper);padding:clamp(20px,2.6cqw,30px)">
       <div class="kicker" style="margin-bottom:14px">Who is behind it</div>
-      <p style="margin:0;font-size:16px;line-height:1.6;color:var(--body);max-width:64ch">Built by <a href="https://github.com/theluckystrike" target="_blank" rel="noopener">Michael Lip</a>, a solo developer whose code is merged into open-source projects with <strong style="font-weight:600;color:var(--ink)">237,000+ combined GitHub stars</strong>, including Prefect, Puter and Google's own Chrome extension samples. The same agentic pipeline runs every property below. None of it's hand-maintained.</p>
+      <p style="margin:0;font-size:16px;line-height:1.6;color:var(--body);max-width:64ch">Built by <a href="https://github.com/theluckystrike" target="_blank" rel="noopener">Michael Lip</a>, a solo developer whose code is merged into <strong style="font-weight:600;color:var(--ink)">61 open-source projects holding 237,000+ stars between them</strong>, among them Prefect, Puter and Google's Chrome extension samples. The same agentic pipeline runs every property listed here. None of it's hand-maintained.</p>
       <div class="creds">
         <div class="cd"><div class="cdn">65</div><div class="cdl">pull requests merged into projects he doesn't own, across 61 repos</div></div>
         <div class="cd"><div class="cdn">237K+</div><div class="cdl">combined stars on those projects, 36 of them above 1,000</div></div>
@@ -496,13 +489,13 @@ html{overflow-x:hidden}
     <p class="sub">One person, in public. The work happens where you can watch it, not behind a landing page.</p>
 
     <div class="behind">
-      <a class="bcard" href="https://github.com/theluckystrike" target="_blank" rel="noopener" aria-label="GitHub profile, theluckystrike">
+      <a class="bcard" href="https://github.com/theluckystrike" target="_blank" rel="noopener" aria-label="GitHub theluckystrike">
         <span class="bk">GitHub</span>
         <span class="bt2">theluckystrike</span>
         <span class="bd">Michael Lip. Code merged into Prefect, Puter and Google's own Chrome extension samples. 65 pull requests landed in projects he doesn't own, across repos holding 237,000+ stars between them.</span>
         <span class="bl">Open profile</span>
       </a>
-      <a class="bcard" href="https://discord.gg/QeHxTFbqmC" target="_blank" rel="noopener" aria-label="Discord, Zovo.one community">
+      <a class="bcard" href="https://discord.gg/QeHxTFbqmC" target="_blank" rel="noopener" aria-label="Discord Zovo.one community">
         <span class="bk">Discord</span>
         <span class="bt2">Zovo.one community</span>
         <span class="bd">386 members. Daily build logs, what shipped, what broke, and what the pipeline held back. You can read the whole thing before you decide anything.</span>
@@ -530,11 +523,11 @@ html{overflow-x:hidden}
       </details>
       <details>
         <summary><h3 style="display:inline;font-size:15.5px;font-weight:500">What exactly do I get for $99?</h3></summary>
-        <p>The full pipeline, one time, yours to keep. Fourteen trust layers, five originality layers, eleven provider adapters, the site templates and the deploy step. You run it on your own machine against your own API key, for as many niches as you want. There is no per-site fee and no metering. API spend is yours. A site build costs a few cents on DeepSeek, one to two dollars through the Anthropic API, and nothing against a Claude subscription. Frontier models through the CLI cost more, so pick the provider that fits your budget.</p>
+        <p>The full pipeline, one time, yours to keep. Fourteen trust layers, five originality layers, eleven provider adapters, the site templates and the deploy step. You run it on your own machine against your own API key, for as many niches as you want. There is no per-site fee and no metering. API spend is yours. Run it against a Claude subscription and the marginal cost is nothing. The cheaper HTTP providers cost a fraction of a dollar per build, and frontier models through the CLI cost more, so pick the provider that fits your budget.</p>
       </details>
       <details>
         <summary><h3 style="display:inline;font-size:15.5px;font-weight:500">Which LLM does it need?</h3></summary>
-        <p>Eleven, picked with one environment variable. Claude runs through the local CLI and that's the battle-tested path, while OpenAI, Kimi, GLM, DeepSeek and Ollama all share an OpenAI-compatible HTTP adapter. Get the model name wrong and it throws. Loudly, rather than guessing.</p>
+        <p>Nine, picked with one environment variable. Claude runs through the local CLI and that's the battle-tested path, while OpenAI, Kimi, GLM, DeepSeek and Ollama all share an OpenAI-compatible HTTP adapter. Get the model name wrong and it throws. Loudly, rather than guessing.</p>
       </details>
     </div>
   </div>
@@ -554,10 +547,12 @@ html{overflow-x:hidden}
         <p>Node 18.17+. Every site above was researched, built and shipped by autonomous agents. Tool results are computed from published constants and rounded once, at display.</p>
       </div>
       <nav aria-label="Footer">
-        <a href="#build">get one built</a>
+        <a href="#build">the pipeline</a>
       <a href="#proof">proof</a>
         <a href="#tools">shipped</a>
         <a href="#how">method</a>
+        <a href="/privacy/">privacy</a>
+        <a href="/terms/">terms</a>
         <a href="https://github.com/theluckystrike" target="_blank" rel="noopener">github</a>
         <a href="https://discord.gg/QeHxTFbqmC" target="_blank" rel="noopener">discord</a>
       </nav>
@@ -694,7 +689,7 @@ html{overflow-x:hidden}
           "name": "What exactly do I get for $99?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The full pipeline, one time, yours to keep. Fourteen trust layers, five originality layers, eleven provider adapters, the site templates and the deploy step. You run it on your own machine against your own API key, for as many niches as you want. There is no per-site fee and no metering. API spend is yours. A site build costs a few cents on DeepSeek, one to two dollars through the Anthropic API, and nothing against a Claude subscription. Frontier models through the CLI cost more, so pick the provider that fits your budget."
+            "text": "The full pipeline, one time, yours to keep. Fourteen trust layers, five originality layers, eleven provider adapters, the site templates and the deploy step. You run it on your own machine against your own API key, for as many niches as you want. There is no per-site fee and no metering. API spend is yours. Run it against a Claude subscription and the marginal cost is nothing. The cheaper HTTP providers cost a fraction of a dollar per build, and frontier models through the CLI cost more, so pick the provider that fits your budget."
           }
         },
         {
@@ -702,7 +697,7 @@ html{overflow-x:hidden}
           "name": "Which LLM does it need?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Eleven, picked with one environment variable. Claude runs through the local CLI and that's the battle-tested path, while OpenAI, Kimi, GLM, DeepSeek and Ollama all share an OpenAI-compatible HTTP adapter. Get the model name wrong and it throws. Loudly, rather than guessing."
+            "text": "Nine, picked with one environment variable. Claude runs through the local CLI and that's the battle-tested path, while OpenAI, Kimi, GLM, DeepSeek and Ollama all share an OpenAI-compatible HTTP adapter. Get the model name wrong and it throws. Loudly, rather than guessing."
           }
         }
       ],
