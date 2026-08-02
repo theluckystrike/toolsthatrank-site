@@ -15,7 +15,13 @@
 <meta property="og:site_name" content="ToolsThatRank">
 <meta property="og:title" content="ToolsThatRank · the SEO pipeline that refuses to guess">
 <meta property="og:description" content="An autonomous pipeline that builds data-backed web tools and ships them only when every number has been fetched, recomputed and re-verified.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://toolsthatrank.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ToolsThatRank. Agents build the tools. Code proves every number.">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://toolsthatrank.com/og.png">
 <meta name="twitter:title" content="ToolsThatRank · the SEO pipeline that refuses to guess">
 <meta name="twitter:description" content="An autonomous pipeline that builds data-backed web tools and ships them only when every number has been fetched, recomputed and re-verified.">
 
@@ -292,7 +298,7 @@ html,body{overflow-x:hidden;max-width:100%}
 
 <section class="wht bt bb">
   <div class="in" style="padding-top:clamp(32px,4.5cqw,58px);padding-bottom:clamp(32px,4.5cqw,58px)">
-    <div class="kicker" style="margin-bottom:16px">The rule the whole thing runs on</div>
+    <h2 style="font-size:clamp(15px,1.5cqw,17px);font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);font-family:var(--mono);margin-bottom:16px">The rule the whole thing runs on</h2>
     <p class="rule">The model never states a number. Code fetches every value, recomputes it, then re-fetches the citation to confirm it still says what was claimed. <span style="color:var(--mut)">That refusal is the product.</span></p>
   </div>
 </section>
@@ -459,7 +465,7 @@ html,body{overflow-x:hidden;max-width:100%}
     <div style="margin-top:clamp(20px,2.6cqw,30px);max-width:72ch">
       <details open>
         <summary><h3 style="display:inline;font-size:15.5px;font-weight:500">How do you stop an LLM from hallucinating numbers?</h3></summary>
-        <p class="qas" data-keyword="stop llm hallucinating numbers">ToolsThatRank removes the model's permission to write numbers: all 12 trust layers require code to fetch and recompute every figure from its source.</p>
+        <p class="qas" data-keyword="stop llm hallucinating numbers">ToolsThatRank removes the model's permission to write numbers. All 12 trust layers require code to fetch and recompute each figure from its cited primary source.</p>
       </details>
       <details>
         <summary><h3 style="display:inline;font-size:15.5px;font-weight:500">Can AI-generated tools rank in Google?</h3></summary>
@@ -525,12 +531,26 @@ document.getElementById('cp').addEventListener('click',function(){
         "programmatic SEO",
         "anti-hallucination content pipelines",
         "data-backed web tools"
+      ],
+      "@id": "https://toolsthatrank.com/#org",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://toolsthatrank.com/og.png"
+      },
+      "sameAs": [
+        "https://github.com/theluckystrike",
+        "https://discord.gg/QeHxTFbqmC"
       ]
     },
     {
       "@type": "WebSite",
       "name": "ToolsThatRank",
-      "url": "https://toolsthatrank.com/"
+      "url": "https://toolsthatrank.com/",
+      "@id": "https://toolsthatrank.com/#website",
+      "publisher": {
+        "@id": "https://toolsthatrank.com/#org"
+      },
+      "inLanguage": "en"
     },
     {
       "@type": "WebPage",
@@ -558,7 +578,20 @@ document.getElementById('cp').addEventListener('click',function(){
           "name": "Internal Revenue Service",
           "url": "https://www.irs.gov/"
         }
-      ]
+      ],
+      "@id": "https://toolsthatrank.com/#webpage",
+      "isPartOf": {
+        "@id": "https://toolsthatrank.com/#website"
+      },
+      "about": {
+        "@id": "https://toolsthatrank.com/#org"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-08-02",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://toolsthatrank.com/og.png"
+      }
     },
     {
       "@type": "SoftwareApplication",
@@ -567,11 +600,15 @@ document.getElementById('cp').addEventListener('click',function(){
       "applicationCategory": "DeveloperApplication",
       "operatingSystem": "Any",
       "softwareVersion": "1.0.0",
-      "license": "https://opensource.org/licenses/MIT",
+      "license": "https://opensource.org/license/MIT",
       "offers": {
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "USD"
+      },
+      "@id": "https://toolsthatrank.com/#app",
+      "publisher": {
+        "@id": "https://toolsthatrank.com/#org"
       }
     },
     {
@@ -582,7 +619,7 @@ document.getElementById('cp').addEventListener('click',function(){
           "name": "How do you stop an LLM from hallucinating numbers?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "ToolsThatRank removes the model's permission to write numbers: all 12 trust layers require code to fetch and recompute every figure from its source."
+            "text": "ToolsThatRank removes the model's permission to write numbers. All 12 trust layers require code to fetch and recompute each figure from its cited primary source."
           }
         },
         {
@@ -590,7 +627,7 @@ document.getElementById('cp').addEventListener('click',function(){
           "name": "Can AI-generated tools rank in Google?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Google's 2024 core update named scaled content abuse: pages that mainly summarize what others say, at scale, regardless of how they were made. A working calculator isn't that. Utility and verified data are what earn the position."
+            "text": "Google's 2024 core update named scaled content abuse: pages that mainly summarize what others say, at scale, regardless of how they were made. A working calculator isn't that. Utility and verified data are what earn the position, and the originality layers block any page that only restates what already ranks."
           }
         },
         {
@@ -598,7 +635,7 @@ document.getElementById('cp').addEventListener('click',function(){
           "name": "What is a programmatic SEO pipeline?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A system that generates many pages from one template and a data source. This one won't emit a page whose numbers can't be traced back to a primary source. That's why it finishes fewer pages than it starts."
+            "text": "A system that generates many pages from one template and a data source. Most produce thin, near-duplicate pages. This one won't emit a page whose numbers can't be traced back to a primary source. That's why it finishes fewer pages than it starts."
           }
         },
         {
@@ -606,7 +643,7 @@ document.getElementById('cp').addEventListener('click',function(){
           "name": "Is ToolsThatRank free to try?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. It's MIT licensed and stub mode runs the full pipeline with no API keys and no model calls."
+            "text": "Yes. It's MIT licensed, and stub mode runs the whole pipeline with no API keys and no model calls. So you can watch it validate constants and refuse to publish before you spend a cent. The repo goes public alongside the first tagged release."
           }
         },
         {
@@ -614,10 +651,14 @@ document.getElementById('cp').addEventListener('click',function(){
           "name": "Which LLM does it need?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Any of eleven, selected with one environment variable. A missing model throws a loud configuration error rather than guessing."
+            "text": "Eleven, picked with one environment variable. Claude runs through the local CLI and that's the battle-tested path, while OpenAI, Kimi, GLM, DeepSeek and Ollama all share an OpenAI-compatible HTTP adapter. Get the model name wrong and it throws. Loudly, rather than guessing."
           }
         }
-      ]
+      ],
+      "@id": "https://toolsthatrank.com/#faq",
+      "isPartOf": {
+        "@id": "https://toolsthatrank.com/#webpage"
+      }
     }
   ]
 }
