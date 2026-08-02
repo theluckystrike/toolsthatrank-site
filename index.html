@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GroundTruth · the SEO pipeline that refuses to guess</title>
+<meta name="description" content="An autonomous pipeline that builds useful, data-backed web tools and ranks them. The model never states a number. Code fetches every value, recomputes it, and re-verifies every citation. If it cannot verify, it ships nothing.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◈</text></svg>">
+<style>
+  :root{
+    --bg:#0a0c0f; --panel:#11151a; --panel2:#161b22; --line:#212832;
+    --ink:#e8eef5; --dim:#93a2b4; --faint:#67757f;
+    --acc:#5eead4; --acc2:#38bdf8; --warn:#fbbf24; --ok:#4ade80;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+  a{color:var(--acc2);text-decoration:none}
+  a:hover{text-decoration:underline}
+  code,kbd{font-family:var(--mono)}
+
+  header{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(10,12,15,.86);
+    backdrop-filter:blur(10px);z-index:10}
+  nav{display:flex;align-items:center;gap:26px;height:60px}
+  .logo{font-weight:700;letter-spacing:-.02em;font-size:17px;display:flex;align-items:center;gap:9px}
+  .logo .m{color:var(--acc)}
+  nav .sp{margin-left:auto}
+  nav a{color:var(--dim);font-size:14.5px}
+  nav a:hover{color:var(--ink);text-decoration:none}
+
+  .hero{padding:86px 0 64px;border-bottom:1px solid var(--line)}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--acc);border:1px solid #17423c;background:#0b1f1c;
+    padding:5px 12px;border-radius:999px;font-weight:600}
+  h1{font-size:clamp(34px,5.4vw,52px);line-height:1.1;letter-spacing:-.03em;margin:22px 0 18px;font-weight:700}
+  h1 .g{background:linear-gradient(92deg,var(--acc),var(--acc2));-webkit-background-clip:text;
+    background-clip:text;-webkit-text-fill-color:transparent}
+  .lede{font-size:19px;color:var(--dim);max-width:660px;margin:0 0 30px}
+  .lede .em{color:var(--ink);font-weight:600}
+
+  .cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .btn{display:inline-block;padding:11px 20px;border-radius:9px;font-weight:600;font-size:15px;
+    border:1px solid var(--line);background:var(--panel2);color:var(--ink)}
+  .btn:hover{text-decoration:none;border-color:#2e3846}
+  .btn.p{background:linear-gradient(92deg,var(--acc),var(--acc2));color:#04201d;border:none}
+
+  .install{margin-top:26px;background:#06080a;border:1px solid var(--line);border-radius:10px;
+    padding:14px 16px;font-family:var(--mono);font-size:14px;overflow-x:auto;white-space:nowrap}
+  .install .p{color:var(--faint);user-select:none}
+  .install .c{color:var(--acc)}
+
+  section{padding:64px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:26px;letter-spacing:-.02em;margin:0 0 10px;font-weight:700}
+  .sub{color:var(--dim);margin:0 0 30px;max-width:640px}
+
+  .law{background:linear-gradient(180deg,#0d1b1a,var(--panel));border:1px solid #17423c;
+    border-radius:14px;padding:28px 30px}
+  .law p{margin:0;font-size:17.5px;line-height:1.65}
+  .law .hl{color:var(--acc);font-weight:600}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:20px}
+  .card h3{margin:0 0 7px;font-size:15.5px;font-weight:650}
+  .card p{margin:0;color:var(--dim);font-size:14.5px;line-height:1.6}
+  .card .ix{font-family:var(--mono);font-size:11px;color:var(--acc);letter-spacing:.08em;
+    text-transform:uppercase;margin-bottom:9px}
+
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:8px}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:18px 18px}
+  .stat .n{font-family:var(--mono);font-size:26px;font-weight:700;letter-spacing:-.02em;color:var(--acc)}
+  .stat .l{color:var(--faint);font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;margin-top:4px}
+
+  pre{background:#06080a;border:1px solid var(--line);border-radius:11px;padding:18px 20px;
+    overflow-x:auto;font-family:var(--mono);font-size:13.5px;line-height:1.75;margin:0}
+  pre .c{color:var(--faint)}
+  pre .k{color:var(--acc)}
+  pre .v{color:var(--acc2)}
+  pre .w{color:var(--warn)}
+  pre .o{color:var(--ok)}
+
+  table{border-collapse:collapse;width:100%;font-size:14px}
+  .tw{overflow-x:auto;border:1px solid var(--line);border-radius:11px;background:var(--panel)}
+  th,td{text-align:left;padding:11px 15px;border-bottom:1px solid var(--line)}
+  th{background:var(--panel2);color:var(--faint);font-size:11px;text-transform:uppercase;
+    letter-spacing:.08em;font-weight:600}
+  tr:last-child td{border-bottom:none}
+  td.m{font-family:var(--mono);font-size:13px}
+  .pill{display:inline-block;font-size:11px;padding:2px 9px;border-radius:999px;font-weight:600}
+  .pill.ok{color:var(--ok);background:#0c2417;border:1px solid #14532d}
+  .pill.wip{color:var(--warn);background:#241d09;border:1px solid #573f0c}
+
+  ol.steps{counter-reset:s;list-style:none;padding:0;margin:0}
+  ol.steps li{counter-increment:s;position:relative;padding:0 0 20px 46px;border-left:1px solid var(--line);
+    margin-left:14px}
+  ol.steps li:last-child{border-left-color:transparent;padding-bottom:0}
+  ol.steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:-15px;top:0;
+    width:30px;height:30px;border-radius:50%;background:var(--panel2);border:1px solid var(--line);
+    display:grid;place-items:center;font-family:var(--mono);font-size:11.5px;color:var(--acc)}
+  ol.steps h4{margin:3px 0 4px;font-size:15.5px}
+  ol.steps p{margin:0;color:var(--dim);font-size:14.5px}
+
+  footer{padding:40px 0 64px;color:var(--faint);font-size:13.5px}
+  footer .r{display:flex;gap:20px;flex-wrap:wrap;align-items:center}
+  footer .sp{margin-left:auto}
+  @media(max-width:640px){nav a:not(.logo){display:none}.hero{padding:56px 0 44px}}
+</style>
+</head>
+<body>
+
+<header><div class="wrap"><nav>
+  <span class="logo"><span class="m">◈</span> GroundTruth</span>
+  <span class="sp"></span>
+  <a href="#how">How it works</a>
+  <a href="#proof">Proof</a>
+  <a href="#providers">Providers</a>
+  <a href="https://github.com/theluckystrike/groundtruth">GitHub</a>
+</nav></div></header>
+
+<div class="hero"><div class="wrap">
+  <span class="eyebrow">MIT licensed · runs on any LLM</span>
+  <h1>The SEO pipeline that<br><span class="g">refuses to guess</span></h1>
+  <p class="lede">An autonomous pipeline that researches a niche, builds a genuinely useful web tool,
+    and ships it only when every number in it has been verified against a primary source.
+    <span class="em">If it cannot prove a value, it publishes nothing.</span></p>
+  <div class="cta">
+    <a class="btn p" href="#install">Install</a>
+    <a class="btn" href="https://github.com/theluckystrike/groundtruth">Read the source</a>
+  </div>
+  <div class="install" id="install">
+    <span class="p">$</span> npx <span class="c">groundtruth</span> --site example-cooking-converter --dry-run
+  </div>
+</div></div>
+
+<section><div class="wrap">
+  <div class="law">
+    <p><span class="hl">The rule the whole thing runs on.</span> The model never states a fact or a number.
+    It finds sources, drafts prose, and tries to refute its own claims. Code fetches every value,
+    recomputes every number, and re-fetches every citation to confirm it still says what was claimed.
+    When data cannot be fetched, the pipeline holds the value and ships nothing rather than guess.
+    That refusal is the product.</p>
+  </div>
+</div></section>
+
+<section id="proof"><div class="wrap">
+  <h2>Measured, not asserted</h2>
+  <p class="sub">Every number below comes from a command you can run yourself against a clean checkout,
+    with no API keys and no LLM calls.</p>
+  <div class="stats">
+    <div class="stat"><div class="n">184/184</div><div class="l">checks passing</div></div>
+    <div class="stat"><div class="n">12 + 5</div><div class="l">trust + originality layers</div></div>
+    <div class="stat"><div class="n">11</div><div class="l">LLM providers</div></div>
+    <div class="stat"><div class="n">0</div><div class="l">keys needed to try it</div></div>
+  </div>
+  <div style="height:22px"></div>
+<pre><span class="c"># zero-config dry run. no keys, no model calls, real arithmetic.</span>
+$ node orchestrator.mjs --site example-cooking-converter --dry-run
+
+  01..09  <span class="o">ok</span>
+  stage 04  validated 5 constants via L2-L5
+            <span class="k">us_cup_ml</span>=<span class="v">236.5882365</span>   <span class="k">water_g_per_cup</span>=<span class="v">236.164</span>
+  stage 10  <span class="w">blocked</span>, awaiting human sign-off
+  <span class="c">→ Nothing published. The gate worked.</span></pre>
+</div></section>
+
+<section id="how"><div class="wrap">
+  <h2>How a page gets made</h2>
+  <p class="sub">Research runs first on purpose. Generate first and you are checking hallucinations afterwards.
+    Research first and generation has nothing left to invent.</p>
+  <ol class="steps">
+    <li><h4>Research before writing</h4><p>Agents search, read primary sources, and extract claims.
+      Nothing is drafted yet. A claim with no source is dropped at the door.</p></li>
+    <li><h4>Validate every value</h4><p>Each number is fetched from its primary source, cross-checked against
+      the median of its citations, range-checked and freshness-checked, or it is held back.</p></li>
+    <li><h4>Generate against the bundle</h4><p>Prose is written only from validated data. Every figure stays a
+      token that the build step fills from code. The model never types a number.</p></li>
+    <li><h4>Refute it</h4><p>A separate agent attacks each claim. Two refutations out of three kills it.
+      Then every cited URL is re-fetched and must still contain the claim.</p></li>
+    <li><h4>Earn the ranking</h4><p>Originality layers read what already ranks and score what this page adds
+      beyond it. A page that only restates the competition is blocked, not shipped.</p></li>
+    <li><h4>Stop at the human gate</h4><p>A clean run halts and waits for you. The pipeline never publishes
+      on its own.</p></li>
+  </ol>
+</div></section>
+
+<section id="providers"><div class="wrap">
+  <h2>Runs on any LLM</h2>
+  <p class="sub">One environment variable, <code>PSEO_PROVIDER</code>. Two HTTP wire formats cover the whole
+    OpenAI-compatible world. A missing model throws a loud configuration error instead of guessing.</p>
+  <div class="tw"><table>
+    <tr><th>Provider</th><th>Transport</th><th>Status</th></tr>
+    <tr><td class="m">stub</td><td class="m">none (default)</td><td><span class="pill ok">proven end to end</span></td></tr>
+    <tr><td class="m">claude</td><td class="m">local CLI</td><td><span class="pill ok">battle tested</span></td></tr>
+    <tr><td class="m">anthropic</td><td class="m">HTTP · Messages</td><td><span class="pill wip">code complete</span></td></tr>
+    <tr><td class="m">openai · kimi · glm · deepseek · ollama</td><td class="m">HTTP · OpenAI schema</td><td><span class="pill wip">code complete</span></td></tr>
+    <tr><td class="m">codex · gemini</td><td class="m">local CLI</td><td><span class="pill wip">needs a Claude-Code-style wrapper</span></td></tr>
+    <tr><td class="m">custom</td><td class="m">HTTP · either schema</td><td><span class="pill ok">env driven</span></td></tr>
+  </table></div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>What it is honest about</h2>
+  <p class="sub">The engine guarantees a floor. It does not manufacture demand.</p>
+  <div class="grid">
+    <div class="card"><div class="ix">it does</div><h3>Refuse to fabricate</h3>
+      <p>No invented numbers, no uncited claims, no stale data presented as fresh. That floor holds under
+        adversarial audit.</p></div>
+    <div class="card"><div class="ix">it does</div><h3>Build real utility</h3>
+      <p>Working calculators and converters, not articles about calculators. Utility is what earns the ranking.</p></div>
+    <div class="card"><div class="ix">it does not</div><h3>Manufacture authority</h3>
+      <p>Links, brand and time still decide competitive niches. Correctness is necessary and not sufficient.</p></div>
+    <div class="card"><div class="ix">it does not</div><h3>Publish for you</h3>
+      <p>Every clean run stops at a human gate. Deployment is opt in and degrades to a preview on any stack.</p></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><div class="r">
+  <span>GroundTruth · MIT</span>
+  <a href="https://github.com/theluckystrike/groundtruth">GitHub</a>
+  <a href="https://www.npmjs.com/package/groundtruth">npm</a>
+  <span class="sp">Node 18.17+</span>
+</div></div></footer>
+
+</body>
+</html>
