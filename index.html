@@ -198,7 +198,7 @@ footer nav a{color:var(--mut);border-bottom:1px solid var(--line2)}
 @media (hover:hover){.card:hover{transform:translateY(-2px);border-color:#CFCBBE}}
 @media (pointer:coarse){nav.top a,footer nav a{min-height:48px;display:inline-flex;align-items:center}summary{min-height:56px;align-items:center}.cmd button{min-height:48px}}
 html,body{overflow-x:hidden;max-width:100%}
-@media (max-width:520px){nav.top a:not(.gh){display:none}}
+@media (max-width:520px){nav.top a:not([href^="#"]){display:none}nav.top{gap:4px 12px;font-size:12px}}
 </style>
 </head>
 <body>
@@ -214,7 +214,7 @@ html,body{overflow-x:hidden;max-width:100%}
       <a href="#how">method</a>
       <a href="#providers">providers</a>
       <a href="#behind">who</a>
-      <a class="gh" href="https://github.com/theluckystrike/toolsthatrank" target="_blank" rel="noopener">github ↗</a>
+      <a class="gh" href="https://github.com/theluckystrike" target="_blank" rel="noopener">github ↗</a>
     </nav>
   </div>
 </header>
@@ -222,7 +222,6 @@ html,body{overflow-x:hidden;max-width:100%}
 <div class="status">
   <div class="in">
     <span style="display:inline-flex;align-items:center;gap:6px"><span class="dot" aria-hidden="true"></span>50+ sites live</span>
-    <span class="sep" aria-hidden="true">·</span><span>10M+ impressions / month</span>
     <span class="sep" aria-hidden="true">·</span><span>10,000 clicks / month</span>
     <span class="sep" aria-hidden="true">·</span><span>20,000 extension users</span>
     <span class="sep" aria-hidden="true">·</span><span>shipped by agents, not by hand</span>
@@ -238,21 +237,21 @@ html,body{overflow-x:hidden;max-width:100%}
 
   <div class="hero-proof">
     <div class="hp"><div class="hpn">50+</div><div class="hpl">sites live</div></div>
-    <div class="hp"><div class="hpn">10M+</div><div class="hpl">impressions / mo</div></div>
-    <div class="hp"><div class="hpn">10,000</div><div class="hpl">clicks / mo</div></div>
+    <div class="hp"><div class="hpn">10,000</div><div class="hpl">organic clicks / mo</div></div>
+    <div class="hp"><div class="hpn">0</div><div class="hpl">invented numbers</div></div>
     <div class="hp"><div class="hpn">20,000</div><div class="hpl">extension users</div></div>
   </div>
 
   <div class="cta-row">
     <a class="btn-p" href="#tools">See what it shipped</a>
-    <a class="btn-s" href="https://github.com/theluckystrike/toolsthatrank" target="_blank" rel="noopener">Read the source</a>
+    <a class="btn-s" href="https://github.com/theluckystrike" target="_blank" rel="noopener">Read the source</a>
   </div>
 
   <div class="cmd" id="install">
-    <code><span class="p">$ </span>npx groundtruth --site my-tool --dry-run</code>
+    <code><span class="p">$ </span>node orchestrator.mjs --site example-cooking-converter --dry-run</code>
     <button type="button" id="cp" aria-label="Copy install command">copy</button>
   </div>
-  <div class="cmdnote">runs the whole pipeline with no keys and no model calls. free, MIT.</div>
+  <div class="cmdnote">the zero-key dry run. no model calls, real arithmetic, and it stops at the gate.</div>
 </section>
 
 
@@ -324,7 +323,7 @@ html,body{overflow-x:hidden;max-width:100%}
       <h2>What it shipped</h2>
       <span style="font-family:var(--mono);font-size:11px;color:var(--faint2)">a sample of 50+ live</span>
     </div>
-    <p class="qas" data-keyword="programmatic seo tool pipeline" style="margin:16px 0 0;font-size:16px;line-height:1.6;color:var(--body);max-width:62ch">ToolsThatRank has shipped 6 live tool sites citing primary sources including USGS, HMRC and the IRS, with 184 of 184 checks passing.</p>
+    <p class="qas" data-keyword="programmatic seo tool pipeline" style="margin:16px 0 0;font-size:16px;line-height:1.6;color:var(--body);max-width:62ch">ToolsThatRank has shipped 50+ live tool sites citing primary sources including USGS, HMRC and the IRS. Six are listed below.</p>
     <p class="sub" style="margin-top:10px">Each one's a working calculator or live-data tool, not an article about one. The model didn't write a single figure on them. Code fetched and recomputed all of it.</p>
 
     <div class="cards">
@@ -379,7 +378,6 @@ html,body{overflow-x:hidden;max-width:100%}
         <div class="cd"><div class="cdn">65</div><div class="cdl">pull requests merged into projects he doesn't own, across 61 repos</div></div>
         <div class="cd"><div class="cdn">237K+</div><div class="cdl">combined stars on those projects, 36 of them above 1,000</div></div>
         <div class="cd"><div class="cdn">50+</div><div class="cdl">sites built and shipped by agents</div></div>
-        <div class="cd"><div class="cdn">10M+</div><div class="cdl">search impressions a month</div></div>
         <div class="cd"><div class="cdn">20,000</div><div class="cdl">users on <a href="https://chromewebstore.google.com/detail/belikenative/gchojmpfpbpmpfgdppfdkpchikbcgabp" target="_blank" rel="noopener">BeLikeNative</a>, 4.7 stars from 377 ratings</div></div>
         <div class="cd"><div class="cdn">$9,447</div><div class="cdl">all-time revenue, Stripe-verified on <a href="https://trustmrr.com/startup/belikenative" target="_blank" rel="noopener">TrustMRR</a></div></div>
       </div>
@@ -473,7 +471,7 @@ html,body{overflow-x:hidden;max-width:100%}
       </details>
       <details>
         <summary><h3 style="display:inline;font-size:15.5px;font-weight:500">Is ToolsThatRank free to try?</h3></summary>
-        <p>Yes. It's MIT licensed, and stub mode runs the whole pipeline with no API keys and no model calls. So you can watch it validate constants and refuse to publish before you spend a cent.</p>
+        <p>Yes. It's MIT licensed, and stub mode runs the whole pipeline with no API keys and no model calls. So you can watch it validate constants and refuse to publish before you spend a cent. The repo goes public alongside the first tagged release.</p>
       </details>
       <details>
         <summary><h3 style="display:inline;font-size:15.5px;font-weight:500">Which LLM does it need?</h3></summary>
@@ -500,8 +498,8 @@ html,body{overflow-x:hidden;max-width:100%}
         <a href="#proof">proof</a>
         <a href="#tools">shipped</a>
         <a href="#how">method</a>
-        <a href="https://github.com/theluckystrike/toolsthatrank" target="_blank" rel="noopener">github</a>
-        <a href="https://www.npmjs.com/package/groundtruth" target="_blank" rel="noopener">npm</a>
+        <a href="https://github.com/theluckystrike" target="_blank" rel="noopener">github</a>
+        <a href="https://discord.gg/QeHxTFbqmC" target="_blank" rel="noopener">discord</a>
       </nav>
     </div>
     <div class="copy">© 2026 toolsthatrank.com · built and shipped by autonomous agents</div>
@@ -510,7 +508,7 @@ html,body{overflow-x:hidden;max-width:100%}
 </div>
 <script>
 document.getElementById('cp').addEventListener('click',function(){
-  var b=this;navigator.clipboard.writeText('npx groundtruth --site my-tool --dry-run').then(function(){
+  var b=this;navigator.clipboard.writeText('node orchestrator.mjs --site example-cooking-converter --dry-run').then(function(){
     b.textContent='ok';setTimeout(function(){b.textContent='copy'},1400);});
 });
 </script>
@@ -523,7 +521,11 @@ document.getElementById('cp').addEventListener('click',function(){
       "name": "ToolsThatRank",
       "url": "https://toolsthatrank.com/",
       "description": "An autonomous pipeline that builds data-backed web tools and publishes them only when every value has been fetched, recomputed and re-verified against a primary source.",
-      "knowsAbout": ["programmatic SEO", "anti-hallucination content pipelines", "data-backed web tools"]
+      "knowsAbout": [
+        "programmatic SEO",
+        "anti-hallucination content pipelines",
+        "data-backed web tools"
+      ]
     },
     {
       "@type": "WebSite",
@@ -534,11 +536,28 @@ document.getElementById('cp').addEventListener('click',function(){
       "@type": "WebPage",
       "url": "https://toolsthatrank.com/",
       "name": "ToolsThatRank",
-      "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".qas"] },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".qas"
+        ]
+      },
       "isBasedOn": [
-        { "@type": "CreativeWork", "name": "USGS Water Data", "url": "https://waterdata.usgs.gov/" },
-        { "@type": "CreativeWork", "name": "HM Revenue and Customs", "url": "https://www.gov.uk/government/organisations/hm-revenue-customs" },
-        { "@type": "CreativeWork", "name": "Internal Revenue Service", "url": "https://www.irs.gov/" }
+        {
+          "@type": "CreativeWork",
+          "name": "USGS Water Data",
+          "url": "https://waterdata.usgs.gov/"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "HM Revenue and Customs",
+          "url": "https://www.gov.uk/government/organisations/hm-revenue-customs"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Internal Revenue Service",
+          "url": "https://www.irs.gov/"
+        }
       ]
     },
     {
@@ -549,16 +568,55 @@ document.getElementById('cp').addEventListener('click',function(){
       "operatingSystem": "Any",
       "softwareVersion": "1.0.0",
       "license": "https://opensource.org/licenses/MIT",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
     },
     {
       "@type": "FAQPage",
       "mainEntity": [
-        { "@type": "Question", "name": "How do you stop an LLM from hallucinating numbers?", "acceptedAnswer": { "@type": "Answer", "text": "ToolsThatRank removes the model's permission to write numbers: all 12 trust layers require code to fetch and recompute every figure from its source." } },
-        { "@type": "Question", "name": "Can AI-generated tools rank in Google?", "acceptedAnswer": { "@type": "Answer", "text": "Google's 2024 core update named scaled content abuse: pages that mainly summarize what others say, at scale, regardless of how they were made. A working calculator isn't that. Utility and verified data are what earn the position." } },
-        { "@type": "Question", "name": "What is a programmatic SEO pipeline?", "acceptedAnswer": { "@type": "Answer", "text": "A system that generates many pages from one template and a data source. This one won't emit a page whose numbers can't be traced back to a primary source. That's why it finishes fewer pages than it starts." } },
-        { "@type": "Question", "name": "Is ToolsThatRank free to try?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The engine is MIT licensed and the stub mode runs the full pipeline with no API keys and no model calls." } },
-        { "@type": "Question", "name": "Which LLM does it need?", "acceptedAnswer": { "@type": "Answer", "text": "Any of eleven, selected with one environment variable. A missing model throws a loud configuration error rather than guessing." } }
+        {
+          "@type": "Question",
+          "name": "How do you stop an LLM from hallucinating numbers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ToolsThatRank removes the model's permission to write numbers: all 12 trust layers require code to fetch and recompute every figure from its source."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can AI-generated tools rank in Google?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google's 2024 core update named scaled content abuse: pages that mainly summarize what others say, at scale, regardless of how they were made. A working calculator isn't that. Utility and verified data are what earn the position."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a programmatic SEO pipeline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A system that generates many pages from one template and a data source. This one won't emit a page whose numbers can't be traced back to a primary source. That's why it finishes fewer pages than it starts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is ToolsThatRank free to try?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. It's MIT licensed and stub mode runs the full pipeline with no API keys and no model calls."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which LLM does it need?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Any of eleven, selected with one environment variable. A missing model throws a loud configuration error rather than guessing."
+          }
+        }
       ]
     }
   ]
