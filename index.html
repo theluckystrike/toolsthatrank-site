@@ -207,20 +207,16 @@ footer nav a{color:var(--mut);border-bottom:1px solid var(--line2)}
 .hero{display:grid;grid-template-columns:1fr;gap:clamp(30px,4cqw,52px);
   padding-top:clamp(34px,5cqw,68px);padding-bottom:clamp(30px,4cqw,48px)}
 @container (min-width:880px){.hero{grid-template-columns:1.15fr .85fr;align-items:start}}
-.run{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--faint);
-  padding-bottom:12px;margin-bottom:20px;border-bottom:1px solid var(--line)}
-.hero h1{font-size:clamp(31px,5.4cqw,56px);line-height:1.04;letter-spacing:-.036em;max-width:none}
-.strike{position:relative;color:var(--mut);white-space:nowrap}
-.strike::after{content:"";position:absolute;left:-.02em;right:-.02em;top:.56em;height:2px;background:var(--acc)}
-.hline{margin-top:clamp(20px,2.6cqw,28px);padding-top:16px;border-top:1px solid var(--line);
-  font-family:var(--mono);font-size:12px;color:var(--faint2)}
+.hero h1{font-size:clamp(33px,5.6cqw,58px);line-height:1.03;letter-spacing:-.038em;max-width:15ch;text-wrap:balance}
+.hline{margin-top:clamp(20px,2.6cqw,28px);font-size:14px;line-height:1.6;color:var(--mut)}
+.hline strong{color:var(--ink);font-weight:600}
 .ledg{border:1px solid var(--line);border-radius:3px;background:var(--white);overflow:hidden}
 .ledghead{display:flex;justify-content:space-between;gap:12px;padding:11px 14px;border-bottom:1px solid var(--line);
   font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
 .lrow{display:flex;align-items:center;gap:10px;padding:11px 14px;border-bottom:1px solid var(--line4)}
 .lrow:last-child{border-bottom:0}
 .lrow.held{background:#FBF7EC}
-.ln{flex:1;min-width:0;font-family:var(--mono);font-size:12px;color:var(--mut);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ln{flex:1;min-width:0;font-size:13px;color:var(--mut);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .lv{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:13.5px;font-weight:500;color:var(--ink)}
 .lv.none{font-size:11.5px;font-weight:400;color:#8A6414;letter-spacing:.04em}
 .lt{flex:none;width:52px;text-align:right;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase}
@@ -270,26 +266,25 @@ html{overflow-x:hidden}
 
 <section class="in hero">
   <div class="hcol">
-    <div class="run">run 0247 &#183; example-cooking-converter &#183; stage 04</div>
-    <h1>It builds the tool.<br>Then it tries to<br><span class="strike">break its own numbers.</span></h1>
-    <p class="lede">Point it at a niche. It researches, builds a working calculator, and refuses to ship a single figure it cannot trace back to a source. When a value will not prove, the run stops and the page waits.</p>
+    <h1>Build calculator sites that rank in Google</h1>
+    <p class="lede">Point it at any niche. It researches the topic, checks every figure against a primary source, and builds a working calculator you can deploy. It will not publish a number it cannot prove.</p>
     <div class="cta-row">
       <a class="btn-p" href="#build">Get the pipeline &#183; $99</a>
-      <a class="btn-s" href="#proof">See what it shipped</a>
+      <a class="btn-s" href="#tools">See the sites it built</a>
     </div>
-    <div class="hline">50+ sites live &#183; 10,000 organic clicks a month &#183; six weeks old</div>
+    <div class="hline">Used by one operator to run <strong>50+ live sites</strong> earning <strong>10,000 organic clicks a month</strong></div>
   </div>
 
   <div class="hcol">
     <div class="ledg">
-      <div class="ledghead"><span>Constant ledger</span><span>4 cleared &#183; 1 held</span></div>
-      <div class="lrow"><span class="ln">us_cup_ml</span><span class="lv">236.5882365</span><span class="lt ok">cleared</span></div>
-      <div class="lrow"><span class="ln">water_g_per_cup</span><span class="lv">236.164</span><span class="lt ok">cleared</span></div>
-      <div class="lrow"><span class="ln">flour_g_per_cup</span><span class="lv">125</span><span class="lt ok">cleared</span></div>
-      <div class="lrow"><span class="ln">oz_g</span><span class="lv">28.349523125</span><span class="lt ok">cleared</span></div>
-      <div class="lrow held"><span class="ln">butter_g_per_cup</span><span class="lv none">no value</span><span class="lt no">held</span></div>
+      <div class="ledghead"><span>What it checked on the last run</span><span>4 cleared, 1 held</span></div>
+      <div class="lrow"><span class="ln">US cup in millilitres</span><span class="lv">236.5882365</span><span class="lt ok">cleared</span></div>
+      <div class="lrow"><span class="ln">Water, grams per cup</span><span class="lv">236.164</span><span class="lt ok">cleared</span></div>
+      <div class="lrow"><span class="ln">Flour, grams per cup</span><span class="lv">125</span><span class="lt ok">cleared</span></div>
+      <div class="lrow"><span class="ln">Ounce in grams</span><span class="lv">28.349523125</span><span class="lt ok">cleared</span></div>
+      <div class="lrow held"><span class="ln">Butter, grams per cup</span><span class="lv none">no value</span><span class="lt no">held</span></div>
     </div>
-    <p class="ledgnote">Four constants cleared. One did not, so the page ships without the unit that depended on it. Not with a plausible substitute.</p>
+    <p class="ledgnote">Four values cleared. One did not, so the page shipped without the unit that depended on it, rather than with a plausible substitute.</p>
   </div>
 </section>
 
@@ -381,7 +376,7 @@ html{overflow-x:hidden}
 
   01..09    <span class="ok">ok</span>
   stage 04  validated 5 constants via L2-L5
-            <span class="hi">us_cup_ml=236.5882365   water_g_per_cup=236.164</span>
+            <span class="hi">US cup = 236.5882365 ml   water = 236.164 g per cup</span>
   stage 10  <span class="w">blocked</span>, awaiting human sign-off
 
   → Nothing published. The gate worked.<span class="cursor" aria-hidden="true">▌</span></pre>
