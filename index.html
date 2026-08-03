@@ -78,7 +78,6 @@ nav.top a:hover{color:var(--ink)}
 .sep{color:#C6C2B6}
 
 h1{margin:0;font-size:clamp(34px,6.2cqw,66px);line-height:1.02;letter-spacing:-.038em;font-weight:600;max-width:16ch;text-wrap:balance}
-.mark{color:var(--acc);box-shadow:inset 0 -.09em 0 rgba(29,107,79,.28)}
 .lede{margin:clamp(18px,2.4cqw,26px) 0 0;font-size:clamp(16.5px,1.7cqw,20px);line-height:1.5;color:var(--body);max-width:50ch;text-wrap:pretty}
 h2{margin:0;font-size:clamp(24px,3.2cqw,36px);font-weight:600;letter-spacing:-.028em;line-height:1.1}
 h3{margin:0;font-size:17px;font-weight:600;letter-spacing:-.02em;line-height:1.25}
@@ -160,13 +159,6 @@ footer nav a{color:var(--mut);border-bottom:1px solid var(--line2)}
 .mk.no::before,.mk.no::after{width:11px;height:1.5px;left:1px;top:6px}
 .mk.no::before{transform:rotate(45deg)} .mk.no::after{transform:rotate(-45deg)}
 
-.eyebrow{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--acc);border:1px solid #C9DED3;background:#EDF4F0;padding:5px 11px;border-radius:999px;margin-bottom:20px}
-.hero-proof{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(50%,132px),1fr));gap:1px;background:var(--line);
-  border:1px solid var(--line);border-radius:3px;overflow:hidden;margin-top:clamp(26px,3.4cqw,36px);max-width:640px}
-.hp{background:var(--white);padding:15px 16px}
-.hpn{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:clamp(22px,2.9cqw,30px);font-weight:600;letter-spacing:-.03em;line-height:1;color:var(--ink)}
-.hpl{margin-top:6px;font-size:12px;line-height:1.3;color:var(--mut)}
 .cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:clamp(22px,2.8cqw,30px)}
 .btn-p,.btn-s{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:3px;
   font-size:15px;font-weight:500;border-bottom:0}
@@ -211,6 +203,29 @@ footer nav a{color:var(--mut);border-bottom:1px solid var(--line2)}
 .anchor strong{color:var(--ink);font-weight:600}
 @container (min-width:760px){.creds{grid-template-columns:repeat(4,1fr)}}
 @media (max-width:430px){.creds{grid-template-columns:1fr}}
+
+.hero{display:grid;grid-template-columns:1fr;gap:clamp(30px,4cqw,52px);
+  padding-top:clamp(34px,5cqw,68px);padding-bottom:clamp(30px,4cqw,48px)}
+@container (min-width:880px){.hero{grid-template-columns:1.15fr .85fr;align-items:start}}
+.run{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--faint);
+  padding-bottom:12px;margin-bottom:20px;border-bottom:1px solid var(--line)}
+.hero h1{font-size:clamp(31px,5.4cqw,56px);line-height:1.04;letter-spacing:-.036em;max-width:none}
+.strike{position:relative;color:var(--mut);white-space:nowrap}
+.strike::after{content:"";position:absolute;left:-.02em;right:-.02em;top:.56em;height:2px;background:var(--acc)}
+.hline{margin-top:clamp(20px,2.6cqw,28px);padding-top:16px;border-top:1px solid var(--line);
+  font-family:var(--mono);font-size:12px;color:var(--faint2)}
+.ledg{border:1px solid var(--line);border-radius:3px;background:var(--white);overflow:hidden}
+.ledghead{display:flex;justify-content:space-between;gap:12px;padding:11px 14px;border-bottom:1px solid var(--line);
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+.lrow{display:flex;align-items:center;gap:10px;padding:11px 14px;border-bottom:1px solid var(--line4)}
+.lrow:last-child{border-bottom:0}
+.lrow.held{background:#FBF7EC}
+.ln{flex:1;min-width:0;font-family:var(--mono);font-size:12px;color:var(--mut);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lv{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:13.5px;font-weight:500;color:var(--ink)}
+.lv.none{font-size:11.5px;font-weight:400;color:#8A6414;letter-spacing:.04em}
+.lt{flex:none;width:52px;text-align:right;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+.lt.ok{color:var(--acc)} .lt.no{color:#8A6414}
+.ledgnote{margin:14px 0 0;font-size:13.5px;line-height:1.55;color:var(--mut)}
 @media (hover:hover){.bcard:hover{border-color:#CFCBBE;transform:translateY(-2px)}}
 .bcard{transition:transform 140ms ease,border-color 140ms ease}
 @media (hover:hover){.card:hover{transform:translateY(-2px);border-color:#CFCBBE}}
@@ -253,22 +268,28 @@ html{overflow-x:hidden}
 
 <main id="main" tabindex="-1">
 
-<section class="in" style="padding-top:clamp(38px,6cqw,80px);padding-bottom:clamp(30px,4cqw,48px)">
-  <div class="eyebrow">Agent-built · human-gated · runs on your machine</div>
-  <h1>Agents build the tools. <span class="mark">Code proves every number.</span></h1>
-  <p class="lede">One command researches a niche, builds a working calculator, checks every figure against a primary source, then stages it for your sign-off. That's <strong style="font-weight:600;color:var(--ink)">50+ live sites</strong> so far, earning <strong style="font-weight:600;color:var(--ink)">10,000 clicks a month</strong>. Nothing hand-written. No invented numbers.</p>
-
-  <div class="hero-proof">
-    <div class="hp"><div class="hpn">50+</div><div class="hpl">sites live</div></div>
-    <div class="hp"><div class="hpn">10,000</div><div class="hpl">organic clicks / mo</div></div>
-    <div class="hp"><div class="hpn">6 wks</div><div class="hpl">age of the sites below</div></div>
-    
-    <div class="hp"><div class="hpn">20,000</div><div class="hpl">extension users</div></div>
+<section class="in hero">
+  <div class="hcol">
+    <div class="run">run 0247 &#183; example-cooking-converter &#183; stage 04</div>
+    <h1>It builds the tool.<br>Then it tries to<br><span class="strike">break its own numbers.</span></h1>
+    <p class="lede">Point it at a niche. It researches, builds a working calculator, and refuses to ship a single figure it cannot trace back to a source. When a value will not prove, the run stops and the page waits.</p>
+    <div class="cta-row">
+      <a class="btn-p" href="#build">Get the pipeline &#183; $99</a>
+      <a class="btn-s" href="#proof">See what it shipped</a>
+    </div>
+    <div class="hline">50+ sites live &#183; 10,000 organic clicks a month &#183; six weeks old</div>
   </div>
 
-  <div class="cta-row">
-    <a class="btn-p" href="#build">Get the pipeline</a>
-    <a class="btn-s" href="#proof">See the proof</a>
+  <div class="hcol">
+    <div class="ledg">
+      <div class="ledghead"><span>Constant ledger</span><span>4 cleared &#183; 1 held</span></div>
+      <div class="lrow"><span class="ln">us_cup_ml</span><span class="lv">236.5882365</span><span class="lt ok">cleared</span></div>
+      <div class="lrow"><span class="ln">water_g_per_cup</span><span class="lv">236.164</span><span class="lt ok">cleared</span></div>
+      <div class="lrow"><span class="ln">flour_g_per_cup</span><span class="lv">125</span><span class="lt ok">cleared</span></div>
+      <div class="lrow"><span class="ln">oz_g</span><span class="lv">28.349523125</span><span class="lt ok">cleared</span></div>
+      <div class="lrow held"><span class="ln">butter_g_per_cup</span><span class="lv none">no value</span><span class="lt no">held</span></div>
+    </div>
+    <p class="ledgnote">Four constants cleared. One did not, so the page ships without the unit that depended on it. Not with a plausible substitute.</p>
   </div>
 </section>
 
