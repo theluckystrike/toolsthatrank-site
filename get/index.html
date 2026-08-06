@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your ToolsThatRank pipeline is ready</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Post-payment delivery for the ToolsThatRank pipeline.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2786%27 fill=%27%231D6B4F%27%3E%E2%97%88%3C/text%3E%3C/svg%3E">
+<style>
+/* Same design system as the sales page (site/index.html): IBM Plex family, same palette
+   and spacing. Fonts are NOT loaded from a remote host (kept CSP-clean); the stack falls
+   back to system-ui, which matches closely. Zero external requests from this document. */
+:root{
+  --acc:#1D6B4F; --acc-br:#5FBE8E; --amber:#D9A441;
+  --ink:#16150F; --body:#4A4840; --mut:#6A6860; --faint:#6E6B61; --faint2:#6E6B61;
+  --line:#E2DFD5; --line2:#DAD7CC; --line3:#EDEBE3; --line4:#F1EFE8;
+  --paper:#F6F5F1; --white:#FFFFFF; --outer:#E8E6DE;
+  --sans:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,'SF Mono',Menlo,monospace;
+}
+*{box-sizing:border-box}
+html{overflow-x:hidden}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--outer);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:var(--acc);text-decoration:none;border-bottom:1px solid rgba(29,107,79,.28)}
+a:hover{color:var(--ink);border-bottom-color:var(--ink)}
+button{font-family:inherit;cursor:pointer}
+button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--acc);outline-offset:2px;border-radius:3px}
+::selection{background:#D8E7DE}
+img{max-width:100%;height:auto}
+
+.frame{width:100%;max-width:1180px;margin:0 auto;container-type:inline-size;background:var(--paper);
+  color:var(--ink);font:400 16px/1.6 var(--sans);border-left:1px solid var(--line2);border-right:1px solid var(--line2);min-height:100svh}
+.in{max-width:760px;margin:0 auto;padding-left:20px;padding-right:20px}
+.sec{padding-top:clamp(40px,6cqw,80px);padding-bottom:clamp(40px,6cqw,80px)}
+.bt{border-top:1px solid var(--line)}
+
+header{background:rgba(246,245,241,.94);border-bottom:1px solid var(--line)}
+header .in{max-width:1080px;padding-top:12px;padding-bottom:12px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px}
+.brand{display:flex;align-items:baseline;gap:7px;margin-right:auto;border:0}
+.brand .g{color:var(--acc);font-size:16px;line-height:1}
+.brand .n{font-size:16px;font-weight:600;letter-spacing:-.025em;color:var(--ink)}
+.brand a{border:0}
+nav.top{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;font-family:var(--mono);font-size:12.5px}
+nav.top a{color:var(--mut);border-bottom:1px solid var(--line2);white-space:nowrap;padding:2px 0}
+nav.top a:hover{color:var(--ink)}
+
+.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+h1{margin:14px 0 0;font-size:clamp(30px,5.4cqw,52px);line-height:1.03;letter-spacing:-.038em;font-weight:600;max-width:20ch;text-wrap:balance}
+h2{margin:0;font-size:clamp(19px,2.2cqw,24px);font-weight:600;letter-spacing:-.022em;line-height:1.2}
+.lede{margin:clamp(16px,2.2cqw,22px) 0 0;font-size:clamp(16px,1.6cqw,19px);line-height:1.55;color:var(--body);max-width:54ch;text-wrap:pretty}
+.sub{margin:12px 0 0;font-size:15px;line-height:1.6;color:var(--mut);max-width:60ch}
+
+/* verification status chip */
+.chip{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;
+  letter-spacing:.08em;text-transform:uppercase;border-radius:3px;padding:5px 9px}
+.chip.ok{color:#1D6B4F;background:#E4EFE8} .chip.wait{color:#8A6414;background:#F6EFDC}
+.chip.bad{color:#8A2F14;background:#F6E2DC}
+.dot{width:7px;height:7px;border-radius:50%;background:currentColor;display:inline-block}
+
+.oc{background:var(--white);border:1px solid #C9DED3;border-radius:3px;padding:clamp(20px,2.8cqw,30px);margin-top:clamp(22px,3cqw,32px)}
+.oc.warn{border-color:#E7D6B4}
+.orderref{font-family:var(--mono);font-size:12.5px;color:var(--faint2);margin:0 0 6px}
+.orderref b{color:var(--ink);font-weight:600}
+
+.dlwrap{margin-top:6px}
+.btn-p,.btn-s{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:3px;
+  font-size:15px;font-weight:500;border-bottom:0;text-decoration:none}
+.btn-p{background:var(--acc);color:#F6F5F1;border:1px solid var(--acc)}
+.btn-p:hover{background:#175840;color:#fff;border-color:#175840}
+.btn-s{background:transparent;color:var(--ink);border:1px solid var(--line2)}
+.btn-s:hover{border-color:var(--ink);color:var(--ink)}
+.btn-p[aria-disabled="true"]{opacity:.55;pointer-events:none}
+.dlmeta{margin:12px 0 0;font-size:13px;line-height:1.55;color:var(--mut)}
+
+.hashrow{margin-top:16px}
+.hashlabel{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+code.hash{display:block;margin-top:6px;font-family:var(--mono);font-size:12px;line-height:1.5;word-break:break-all;
+  background:var(--line4);border:1px solid var(--line);border-radius:3px;padding:10px 12px;color:var(--ink)}
+code.k{font-family:var(--mono);font-size:13.5px;background:var(--line4);border:1px solid var(--line);border-radius:3px;padding:1px 5px}
+
+pre.term{margin:clamp(18px,2.4cqw,26px) 0 0;background:var(--ink);border-radius:3px;padding:clamp(16px,2.2cqw,24px);
+  overflow-x:auto;font-family:var(--mono);font-size:12.5px;line-height:1.85;color:#CFCBBB;white-space:pre}
+pre.term .c{color:#8F8B7A} pre.term .ok{color:var(--acc-br)} pre.term .hi{color:#F2F0E9}
+
+.steps{margin-top:clamp(22px,3cqw,32px)}
+ol.qs{margin:14px 0 0;padding-left:1.15rem}
+ol.qs li{margin:.4rem 0;line-height:1.55;font-size:15px}
+.docs{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:14px;font-family:var(--mono);font-size:13px}
+
+.guar{margin-top:clamp(22px,3cqw,32px);padding-top:18px;border-top:1px solid var(--line);font-size:14px;line-height:1.6;color:var(--mut)}
+.guar strong{display:block;color:var(--ink);font-weight:600;margin-bottom:6px}
+.support{margin-top:14px;font-size:14px;line-height:1.6;color:var(--mut)}
+.support a{font-weight:500}
+
+.hidden{display:none}
+
+footer{margin-top:clamp(40px,6cqw,80px);border-top:1px solid var(--line);background:var(--white)}
+footer .in{max-width:1080px;padding-top:clamp(24px,3cqw,36px);padding-bottom:clamp(24px,3cqw,36px);
+  display:flex;flex-wrap:wrap;gap:14px 28px;align-items:baseline}
+footer .l{flex:1 1 220px;font-size:12.5px;line-height:1.6;color:var(--faint2)}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--mono);font-size:12.5px}
+footer nav a{color:var(--mut);border-bottom:1px solid var(--line2)}
+@media (pointer:coarse){nav.top a,footer nav a{min-height:44px;display:inline-flex;align-items:center}}
+</style>
+</head>
+<body>
+<div class="frame">
+
+<header>
+  <div class="in">
+    <a class="brand" href="/"><span class="g" aria-hidden="true">&#9672;</span><span class="n">ToolsThatRank</span></a>
+    <nav class="top" aria-label="Primary">
+      <a href="/">home</a>
+      <a href="https://github.com/theluckystrike" target="_blank" rel="noopener">github <span aria-hidden="true">&#8599;</span></a>
+    </nav>
+  </div>
+</header>
+
+<main class="in sec" id="main">
+
+  <!-- LOADING: shown until the token is resolved. No download exists in the DOM yet. -->
+  <section id="state-loading" aria-live="polite">
+    <span class="chip wait"><span class="dot" aria-hidden="true"></span>Confirming your order</span>
+    <h1>Checking your purchase&#8230;</h1>
+    <p class="lede">One moment while we verify the signed receipt from your payment. Your payment is safe; this only confirms the download.</p>
+  </section>
+
+  <!-- VALID: revealed only after JS verifies a real, paid, signed token for this product.
+       The download control itself is BUILT IN JAVASCRIPT (see script below) and inserted
+       into #dl-slot. It is never present in the served HTML, so the gate is not CSS-only. -->
+  <section id="state-ok" class="hidden" aria-live="polite">
+    <span class="chip ok"><span class="dot" aria-hidden="true"></span>Payment verified</span>
+    <h1>Payment received. Your ToolsThatRank pipeline is ready.</h1>
+    <p class="lede">Thanks for buying the full pipeline. Download the archive below, verify its checksum, and you are ninety seconds from your first dry run.</p>
+
+    <div class="oc">
+      <p class="orderref" id="orderref"></p>
+      <div class="dlwrap" id="dl-slot"><!-- download button injected here by JS on success --></div>
+      <p class="dlmeta">One-time purchase, yours forever. Keep this page&#8217;s link from your receipt to download again on any machine.</p>
+
+      <div class="hashrow">
+        <span class="hashlabel">SHA-256 &#183; ToolsThatRank-1.0.0.zip</span>
+        <code class="hash" id="sha256">1083ce0c3f5d5d527a798144aa5ce0896dbe133854ea0dd253db15387dd573f0</code>
+        <p class="dlmeta">After downloading, run <code class="k">shasum -a 256 ToolsThatRank-1.0.0.zip</code> and confirm it matches the value above.</p>
+      </div>
+    </div>
+
+    <div class="steps">
+      <h2>Quickstart</h2>
+      <p class="sub">Node 18.17 or newer. The default <code class="k">stub</code> provider runs the whole pipeline offline, with no API key, and never fabricates a value.</p>
+<pre class="term"><span class="c"># 1. unzip and enter the folder</span>
+$ unzip ToolsThatRank-1.0.0.zip &amp;&amp; cd ToolsThatRank
+
+<span class="c"># 2. verify the build (runs node --check on every module, then the self-check)</span>
+$ npm run verify            <span class="c"># expect: all modules parse OK + 184/184</span>
+
+<span class="c"># 3. preflight your environment</span>
+$ node doctor.mjs
+
+<span class="c"># 4. a full stub dry-run against the bundled example site</span>
+$ node orchestrator.mjs --site example-cooking-converter --dry-run
+<span class="hi">  &#8594; nothing published. the human gate held.</span></pre>
+      <ol class="qs">
+        <li><b>Unzip</b> the archive and <code class="k">cd ToolsThatRank</code>.</li>
+        <li>Run <code class="k">npm run verify</code> &#8212; it runs <code class="k">node --check</code> on every module, then the self-check suite.</li>
+        <li>Run <code class="k">node doctor.mjs</code> to confirm your Node version and environment.</li>
+        <li>Run the stub dry-run above to watch a full pipeline stop at the human gate without publishing.</li>
+      </ol>
+      <div class="docs">
+        <span class="kicker" style="letter-spacing:.1em">In the zip:</span>
+        <span>README.md</span>
+        <span>QUICKSTART.md</span>
+        <span>docs/PROVIDERS.md</span>
+        <span>docs/CONFIGURATION.md</span>
+        <span>RUN-SITE.md</span>
+      </div>
+    </div>
+
+    <div class="guar">
+      <strong>Fourteen days, no questions, no conditions.</strong>
+      Run it on your own niche. If you do not want it, say so within 14 days and you are refunded in full. You do not have to justify it.
+    </div>
+    <p class="support">Anything not working, or the checksum did not match? Email <a id="support-ok" href="#">support</a> and include your order reference above.</p>
+  </section>
+
+  <!-- INVALID / ABSENT: no download control is ever created on this path. -->
+  <section id="state-bad" class="hidden" aria-live="polite">
+    <span class="chip bad"><span class="dot" aria-hidden="true"></span>Not verified</span>
+    <h1>We could not verify this purchase.</h1>
+    <p class="lede" id="bad-detail">This link does not carry a valid, paid receipt for ToolsThatRank, so we have not shown the download. If you have just paid, give it a few seconds and reload &#8212; the receipt sometimes lands a moment after you do.</p>
+    <div class="oc warn">
+      <p class="sub" style="margin-top:0">Nothing is lost. Your payment is safe regardless of what this page shows.</p>
+      <ol class="qs">
+        <li>Reload this page &#8212; a receipt that was still in flight will resolve.</li>
+        <li>Reopen the exact link from your Stripe payment confirmation, including everything after the <code class="k">#</code>.</li>
+        <li>Still stuck? Email support below with your Stripe receipt and we will re-issue your key by hand.</li>
+      </ol>
+      <p class="support" style="margin-top:14px">Go back to the <a href="/">ToolsThatRank home page</a>, or email <a id="support-bad" href="#">support</a>.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="in">
+    <div class="l">&#169; 2026 toolsthatrank.com &#183; built and shipped by autonomous agents. This delivery page verifies a signed receipt in your browser; the download is never revealed without one.</div>
+    <nav aria-label="Footer">
+      <a href="/">home</a>
+      <a href="/privacy/">privacy</a>
+      <a href="/terms/">terms</a>
+      <a href="https://github.com/theluckystrike" target="_blank" rel="noopener">github</a>
+    </nav>
+  </div>
+</footer>
+</div>
+
+<script type="module">
+import { readFragment, resolveTokenGate } from './verify.mjs';
+
+/* ---- operator configuration. Fill these before deploy (see README.md). ---- */
+
+/* Where the paid .zip is hosted. MUST be a private / tokened location, NOT the public
+   GitHub Pages repo. Left as a placeholder until the operator wires the real URL. */
+const ZIP_URL = '{{ZIP_URL}}';
+
+/* Support address shown on both the success and failure states. */
+const SUPPORT_EMAIL = 'support@toolsthatrank.com';
+
+/* Origin of the live licence Worker. Only used to exchange a #s=<session> ref for a
+   signed token; a #k=<token> link needs no network at all. This is the sole external
+   origin this page ever contacts. Confirm it before deploy. */
+const WORKER_ORIGIN = 'https://toolsthatrank-licence.lipmichal.workers.dev';
+
+const VERSION = '1.0.0';
+const ZIP_NAME = 'ToolsThatRank-' + VERSION + '.zip';
+
+/* ---- state helpers ---- */
+
+const el = (id) => document.getElementById(id);
+function show(which) {
+  el('state-loading').classList.toggle('hidden', which !== 'loading');
+  el('state-ok').classList.toggle('hidden', which !== 'ok');
+  el('state-bad').classList.toggle('hidden', which !== 'bad');
+}
+
+function wireSupport() {
+  const href = SUPPORT_EMAIL.indexOf('{{') === 0
+    ? '#'
+    : 'mailto:' + SUPPORT_EMAIL + '?subject=' + encodeURIComponent('ToolsThatRank download');
+  ['support-ok', 'support-bad'].forEach((id) => {
+    const a = el(id);
+    if (!a) return;
+    a.href = href;
+    a.textContent = SUPPORT_EMAIL.indexOf('{{') === 0 ? 'support' : SUPPORT_EMAIL;
+  });
+}
+
+/*
+ * Exchanges a checkout session/order ref for a signed token via the EXISTING Worker
+ * /success endpoint. The Worker renders an HTML page carrying the token in
+ * <code id="k">...</code>; we pull it out and hand it back to be verified locally.
+ * We never trust the Worker's word for "paid" - the token's signature is re-checked
+ * against the embedded public key before anything is revealed.
+ */
+async function exchangeSession(ref) {
+  try {
+    const url = WORKER_ORIGIN.replace(/\/+$/, '') + '/success?session_id=' + encodeURIComponent(ref);
+    const res = await fetch(url, { method: 'GET', credentials: 'omit', redirect: 'follow' });
+    if (!res.ok) return null;
+    const html = await res.text();
+    const m = /<code id="k">([^<]+)<\/code>/.exec(html);
+    return m ? m[1].trim() : null;
+  } catch (e) {
+    return null;
+  }
+}
+
+/* Builds the download control in JS and inserts it. Called ONLY when the gate is open.
+   The archive URL never exists as a clickable control until this runs. */
+function revealDownload(payload, token) {
+  if (payload && payload.o) {
+    el('orderref').innerHTML = 'Order <b>' + String(payload.o).replace(/[<>&]/g, '') + '</b> confirmed.';
+  }
+  const slot = el('dl-slot');
+  slot.textContent = '';
+
+  // The download is served by the fulfillment Worker's token-gated /download endpoint:
+  // the SAME signed token that opened this gate is required to fetch the bytes, so the
+  // archive URL is not a public link. We build it from the verified token here (never a
+  // static ZIP_URL), which also means the .zip only ever lives in the Worker's storage.
+  // A bundle token (t:"*") must name the slug; a product token carries its own slug.
+  let dlUrl = null;
+  if (token && WORKER_ORIGIN.indexOf('{{') !== 0) {
+    const base = WORKER_ORIGIN.replace(/\/+$/, '') + '/download?k=' + encodeURIComponent(token);
+    dlUrl = (payload && payload.t === '*') ? base + '&slug=toolsthatrank' : base;
+  } else if (ZIP_URL.indexOf('{{') !== 0) {
+    dlUrl = ZIP_URL; // fallback: an explicitly configured direct URL
+  }
+
+  const a = document.createElement('a');
+  a.className = 'btn-p';
+  a.textContent = 'Download ToolsThatRank v' + VERSION + ' (.zip)';
+  if (!dlUrl) {
+    a.setAttribute('aria-disabled', 'true');
+    a.href = '#';
+    const note = document.createElement('p');
+    note.className = 'dlmeta';
+    note.textContent = 'Your purchase is verified. The download link is being finalised - if the button is inactive, email support and we will send the archive directly.';
+    slot.appendChild(a);
+    slot.appendChild(note);
+  } else {
+    a.href = dlUrl;
+    a.setAttribute('download', ZIP_NAME);
+    a.rel = 'noopener';
+    slot.appendChild(a);
+  }
+  show('ok');
+}
+
+async function main() {
+  wireSupport();
+
+  const frag = readFragment(location.hash);
+  let token = null;
+  if (frag.kind === 'token') {
+    token = frag.value;
+  } else if (frag.kind === 'session') {
+    token = await exchangeSession(frag.value);
+  }
+
+  const gate = await resolveTokenGate(token);
+  if (gate.open) {
+    revealDownload(gate.payload, token);
+  } else {
+    if (gate.reason === 'wrong-product') {
+      el('bad-detail').textContent =
+        'This receipt is valid but it is for a different product, so the ToolsThatRank download has not been shown. Reopen the link from your ToolsThatRank payment confirmation.';
+    }
+    show('bad');
+  }
+}
+
+main();
+</script>
+</body>
+</html>
