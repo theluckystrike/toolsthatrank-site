@@ -90,6 +90,14 @@ ol.qs{margin:14px 0 0;padding-left:1.15rem}
 ol.qs li{margin:.4rem 0;line-height:1.55;font-size:15px}
 .docs{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:14px;font-family:var(--mono);font-size:13px}
 
+.manifest{margin-top:clamp(26px,3.4cqw,38px)}
+dl.man{margin:14px 0 0}
+dl.man>div{display:grid;grid-template-columns:minmax(0,190px) 1fr;gap:4px 22px;padding:13px 0;border-top:1px solid var(--line3)}
+dl.man>div:first-child{border-top:0;padding-top:2px}
+dl.man dt{font-weight:600;color:var(--ink);font-size:15px;letter-spacing:-.01em}
+dl.man dd{margin:0;font-size:14.5px;line-height:1.6;color:var(--body)}
+@container (max-width:560px){dl.man>div{grid-template-columns:1fr;gap:2px}}
+
 .guar{margin-top:clamp(22px,3cqw,32px);padding-top:18px;border-top:1px solid var(--line);font-size:14px;line-height:1.6;color:var(--mut)}
 .guar strong{display:block;color:var(--ink);font-weight:600;margin-bottom:6px}
 .support{margin-top:14px;font-size:14px;line-height:1.6;color:var(--mut)}
@@ -155,7 +163,7 @@ footer nav a{color:var(--mut);border-bottom:1px solid var(--line2)}
 $ unzip ToolsThatRank-1.0.0.zip &amp;&amp; cd ToolsThatRank
 
 <span class="c"># 2. verify the build (runs node --check on every module, then the self-check)</span>
-$ npm run verify            <span class="c"># expect: all modules parse OK + 184/184</span>
+$ npm run verify            <span class="c"># expect: all modules parse OK + 120/120</span>
 
 <span class="c"># 3. preflight your environment</span>
 $ node doctor.mjs
@@ -165,18 +173,37 @@ $ node orchestrator.mjs --site example-cooking-converter --dry-run
 <span class="hi">  &#8594; nothing published. the human gate held.</span></pre>
       <ol class="qs">
         <li><b>Unzip</b> the archive and <code class="k">cd ToolsThatRank</code>.</li>
-        <li>Run <code class="k">npm run verify</code> &#8212; it runs <code class="k">node --check</code> on every module, then the self-check suite.</li>
+        <li>Run <code class="k">npm run verify</code>. It runs <code class="k">node --check</code> on every module, then the self-check suite.</li>
         <li>Run <code class="k">node doctor.mjs</code> to confirm your Node version and environment.</li>
         <li>Run the stub dry-run above to watch a full pipeline stop at the human gate without publishing.</li>
       </ol>
-      <div class="docs">
-        <span class="kicker" style="letter-spacing:.1em">In the zip:</span>
-        <span>README.md</span>
-        <span>QUICKSTART.md</span>
-        <span>docs/PROVIDERS.md</span>
-        <span>docs/CONFIGURATION.md</span>
-        <span>RUN-SITE.md</span>
-      </div>
+    </div>
+
+    <div class="manifest">
+      <h2>What is in the archive</h2>
+      <p class="sub">93 files, 708&#8201;KB unpacked from a 205&#8201;KB zip. Everything runs from the folder; the offline stub run needs nothing but Node.</p>
+      <dl class="man">
+        <div>
+          <dt>15-stage pipeline</dt>
+          <dd><code class="k">orchestrator.mjs</code> drives <code class="k">stages/</code>: intake, deep research, SERP validation, generation, fact-check, QA, hardening, build, and a <b>human gate that refuses to publish on its own</b>. 16 shared modules live in <code class="k">lib/</code>.</dd>
+        </div>
+        <div>
+          <dt>8 agent prompts</dt>
+          <dd><code class="k">prompts/</code> holds research, generate, fact-check, humanize, adversarial-QA, information-gain, helpfulness, and discover. Edit them; they are the pipeline&#8217;s behaviour.</dd>
+        </div>
+        <div>
+          <dt>6 written guides</dt>
+          <dd><code class="k">docs/</code> carries QUICKSTART, PROVIDERS, CONFIGURATION, ARCHITECTURE, HOW-TO-RUN-ON-A-NEW-PROJECT, and the NASA Power-of-10 rules the code holds to.</dd>
+        </div>
+        <div>
+          <dt>A worked example</dt>
+          <dd><code class="k">sites/example-cooking-converter/</code> runs end-to-end offline (the dry-run above). <code class="k">sites/_TEMPLATE/</code> is the blank you copy for your own niche.</dd>
+        </div>
+        <div>
+          <dt>Tooling &amp; config</dt>
+          <dd><code class="k">doctor.mjs</code> preflight, <code class="k">discover.mjs</code> keyword discovery, <code class="k">test/selfcheck.mjs</code> (the 120 checks), <code class="k">pipeline.config.mjs</code>, and a documented <code class="k">.env.example</code>.</dd>
+        </div>
+      </dl>
     </div>
 
     <div class="guar">
@@ -190,11 +217,11 @@ $ node orchestrator.mjs --site example-cooking-converter --dry-run
   <section id="state-bad" class="hidden" aria-live="polite">
     <span class="chip bad"><span class="dot" aria-hidden="true"></span>Not verified</span>
     <h1>We could not verify this purchase.</h1>
-    <p class="lede" id="bad-detail">This link does not carry a valid, paid receipt for ToolsThatRank, so we have not shown the download. If you have just paid, give it a few seconds and reload &#8212; the receipt sometimes lands a moment after you do.</p>
+    <p class="lede" id="bad-detail">This link does not carry a valid, paid receipt for ToolsThatRank, so we have not shown the download. If you have just paid, give it a few seconds and reload. The receipt sometimes lands a moment after you do.</p>
     <div class="oc warn">
       <p class="sub" style="margin-top:0">Nothing is lost. Your payment is safe regardless of what this page shows.</p>
       <ol class="qs">
-        <li>Reload this page &#8212; a receipt that was still in flight will resolve.</li>
+        <li>Reload this page. A receipt that was still in flight will resolve.</li>
         <li>Reopen the exact link from your Stripe payment confirmation, including everything after the <code class="k">#</code>.</li>
         <li>Still stuck? Email support below with your Stripe receipt and we will re-issue your key by hand.</li>
       </ol>
