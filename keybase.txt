@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/theluckystrike
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://toolsthatrank.com
+  * I am theluckystrike (https://keybase.io/theluckystrike) on keybase.
+  * I have a public key ASDgtdHhC_B8h58mV4-AsMYSJ0ERrE-pUg8orSdtD0aQggo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120e0b5d1e10bf07c879f26578f80b0c612274111ac4fa9520f28ad276d0f4690820a",
+      "host": "keybase.io",
+      "kid": "0120e0b5d1e10bf07c879f26578f80b0c612274111ac4fa9520f28ad276d0f4690820a",
+      "uid": "cf36e7728345665d9ee43b657fc4db19",
+      "username": "theluckystrike"
+    },
+    "merkle_root": {
+      "ctime": 1786232171,
+      "hash": "7a3c2013686a660353c983c8316da81d78bf832a56ec868cf0df56decf525ec06debb3cd923542eea5d91b30e5d17c90023d1815c41201db09ff72e8007e387c",
+      "hash_meta": "ca3c2d17115c7635ca3c82e86c9d097c54470fa5cd162d50e0e2f97082fdddb5",
+      "seqno": 27717778
+    },
+    "service": {
+      "entropy": "QZRR+/riSLrNxhTDHqxJJoE2",
+      "hostname": "toolsthatrank.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.6.3"
+  },
+  "ctime": 1786232234,
+  "expire_in": 504576000,
+  "prev": "3ca42b71f9250d7df753434a354d95ce1fa2ba064ebc11f63452713e51b5a643",
+  "seqno": 4,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg4LXR4QvwfIefJlePgLDGEidBEaxPqVIPKK0nbQ9GkIIKp3BheWxvYWTESpcCBMQgPKQrcfklDX33U0NKNU2Vzh+iugZOvBH2NFJxPlG1pkPEIJTwvhUXhv77eSX/hIAFuWUD1sZE2Q5K2XaqJEgmgFNMAgHCo3NpZ8RAjU9LQpI/6KxiiSzMI2LpIZZPVdq+IZ6bVDH119nu1Jd/4/D9wwVtyoBPJaX5owt0BTIDojKV0dMzp0A28rYfBqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIBFtb2N67Nv39sf7/f8F5RD3xa1OUGRxaDesNWLaovtdo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/theluckystrike
+
+==================================================================
