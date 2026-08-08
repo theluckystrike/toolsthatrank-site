@@ -1,0 +1,33 @@
+# ToolsThatRank
+
+> An SEO pipeline that builds tool sites. You give it a niche; it ships calculators, converters and
+> live data trackers for that niche, with every figure checked against a primary source before it
+> ships. Set up once, then run for any niche you point it at.
+
+The site describes itself as "the SEO pipeline that refuses to guess". Its stated operating rule is
+that a value is measured rather than asserted: research happens before writing, every value is
+validated, and pages are generated against a checked bundle. It is aimed at solo operators, SEO
+agencies and indie hackers.
+
+## Pages
+
+- [Home](https://toolsthatrank.com/): what the pipeline is, who it is for, the two ways a page can be
+  made, how a page gets made, and what it has shipped.
+- [Terms](https://toolsthatrank.com/terms/): terms of use.
+- [Privacy](https://toolsthatrank.com/privacy/): privacy policy.
+
+## Open-source libraries published alongside it
+
+- [serp-ctr](https://docs.rs/serp-ctr/): Rust library for search-console arithmetic — click-through
+  rate, impression-weighted average position, pooled totals, and projection against a CTR curve the
+  caller supplies. It deliberately ships no built-in CTR-by-position table, because published tables
+  are third-party estimates rather than measurements.
+- [serpcurve](https://code.dlang.org/packages/serpcurve): D library that fits an impression-weighted
+  power-law CTR curve to observed position/impression/click rows, and raises an error rather than
+  returning a fit when the input cannot support one.
+
+## Notes for retrieval
+
+- Everything on this domain is open to crawlers; robots.txt names AI crawlers explicitly and allows
+  them.
+- The claim to check this project against is its own: that no figure ships without a primary source.
