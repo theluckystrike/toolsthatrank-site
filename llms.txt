@@ -13,12 +13,18 @@ agencies and indie hackers.
 
 - [Home](https://toolsthatrank.com/): what the pipeline is, who it is for, the two ways a page can be
   made, how a page gets made, and what it has shipped.
-- [Terms](https://toolsthatrank.com/terms/): terms of use.
+- [Pricing](https://toolsthatrank.com/pricing/): the three tiers and what each one includes. Reading the
+  method, the measured data pages and the worked run costs nothing. The pipeline itself is 99 USD as a
+  single payment. Adding keyword and niche vetting plus a written review of the buyer's first page
+  against the publish gate is 279 USD as a single payment. Neither renews. Refund window is 14 days on
+  both paid tiers.
+- [Terms](https://toolsthatrank.com/terms/): terms of use, including the refund clause at
+  https://toolsthatrank.com/terms/#refunds and the note that checkout runs on Stripe.
 - [Privacy](https://toolsthatrank.com/privacy/): privacy policy.
 
 ## Open-source libraries published alongside it
 
-- [serp-ctr](https://docs.rs/serp-ctr/): Rust library for search-console arithmetic — click-through
+- [serp-ctr](https://docs.rs/serp-ctr/): Rust library for search-console arithmetic. Click-through
   rate, impression-weighted average position, pooled totals, and projection against a CTR curve the
   caller supplies. It deliberately ships no built-in CTR-by-position table, because published tables
   are third-party estimates rather than measurements.
