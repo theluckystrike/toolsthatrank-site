@@ -1,0 +1,2956 @@
+{
+  "rawSha256": "4083300e256cbfc087100acace5b1b249e14e7a0ec068b2240b5b31aea591e7b",
+  "fetchedAt": "2026-09-08T03:29:08.279Z",
+  "auditedAt": "2026-09-08T03:33:48.165181+00:00",
+  "method": "Independent Python integer sums and Fraction arithmetic; no dependence on recorded verified booleans",
+  "periodChecks": {
+    "days": {
+      "earlier": 28,
+      "later": 28
+    },
+    "adjacent": true,
+    "overlap": []
+  },
+  "propertyCount": 38,
+  "nonzeroBoth": 36,
+  "zeroBoth": [
+    "tg.zovo.one",
+    "tgtools-site.lipmichal.workers.dev"
+  ],
+  "oneZeroPeriod": [],
+  "duplicateDomains": [],
+  "issues": [],
+  "rawResponseChecks": [
+    {
+      "domain": "ml0x.com",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 10,
+        "impressions": 1044
+      },
+      "dailyCounts": {
+        "clicks": 10,
+        "impressions": 1044
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "ml0x.com",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 31,
+        "impressions": 2351
+      },
+      "dailyCounts": {
+        "clicks": 31,
+        "impressions": 2351
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "bugbountyreality.com",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 4,
+        "impressions": 517
+      },
+      "dailyCounts": {
+        "clicks": 4,
+        "impressions": 517
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "bugbountyreality.com",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 3,
+        "impressions": 1505
+      },
+      "dailyCounts": {
+        "clicks": 3,
+        "impressions": 1505
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "abwex.com",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 2,
+        "impressions": 1109
+      },
+      "dailyCounts": {
+        "clicks": 2,
+        "impressions": 1109
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "abwex.com",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 2,
+        "impressions": 1475
+      },
+      "dailyCounts": {
+        "clicks": 2,
+        "impressions": 1475
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "ingredientcalculator.com",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 191,
+        "impressions": 19760
+      },
+      "dailyCounts": {
+        "clicks": 191,
+        "impressions": 19760
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "ingredientcalculator.com",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 209,
+        "impressions": 34381
+      },
+      "dailyCounts": {
+        "clicks": 209,
+        "impressions": 34381
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "dismissticket.com",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 0,
+        "impressions": 161
+      },
+      "dailyCounts": {
+        "clicks": 0,
+        "impressions": 161
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "dismissticket.com",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 1,
+        "impressions": 1519
+      },
+      "dailyCounts": {
+        "clicks": 1,
+        "impressions": 1519
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "tg.zovo.one",
+      "period": "earlier",
+      "flatRows": 0,
+      "dailyRows": 0,
+      "missingDates": [
+        "2026-07-12",
+        "2026-07-13",
+        "2026-07-14",
+        "2026-07-15",
+        "2026-07-16",
+        "2026-07-17",
+        "2026-07-18",
+        "2026-07-19",
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23",
+        "2026-07-24",
+        "2026-07-25",
+        "2026-07-26",
+        "2026-07-27",
+        "2026-07-28",
+        "2026-07-29",
+        "2026-07-30",
+        "2026-07-31",
+        "2026-08-01",
+        "2026-08-02",
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-08"
+      ],
+      "counts": {
+        "clicks": 0,
+        "impressions": 0
+      },
+      "dailyCounts": {
+        "clicks": 0,
+        "impressions": 0
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "tg.zovo.one",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 3,
+      "missingDates": [
+        "2026-08-09",
+        "2026-08-10",
+        "2026-08-11",
+        "2026-08-12",
+        "2026-08-13",
+        "2026-08-14",
+        "2026-08-15",
+        "2026-08-16",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-22",
+        "2026-08-23",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28",
+        "2026-08-29",
+        "2026-08-30",
+        "2026-08-31",
+        "2026-09-01",
+        "2026-09-02"
+      ],
+      "counts": {
+        "clicks": 0,
+        "impressions": 0
+      },
+      "dailyCounts": {
+        "clicks": 0,
+        "impressions": 0
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "epochpilot.com",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 5,
+        "impressions": 6373
+      },
+      "dailyCounts": {
+        "clicks": 5,
+        "impressions": 6373
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "epochpilot.com",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 0,
+        "impressions": 760
+      },
+      "dailyCounts": {
+        "clicks": 0,
+        "impressions": 760
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "recipetool.net",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 8,
+        "impressions": 3510
+      },
+      "dailyCounts": {
+        "clicks": 8,
+        "impressions": 3510
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "recipetool.net",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 42,
+        "impressions": 6261
+      },
+      "dailyCounts": {
+        "clicks": 42,
+        "impressions": 6261
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "gen8x.com",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 1,
+        "impressions": 1002
+      },
+      "dailyCounts": {
+        "clicks": 1,
+        "impressions": 1002
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "gen8x.com",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 4,
+        "impressions": 1619
+      },
+      "dailyCounts": {
+        "clicks": 4,
+        "impressions": 1619
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "viryd.com",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 0,
+        "impressions": 20
+      },
+      "dailyCounts": {
+        "clicks": 0,
+        "impressions": 20
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "viryd.com",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 0,
+        "impressions": 5
+      },
+      "dailyCounts": {
+        "clicks": 0,
+        "impressions": 5
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "ml3x.com",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 0,
+        "impressions": 581
+      },
+      "dailyCounts": {
+        "clicks": 0,
+        "impressions": 581
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "ml3x.com",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 0,
+        "impressions": 943
+      },
+      "dailyCounts": {
+        "clicks": 0,
+        "impressions": 943
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "tgtools-site.lipmichal.workers.dev",
+      "period": "earlier",
+      "flatRows": 0,
+      "dailyRows": 0,
+      "missingDates": [
+        "2026-07-12",
+        "2026-07-13",
+        "2026-07-14",
+        "2026-07-15",
+        "2026-07-16",
+        "2026-07-17",
+        "2026-07-18",
+        "2026-07-19",
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23",
+        "2026-07-24",
+        "2026-07-25",
+        "2026-07-26",
+        "2026-07-27",
+        "2026-07-28",
+        "2026-07-29",
+        "2026-07-30",
+        "2026-07-31",
+        "2026-08-01",
+        "2026-08-02",
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-08"
+      ],
+      "counts": {
+        "clicks": 0,
+        "impressions": 0
+      },
+      "dailyCounts": {
+        "clicks": 0,
+        "impressions": 0
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "tgtools-site.lipmichal.workers.dev",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 5,
+      "missingDates": [
+        "2026-08-09",
+        "2026-08-10",
+        "2026-08-11",
+        "2026-08-12",
+        "2026-08-13",
+        "2026-08-14",
+        "2026-08-15",
+        "2026-08-16",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-22",
+        "2026-08-23",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28",
+        "2026-08-29",
+        "2026-08-30",
+        "2026-08-31"
+      ],
+      "counts": {
+        "clicks": 0,
+        "impressions": 0
+      },
+      "dailyCounts": {
+        "clicks": 0,
+        "impressions": 0
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "claudkit.com",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 1,
+        "impressions": 178
+      },
+      "dailyCounts": {
+        "clicks": 1,
+        "impressions": 178
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "claudkit.com",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 1,
+        "impressions": 127
+      },
+      "dailyCounts": {
+        "clicks": 1,
+        "impressions": 127
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "claudhq.com",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 7,
+        "impressions": 920
+      },
+      "dailyCounts": {
+        "clicks": 7,
+        "impressions": 920
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "claudhq.com",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 4,
+        "impressions": 1061
+      },
+      "dailyCounts": {
+        "clicks": 4,
+        "impressions": 1061
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "goldgramprice.com",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 2,
+        "impressions": 5231
+      },
+      "dailyCounts": {
+        "clicks": 2,
+        "impressions": 5231
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "goldgramprice.com",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 9,
+        "impressions": 8708
+      },
+      "dailyCounts": {
+        "clicks": 9,
+        "impressions": 8708
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "bestchromeextensions.com",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 3,
+        "impressions": 1390
+      },
+      "dailyCounts": {
+        "clicks": 3,
+        "impressions": 1390
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "bestchromeextensions.com",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 0,
+        "impressions": 1335
+      },
+      "dailyCounts": {
+        "clicks": 0,
+        "impressions": 1335
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "kappafy.com",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 1,
+        "impressions": 692
+      },
+      "dailyCounts": {
+        "clicks": 1,
+        "impressions": 692
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "kappafy.com",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 1,
+        "impressions": 419
+      },
+      "dailyCounts": {
+        "clicks": 1,
+        "impressions": 419
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "pictureeditor.net",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 0,
+        "impressions": 678
+      },
+      "dailyCounts": {
+        "clicks": 0,
+        "impressions": 678
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "pictureeditor.net",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 1,
+        "impressions": 820
+      },
+      "dailyCounts": {
+        "clicks": 1,
+        "impressions": 820
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "englishlearner.org",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 25,
+        "impressions": 767
+      },
+      "dailyCounts": {
+        "clicks": 25,
+        "impressions": 767
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "englishlearner.org",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 108,
+        "impressions": 1984
+      },
+      "dailyCounts": {
+        "clicks": 108,
+        "impressions": 1984
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "claudflow.com",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 24,
+        "impressions": 1310
+      },
+      "dailyCounts": {
+        "clicks": 24,
+        "impressions": 1310
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "claudflow.com",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 16,
+        "impressions": 2425
+      },
+      "dailyCounts": {
+        "clicks": 16,
+        "impressions": 2425
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "krzen.com",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 1,
+        "impressions": 208
+      },
+      "dailyCounts": {
+        "clicks": 1,
+        "impressions": 208
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "krzen.com",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 0,
+        "impressions": 802
+      },
+      "dailyCounts": {
+        "clicks": 0,
+        "impressions": 802
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "heytensor.com",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 30,
+        "impressions": 29117
+      },
+      "dailyCounts": {
+        "clicks": 30,
+        "impressions": 29117
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "heytensor.com",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 6,
+        "impressions": 10108
+      },
+      "dailyCounts": {
+        "clicks": 6,
+        "impressions": 10108
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "grammarhelper.org",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 0,
+        "impressions": 18
+      },
+      "dailyCounts": {
+        "clicks": 0,
+        "impressions": 18
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "grammarhelper.org",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 1,
+        "impressions": 104
+      },
+      "dailyCounts": {
+        "clicks": 1,
+        "impressions": 104
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "b2berp.com",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 1,
+        "impressions": 2631
+      },
+      "dailyCounts": {
+        "clicks": 1,
+        "impressions": 2631
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "b2berp.com",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 0,
+        "impressions": 1380
+      },
+      "dailyCounts": {
+        "clicks": 0,
+        "impressions": 1380
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "writingassistant.org",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 0,
+        "impressions": 310
+      },
+      "dailyCounts": {
+        "clicks": 0,
+        "impressions": 310
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "writingassistant.org",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 0,
+        "impressions": 832
+      },
+      "dailyCounts": {
+        "clicks": 0,
+        "impressions": 832
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "aiwebsitepipeline.com",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 7,
+      "missingDates": [
+        "2026-07-12",
+        "2026-07-13",
+        "2026-07-14",
+        "2026-07-15",
+        "2026-07-16",
+        "2026-07-17",
+        "2026-07-18",
+        "2026-07-19",
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23",
+        "2026-07-24",
+        "2026-07-25",
+        "2026-07-26",
+        "2026-07-27",
+        "2026-07-28",
+        "2026-07-29",
+        "2026-07-30",
+        "2026-07-31",
+        "2026-08-01"
+      ],
+      "counts": {
+        "clicks": 0,
+        "impressions": 58
+      },
+      "dailyCounts": {
+        "clicks": 0,
+        "impressions": 58
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "aiwebsitepipeline.com",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 0,
+        "impressions": 1183
+      },
+      "dailyCounts": {
+        "clicks": 0,
+        "impressions": 1183
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "belikenative.com",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 1160,
+        "impressions": 309177
+      },
+      "dailyCounts": {
+        "clicks": 1160,
+        "impressions": 309177
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "belikenative.com",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 1068,
+        "impressions": 329175
+      },
+      "dailyCounts": {
+        "clicks": 1068,
+        "impressions": 329175
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "kickllm.com",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 20,
+        "impressions": 7904
+      },
+      "dailyCounts": {
+        "clicks": 20,
+        "impressions": 7904
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "kickllm.com",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 26,
+        "impressions": 11298
+      },
+      "dailyCounts": {
+        "clicks": 26,
+        "impressions": 11298
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "taxbreakcalc.com",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 0,
+        "impressions": 18
+      },
+      "dailyCounts": {
+        "clicks": 0,
+        "impressions": 18
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "taxbreakcalc.com",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 0,
+        "impressions": 369
+      },
+      "dailyCounts": {
+        "clicks": 0,
+        "impressions": 369
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "lochbot.com",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 2,
+        "impressions": 2061
+      },
+      "dailyCounts": {
+        "clicks": 2,
+        "impressions": 2061
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "lochbot.com",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 0,
+        "impressions": 519
+      },
+      "dailyCounts": {
+        "clicks": 0,
+        "impressions": 519
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "paraphrasetool.org",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 1,
+        "impressions": 285
+      },
+      "dailyCounts": {
+        "clicks": 1,
+        "impressions": 285
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "paraphrasetool.org",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 1,
+        "impressions": 1302
+      },
+      "dailyCounts": {
+        "clicks": 1,
+        "impressions": 1302
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "lakelevelnow.com",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 141,
+        "impressions": 17052
+      },
+      "dailyCounts": {
+        "clicks": 141,
+        "impressions": 17052
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "lakelevelnow.com",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 212,
+        "impressions": 24881
+      },
+      "dailyCounts": {
+        "clicks": 212,
+        "impressions": 24881
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "lockml.com",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 3,
+        "impressions": 198
+      },
+      "dailyCounts": {
+        "clicks": 3,
+        "impressions": 198
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "lockml.com",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 4,
+        "impressions": 841
+      },
+      "dailyCounts": {
+        "clicks": 4,
+        "impressions": 841
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "zovo.one",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 68,
+        "impressions": 6632
+      },
+      "dailyCounts": {
+        "clicks": 68,
+        "impressions": 6632
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "zovo.one",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 57,
+        "impressions": 3359
+      },
+      "dailyCounts": {
+        "clicks": 57,
+        "impressions": 3359
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "invokebot.com",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 0,
+        "impressions": 48
+      },
+      "dailyCounts": {
+        "clicks": 0,
+        "impressions": 48
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "invokebot.com",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 0,
+        "impressions": 184
+      },
+      "dailyCounts": {
+        "clicks": 0,
+        "impressions": 184
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "enhio.com",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 1,
+        "impressions": 1338
+      },
+      "dailyCounts": {
+        "clicks": 1,
+        "impressions": 1338
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "enhio.com",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 5,
+        "impressions": 2601
+      },
+      "dailyCounts": {
+        "clicks": 5,
+        "impressions": 2601
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "neovistainc.com",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 2,
+        "impressions": 42
+      },
+      "dailyCounts": {
+        "clicks": 2,
+        "impressions": 42
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "neovistainc.com",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 1,
+        "impressions": 72
+      },
+      "dailyCounts": {
+        "clicks": 1,
+        "impressions": 72
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "gpt0x.com",
+      "period": "earlier",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 1,
+        "impressions": 2505
+      },
+      "dailyCounts": {
+        "clicks": 1,
+        "impressions": 2505
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    },
+    {
+      "domain": "gpt0x.com",
+      "period": "later",
+      "flatRows": 1,
+      "dailyRows": 28,
+      "missingDates": [],
+      "counts": {
+        "clicks": 1,
+        "impressions": 5780
+      },
+      "dailyCounts": {
+        "clicks": 1,
+        "impressions": 5780
+      },
+      "exactCountsAgree": true,
+      "issues": []
+    }
+  ],
+  "largestByCombinedImpressions": "belikenative.com",
+  "largestEachPeriod": {
+    "earlier": "belikenative.com",
+    "later": "belikenative.com"
+  },
+  "pooled": {
+    "totals": {
+      "earlier": {
+        "clicks": 1715,
+        "impressions": 424845
+      },
+      "later": {
+        "clicks": 1814,
+        "impressions": 462488
+      }
+    },
+    "ctrPct": {
+      "earlier": {
+        "fraction": "34300/84969",
+        "decimal": "0.4036766350080617637020560439689769209947"
+      },
+      "later": {
+        "fraction": "22675/57811",
+        "decimal": "0.3922263929010049990486239642974520419989"
+      }
+    },
+    "changePp": {
+      "fraction": "-56245225/4912142859",
+      "decimal": "-0.01145024210705676465343207967152487899579"
+    },
+    "withinRatePp": {
+      "fraction": "-143955265506902206403370904963190937018410244076107020540150007644893777838620978412246136586035401403467/2992082586500877684472804994162742203382932562658650397063358669387066732732379741358976212064812375895616",
+      "decimal": "-0.04811206286764036123400545023595372048099"
+    },
+    "mixPp": {
+      "fraction": "36565065162386180805700283418507888397594194699861012578291834191562288338770193068953290063111018697689/997360862166959228157601664720914067794310854219550132354452889795688910910793247119658737354937458631872",
+      "decimal": "0.03666182076058359658057337056442884148520"
+    },
+    "exactIdentityHolds": true,
+    "identityResidual": {
+      "fraction": "0",
+      "decimal": "0"
+    },
+    "propertyContributions": [
+      {
+        "domain": "ml0x.com",
+        "withinRateContributionPp": {
+          "fraction": "3644031107005/2679239903870088",
+          "decimal": "0.001360098848087958741283663299752661218425"
+        },
+        "mixContributionPp": {
+          "fraction": "616014578515/206095377220776",
+          "decimal": "0.002988978146050822677247552101122551804365"
+        },
+        "earlierWeight": {
+          "fraction": "116/47205",
+          "decimal": "0.002457366804363944497404935917805317233344"
+        },
+        "laterWeight": {
+          "fraction": "2351/462488",
+          "decimal": "0.005083375136219750566501184895608102264275"
+        }
+      },
+      {
+        "domain": "bugbountyreality.com",
+        "withinRateContributionPp": {
+          "fraction": "-3926007655849/3057651741156012",
+          "decimal": "-0.001283994381376044836027243461354586520619"
+        },
+        "mixContributionPp": {
+          "fraction": "3030560982959/3057651741156012",
+          "decimal": "0.0009911400118488413113465293656980293952315"
+        },
+        "earlierWeight": {
+          "fraction": "517/424845",
+          "decimal": "0.001216914404076780943638268074238840047547"
+        },
+        "laterWeight": {
+          "fraction": "1505/462488",
+          "decimal": "0.003254138485755306083617304665202124163222"
+        }
+      },
+      {
+        "domain": "abwex.com",
+        "withinRateContributionPp": {
+          "fraction": "-69512279587/535677365678715",
+          "decimal": "-0.0001297651983091098378398581698715618910566"
+        },
+        "mixContributionPp": {
+          "fraction": "146961360436/1607032097036145",
+          "decimal": "0.00009144892669352488890871390161810472913411"
+        },
+        "earlierWeight": {
+          "fraction": "1109/424845",
+          "decimal": "0.002610363779731431463239534418434958631972"
+        },
+        "laterWeight": {
+          "fraction": "1475/462488",
+          "decimal": "0.003189271937866495995571776997457231322759"
+        }
+      },
+      {
+        "domain": "ingredientcalculator.com",
+        "withinRateContributionPp": {
+          "fraction": "-57865801026766075/2669724336506490432",
+          "decimal": "-0.02167482246593566835048131278410610872899"
+        },
+        "mixContributionPp": {
+          "fraction": "19495761103080905/889908112168830144",
+          "decimal": "0.02190761139997591101028869523059452019317"
+        },
+        "earlierWeight": {
+          "fraction": "3952/84969",
+          "decimal": "0.04651108051171603761371794419141098518283"
+        },
+        "laterWeight": {
+          "fraction": "34381/462488",
+          "decimal": "0.07433922609883932123644289149123869159848"
+        }
+      },
+      {
+        "domain": "dismissticket.com",
+        "withinRateContributionPp": {
+          "fraction": "514142945/4263740001612",
+          "decimal": "0.0001205849664392334040302541319834770270332"
+        },
+        "mixContributionPp": {
+          "fraction": "407770705/4263740001612",
+          "decimal": "0.00009563685985680022278817142716616577450974"
+        },
+        "earlierWeight": {
+          "fraction": "161/424845",
+          "decimal": "0.0003789617389871600230672362861749579258318"
+        },
+        "laterWeight": {
+          "fraction": "1519/462488",
+          "decimal": "0.003284409541436750791371884243483074155438"
+        }
+      },
+      {
+        "domain": "epochpilot.com",
+        "withinRateContributionPp": {
+          "fraction": "-20439488900/31305086440407",
+          "decimal": "-0.0006529127124088613289914171992013350658528"
+        },
+        "mixContributionPp": {
+          "fraction": "-16403461400/31305086440407",
+          "decimal": "-0.0005239870981102691774285712671805218466682"
+        },
+        "earlierWeight": {
+          "fraction": "6373/424845",
+          "decimal": "0.01500076498487683743482917299250314820699"
+        },
+        "laterWeight": {
+          "fraction": "95/57811",
+          "decimal": "0.001643285879849855563820034249537285291726"
+        }
+      },
+      {
+        "domain": "recipetool.net",
+        "withinRateContributionPp": {
+          "fraction": "1286731270525/266542695815058",
+          "decimal": "0.004827486518024133032767175174614527464461"
+        },
+        "mixContributionPp": {
+          "fraction": "631916888305/266542695815058",
+          "decimal": "0.002370790489578670483334716763459499140309"
+        },
+        "earlierWeight": {
+          "fraction": "26/3147",
+          "decimal": "0.008261836669844296155068319034000635525898"
+        },
+        "laterWeight": {
+          "fraction": "6261/462488",
+          "decimal": "0.01353764854439466537510162425835913580460"
+        }
+      },
+      {
+        "domain": "gen8x.com",
+        "withinRateContributionPp": {
+          "fraction": "4583842111765/10624886409731256",
+          "decimal": "0.0004314250463484195397300120087387552924697"
+        },
+        "mixContributionPp": {
+          "fraction": "2104601902555/10624886409731256",
+          "decimal": "0.0001980822967318888662596925345834445311980"
+        },
+        "earlierWeight": {
+          "fraction": "334/141615",
+          "decimal": "0.002358507220280337534865656886629241252692"
+        },
+        "laterWeight": {
+          "fraction": "1619/462488",
+          "decimal": "0.003500631367732784418190309802632716956981"
+        }
+      },
+      {
+        "domain": "viryd.com",
+        "withinRateContributionPp": {
+          "fraction": "0",
+          "decimal": "0"
+        },
+        "mixContributionPp": {
+          "fraction": "0",
+          "decimal": "0"
+        },
+        "earlierWeight": {
+          "fraction": "4/84969",
+          "decimal": "0.00004707599242076522025679953865527427650084"
+        },
+        "laterWeight": {
+          "fraction": "5/462488",
+          "decimal": "0.00001081109131480168134092127795748214007715"
+        }
+      },
+      {
+        "domain": "ml3x.com",
+        "withinRateContributionPp": {
+          "fraction": "0",
+          "decimal": "0"
+        },
+        "mixContributionPp": {
+          "fraction": "0",
+          "decimal": "0"
+        },
+        "earlierWeight": {
+          "fraction": "581/424845",
+          "decimal": "0.001367557579823229648460026597935717732349"
+        },
+        "laterWeight": {
+          "fraction": "943/462488",
+          "decimal": "0.002038971821971597100897753022781131618550"
+        }
+      },
+      {
+        "domain": "claudkit.com",
+        "withinRateContributionPp": {
+          "fraction": "11583645215/148058535294072",
+          "decimal": "0.00007823692968455151615409788123009678483515"
+        },
+        "mixContributionPp": {
+          "fraction": "-43260512225/444175605882216",
+          "decimal": "-0.00009739506549234399061967001535682536579640"
+        },
+        "earlierWeight": {
+          "fraction": "178/424845",
+          "decimal": "0.0004189763325448104602855158940319410608575"
+        },
+        "laterWeight": {
+          "fraction": "127/462488",
+          "decimal": "0.0002746017193959627060594004601200463579596"
+        }
+      },
+      {
+        "domain": "claudhq.com",
+        "withinRateContributionPp": {
+          "fraction": "-1094435631745/1278624236673888",
+          "decimal": "-0.0008559478229444315284288283474787456809744"
+        },
+        "mixContributionPp": {
+          "fraction": "280691494595/3835872710021664",
+          "decimal": "0.00007317539340178332671454673114271720961682"
+        },
+        "earlierWeight": {
+          "fraction": "184/84969",
+          "decimal": "0.002165495651355200131812778778142616719039"
+        },
+        "laterWeight": {
+          "fraction": "1061/462488",
+          "decimal": "0.002294113577000916780543495182577710124371"
+        }
+      },
+      {
+        "domain": "goldgramprice.com",
+        "withinRateContributionPp": {
+          "fraction": "226878382023805/223755711224595732",
+          "decimal": "0.001013955714391016701740259356546304089403"
+        },
+        "mixContributionPp": {
+          "fraction": "103214213045425/223755711224595732",
+          "decimal": "0.0004612807980656337370575752892477383594750"
+        },
+        "earlierWeight": {
+          "fraction": "5231/424845",
+          "decimal": "0.01231272581765114335816591933528698701880"
+        },
+        "laterWeight": {
+          "fraction": "2177/115622",
+          "decimal": "0.01882859663385860822334849769075089515836"
+        }
+      },
+      {
+        "domain": "bestchromeextensions.com",
+        "withinRateContributionPp": {
+          "fraction": "-1210026395/1820767619736",
+          "decimal": "-0.0006645693727656724884036204119988446349720"
+        },
+        "mixContributionPp": {
+          "fraction": "-75690245/1820767619736",
+          "decimal": "-0.00004157051354580581544837266783026951254065"
+        },
+        "earlierWeight": {
+          "fraction": "278/84969",
+          "decimal": "0.003271781473243182807847567936541562216808"
+        },
+        "laterWeight": {
+          "fraction": "1335/462488",
+          "decimal": "0.002886561381052048918025981214647731400599"
+        }
+      },
+      {
+        "domain": "kappafy.com",
+        "withinRateContributionPp": {
+          "fraction": "17431811285/146078563864752",
+          "decimal": "0.0001193317542547815646616754601815656035518"
+        },
+        "mixContributionPp": {
+          "fraction": "-788985765755/5697063990725328",
+          "decimal": "-0.0001384898900625740391272475943082941845130"
+        },
+        "earlierWeight": {
+          "fraction": "692/424845",
+          "decimal": "0.001628829337758476620885264037472489966929"
+        },
+        "laterWeight": {
+          "fraction": "419/462488",
+          "decimal": "0.0009059694521803808963692030928370033384650"
+        }
+      },
+      {
+        "domain": "pictureeditor.net",
+        "withinRateContributionPp": {
+          "fraction": "55161647/268530476292",
+          "decimal": "0.0002054204340665497991839386552098090820750"
+        },
+        "mixContributionPp": {
+          "fraction": "2900503/268530476292",
+          "decimal": "0.00001080139222948382763448690393983371946791"
+        },
+        "earlierWeight": {
+          "fraction": "226/141615",
+          "decimal": "0.001595876143063940966705504360413797973379"
+        },
+        "laterWeight": {
+          "fraction": "205/115622",
+          "decimal": "0.001773018975627475739911089585027070972652"
+        }
+      },
+      {
+        "domain": "englishlearner.org",
+        "withinRateContributionPp": {
+          "fraction": "6219394392365/934368166067544",
+          "decimal": "0.006656256728587443972833605382376572703198"
+        },
+        "mixContributionPp": {
+          "fraction": "10101642480035/934368166067544",
+          "decimal": "0.01081120145878853519145641267387556530084"
+        },
+        "earlierWeight": {
+          "fraction": "767/424845",
+          "decimal": "0.001805364309336346196848262307429768503807"
+        },
+        "laterWeight": {
+          "fraction": "248/57811",
+          "decimal": "0.004289841033713307156077563093528913182612"
+        }
+      },
+      {
+        "domain": "claudflow.com",
+        "withinRateContributionPp": {
+          "fraction": "-304643385011/62418599309313",
+          "decimal": "-0.004880650773679673060922422922483450783281"
+        },
+        "mixContributionPp": {
+          "fraction": "167973500651/62418599309313",
+          "decimal": "0.002691080903924384659201287230244822427868"
+        },
+        "earlierWeight": {
+          "fraction": "262/84969",
+          "decimal": "0.003083477503560121926820369781920465110805"
+        },
+        "laterWeight": {
+          "fraction": "2425/462488",
+          "decimal": "0.005243379287678815450346819809378837937417"
+        }
+      },
+      {
+        "domain": "krzen.com",
+        "withinRateContributionPp": {
+          "fraction": "-1092307985/2043451429344",
+          "decimal": "-0.0005345407134784009561909827371141797461498"
+        },
+        "mixContributionPp": {
+          "fraction": "611320465/2043451429344",
+          "decimal": "0.0002991607513745748549069850438378083636456"
+        },
+        "earlierWeight": {
+          "fraction": "208/424845",
+          "decimal": "0.0004895903211759582906707152020148524756088"
+        },
+        "laterWeight": {
+          "fraction": "401/231244",
+          "decimal": "0.001734099046894189687083772984380135268375"
+        }
+      },
+      {
+        "domain": "heytensor.com",
+        "withinRateContributionPp": {
+          "fraction": "-158535523222745/80317529862588018",
+          "decimal": "-0.001973859548394689835886876110663143826194"
+        },
+        "mixContributionPp": {
+          "fraction": "-913260518682815/240952589587764054",
+          "decimal": "-0.003790208356943891441722501332730140839674"
+        },
+        "earlierWeight": {
+          "fraction": "29117/424845",
+          "decimal": "0.06853558356577104591086160835128105544375"
+        },
+        "laterWeight": {
+          "fraction": "2527/115622",
+          "decimal": "0.02185570220200307899880645551884589437996"
+        }
+      },
+      {
+        "domain": "grammarhelper.org",
+        "withinRateContributionPp": {
+          "fraction": "280495/2183174604",
+          "decimal": "0.0001284803329454633029434048876468150781036"
+        },
+        "mixContributionPp": {
+          "fraction": "14735/167936508",
+          "decimal": "0.00008774149335057032387502067150282772343938"
+        },
+        "earlierWeight": {
+          "fraction": "2/47205",
+          "decimal": "0.00004236839317868869823111958478974684885076"
+        },
+        "laterWeight": {
+          "fraction": "1/4447",
+          "decimal": "0.0002248706993478749718911625815156285136047"
+        }
+      },
+      {
+        "domain": "b2berp.com",
+        "withinRateContributionPp": {
+          "fraction": "-751288345/4307949287343",
+          "decimal": "-0.0001743958191911236939353145577036564373808"
+        },
+        "mixContributionPp": {
+          "fraction": "-262716595/4307949287343",
+          "decimal": "-0.00006098414291270240734868313557271494512339"
+        },
+        "earlierWeight": {
+          "fraction": "877/141615",
+          "decimal": "0.006192846802951664724781979310101331073686"
+        },
+        "laterWeight": {
+          "fraction": "345/115622",
+          "decimal": "0.002983861202885264050094272716265070661293"
+        }
+      },
+      {
+        "domain": "writingassistant.org",
+        "withinRateContributionPp": {
+          "fraction": "0",
+          "decimal": "0"
+        },
+        "mixContributionPp": {
+          "fraction": "0",
+          "decimal": "0"
+        },
+        "earlierWeight": {
+          "fraction": "62/84969",
+          "decimal": "0.0007296778825218609139803928491567512857630"
+        },
+        "laterWeight": {
+          "fraction": "8/4447",
+          "decimal": "0.001798965594782999775129300652125028108837"
+        }
+      },
+      {
+        "domain": "aiwebsitepipeline.com",
+        "withinRateContributionPp": {
+          "fraction": "0",
+          "decimal": "0"
+        },
+        "mixContributionPp": {
+          "fraction": "0",
+          "decimal": "0"
+        },
+        "earlierWeight": {
+          "fraction": "58/424845",
+          "decimal": "0.0001365203780202191387447186621002954018524"
+        },
+        "laterWeight": {
+          "fraction": "91/35576",
+          "decimal": "0.002557904205082077805261974364740274342253"
+        }
+      },
+      {
+        "domain": "belikenative.com",
+        "withinRateContributionPp": {
+          "fraction": "-41397027874049/1133501525428545",
+          "decimal": "-0.03652136935448582636003235332439445561804"
+        },
+        "mixContributionPp": {
+          "fraction": "-6341347308701/1133501525428545",
+          "decimal": "-0.005594476201788537687326473704377836038957"
+        },
+        "earlierWeight": {
+          "fraction": "3817/5245",
+          "decimal": "0.7277407054337464251668255481410867492850"
+        },
+        "laterWeight": {
+          "fraction": "329175/462488",
+          "decimal": "0.7117481967099686910795523343308366919790"
+        }
+      },
+      {
+        "domain": "kickllm.com",
+        "withinRateContributionPp": {
+          "fraction": "-54051169827085/109662842681460432",
+          "decimal": "-0.0004928849964621870495072482398184175033700"
+        },
+        "mixContributionPp": {
+          "fraction": "154301457892285/109662842681460432",
+          "decimal": "0.001407053238082539321106358912181702693403"
+        },
+        "earlierWeight": {
+          "fraction": "7904/424845",
+          "decimal": "0.01860443220468641504548717767656439407313"
+        },
+        "laterWeight": {
+          "fraction": "5649/231244",
+          "decimal": "0.02442874193492587915794571967272664371832"
+        }
+      },
+      {
+        "domain": "taxbreakcalc.com",
+        "withinRateContributionPp": {
+          "fraction": "0",
+          "decimal": "0"
+        },
+        "mixContributionPp": {
+          "fraction": "0",
+          "decimal": "0"
+        },
+        "earlierWeight": {
+          "fraction": "2/47205",
+          "decimal": "0.00004236839317868869823111958478974684885076"
+        },
+        "laterWeight": {
+          "fraction": "369/462488",
+          "decimal": "0.0007978585390323640829599903132621819376935"
+        }
+      },
+      {
+        "domain": "lochbot.com",
+        "withinRateContributionPp": {
+          "fraction": "-652045735/2249761429422",
+          "decimal": "-0.0002898288353923469418074149010389451884241"
+        },
+        "mixContributionPp": {
+          "fraction": "-407051785/2249761429422",
+          "decimal": "-0.0001809310888153052607605804855137975765844"
+        },
+        "earlierWeight": {
+          "fraction": "229/47205",
+          "decimal": "0.004851181018959855947463192458426014193412"
+        },
+        "laterWeight": {
+          "fraction": "519/462488",
+          "decimal": "0.001122191278476414523187628651986646140008"
+        }
+      },
+      {
+        "domain": "paraphrasetool.org",
+        "withinRateContributionPp": {
+          "fraction": "-12900028585/27003686676876",
+          "decimal": "-0.0004777136077514426748864761645332996264050"
+        },
+        "mixContributionPp": {
+          "fraction": "37148064865/81011060030628",
+          "decimal": "0.0004585554719436502004209040304065710454438"
+        },
+        "earlierWeight": {
+          "fraction": "19/28323",
+          "decimal": "0.0006708328919959043886593934258376584401370"
+        },
+        "laterWeight": {
+          "fraction": "651/231244",
+          "decimal": "0.002815208178374357821175900780128349276089"
+        }
+      },
+      {
+        "domain": "lakelevelnow.com",
+        "withinRateContributionPp": {
+          "fraction": "365046993856345/308752420658952816",
+          "decimal": "0.001182329171953521409491393933363686152953"
+        },
+        "mixContributionPp": {
+          "fraction": "10622432530632725/926257261976858448",
+          "decimal": "0.01146812334616612719497114985439222284106"
+        },
+        "earlierWeight": {
+          "fraction": "5684/141615",
+          "decimal": "0.04013699113794442679094728665748684814462"
+        },
+        "laterWeight": {
+          "fraction": "24881/462488",
+          "decimal": "0.05379815260071612668869246337202262545190"
+        }
+      },
+      {
+        "domain": "lockml.com",
+        "withinRateContributionPp": {
+          "fraction": "-143886896785/121179289569624",
+          "decimal": "-0.001187388515777106136420570136762967444185"
+        },
+        "mixContributionPp": {
+          "fraction": "12547984325/9321483813048",
+          "decimal": "0.001346135934649762339842279293532424502845"
+        },
+        "earlierWeight": {
+          "fraction": "22/47205",
+          "decimal": "0.0004660523249655756805423154326872153373583"
+        },
+        "laterWeight": {
+          "fraction": "841/462488",
+          "decimal": "0.001818425559149642801542958952448495960976"
+        }
+      },
+      {
+        "domain": "zovo.one",
+        "withinRateContributionPp": {
+          "fraction": "840496796298565/109427256309942792",
+          "decimal": "0.007680872431982886909230310363744358488113"
+        },
+        "mixContributionPp": {
+          "fraction": "-1243319681710745/109427256309942792",
+          "decimal": "-0.01136206575616914506789189663500797281045"
+        },
+        "earlierWeight": {
+          "fraction": "6632/424845",
+          "decimal": "0.01561039908672574703715472701808895008768"
+        },
+        "laterWeight": {
+          "fraction": "3359/462488",
+          "decimal": "0.007262891145283769524830914531836501703828"
+        }
+      },
+      {
+        "domain": "invokebot.com",
+        "withinRateContributionPp": {
+          "fraction": "0",
+          "decimal": "0"
+        },
+        "mixContributionPp": {
+          "fraction": "0",
+          "decimal": "0"
+        },
+        "earlierWeight": {
+          "fraction": "16/141615",
+          "decimal": "0.0001129823818098365286163188927726582636020"
+        },
+        "laterWeight": {
+          "fraction": "23/57811",
+          "decimal": "0.0003978481603847018733459030288353427548390"
+        }
+      },
+      {
+        "domain": "enhio.com",
+        "withinRateContributionPp": {
+          "fraction": "3915968942345/7597748900015352",
+          "decimal": "0.0005154117349596914684881068939479916982995"
+        },
+        "mixContributionPp": {
+          "fraction": "2509668923995/7597748900015352",
+          "decimal": "0.0003303174344166505643200232085238509269111"
+        },
+        "earlierWeight": {
+          "fraction": "446/141615",
+          "decimal": "0.003149383892949193235179889136037849097906"
+        },
+        "laterWeight": {
+          "fraction": "2601/462488",
+          "decimal": "0.005623929701959834633547248793482209268132"
+        }
+      },
+      {
+        "domain": "neovistainc.com",
+        "withinRateContributionPp": {
+          "fraction": "-177130565/412620000156",
+          "decimal": "-0.0004292825479449176543080627355143769406712"
+        },
+        "mixContributionPp": {
+          "fraction": "72103055/412620000156",
+          "decimal": "0.0001747444500332990785584929081112769772058"
+        },
+        "earlierWeight": {
+          "fraction": "14/141615",
+          "decimal": "0.00009885958408360696253927903117607598065177"
+        },
+        "laterWeight": {
+          "fraction": "9/57811",
+          "decimal": "0.0001556797149331442113092664025877428171109"
+        }
+      },
+      {
+        "domain": "gpt0x.com",
+        "withinRateContributionPp": {
+          "fraction": "-197271619475/948299003215668",
+          "decimal": "-0.0002080268130685098624733454612522655273346"
+        },
+        "mixContributionPp": {
+          "fraction": "179103978385/948299003215668",
+          "decimal": "0.0001888686772607173880077733271255369463733"
+        },
+        "earlierWeight": {
+          "fraction": "167/28323",
+          "decimal": "0.005896268050700843837164142216573103131730"
+        },
+        "laterWeight": {
+          "fraction": "1445/115622",
+          "decimal": "0.01249762155991074363010499731884935392918"
+        }
+      }
+    ]
+  },
+  "largestExcluded": {
+    "totals": {
+      "earlier": {
+        "clicks": 555,
+        "impressions": 115668
+      },
+      "later": {
+        "clicks": 746,
+        "impressions": 133313
+      }
+    },
+    "ctrPct": {
+      "earlier": {
+        "fraction": "4625/9639",
+        "decimal": "0.4798215582529308019504097935470484490092"
+      },
+      "later": {
+        "fraction": "74600/133313",
+        "decimal": "0.5595853367638564881144374517113859863629"
+      }
+    },
+    "changePp": {
+      "fraction": "102496775/1285004007",
+      "decimal": "0.07976377851092568616402765816433753735369"
+    },
+    "withinRatePp": {
+      "fraction": "-13931229061939528814970665204637937448435054951801537650231750480365225549779704048629560601621011/340154903593986806387606123185550566890546420961217870413329482765365822081370954076649423780367328",
+      "decimal": "-0.04095554382649153269328392408492594821188"
+    },
+    "mixPp": {
+      "fraction": "287442886161309004667919341208177407790838362265536341454617323922734644666699515038204420808314277/2381084325157907644713242862298853968233824946728525092893306379357560754569596678536545966462571296",
+      "decimal": "0.1207193223374172188573115822492634855656"
+    },
+    "exactIdentityHolds": true,
+    "identityResidual": {
+      "fraction": "0",
+      "decimal": "0"
+    },
+    "propertyContributions": [
+      {
+        "domain": "ml0x.com",
+        "withinRateContributionPp": {
+          "fraction": "1263890792000/262830864579759",
+          "decimal": "0.004808760926997057597182014683463325483456"
+        },
+        "mixContributionPp": {
+          "fraction": "367938870650/37547266368537",
+          "decimal": "0.009799351756758436196646546765787729912929"
+        },
+        "earlierWeight": {
+          "fraction": "29/3213",
+          "decimal": "0.009025832555244319950202303143479614067849"
+        },
+        "laterWeight": {
+          "fraction": "2351/133313",
+          "decimal": "0.01763518936637837270183703014709743235843"
+        }
+      },
+      {
+        "domain": "bugbountyreality.com",
+        "withinRateContributionPp": {
+          "fraction": "-5429905632545/1199810811343914",
+          "decimal": "-0.004525634859434993716648777197034651856508"
+        },
+        "mixContributionPp": {
+          "fraction": "3980737881745/1199810811343914",
+          "decimal": "0.003317804643955621544802571688146564267325"
+        },
+        "earlierWeight": {
+          "fraction": "517/115668",
+          "decimal": "0.004469689110211986028979493031780613479960"
+        },
+        "laterWeight": {
+          "fraction": "1505/133313",
+          "decimal": "0.01128922160629495998139716306736777358547"
+        }
+      },
+      {
+        "domain": "abwex.com",
+        "withinRateContributionPp": {
+          "fraction": "-38851438874/84079097182017",
+          "decimal": "-0.0004620820177206852897163491851214728242353"
+        },
+        "mixContributionPp": {
+          "fraction": "3460459816/14837487738003",
+          "decimal": "0.0002332241062034231234409927119853284843108"
+        },
+        "earlierWeight": {
+          "fraction": "1109/115668",
+          "decimal": "0.009587785731576581249783864162949130269392"
+        },
+        "laterWeight": {
+          "fraction": "1475/133313",
+          "decimal": "0.01106418728856150562960851529858303391267"
+        }
+      },
+      {
+        "domain": "ingredientcalculator.com",
+        "withinRateContributionPp": {
+          "fraction": "-2876904265242005/37413913792706568",
+          "decimal": "-0.07689396734010826533751463622277122069746"
+        },
+        "mixContributionPp": {
+          "fraction": "5983490887811545/87299132182981992",
+          "decimal": "0.06854009585421698956553695916535381660268"
+        },
+        "earlierWeight": {
+          "fraction": "4940/28917",
+          "decimal": "0.1708337656050074350727945499187329252689"
+        },
+        "laterWeight": {
+          "fraction": "34381/133313",
+          "decimal": "0.2578968292664631356281832979529378230180"
+        }
+      },
+      {
+        "domain": "dismissticket.com",
+        "withinRateContributionPp": {
+          "fraction": "704153875/1673075217114",
+          "decimal": "0.0004208740096064792542467392038452935441226"
+        },
+        "mixContributionPp": {
+          "fraction": "550843925/1673075217114",
+          "decimal": "0.0003292403828383685850487533587705053652111"
+        },
+        "earlierWeight": {
+          "fraction": "23/16524",
+          "decimal": "0.001391914790607601065117404986686032437666"
+        },
+        "laterWeight": {
+          "fraction": "1519/133313",
+          "decimal": "0.01139423762123723867889853202613398543278"
+        }
+      },
+      {
+        "domain": "epochpilot.com",
+        "withinRateContributionPp": {
+          "fraction": "-117188928625/49135983219666",
+          "decimal": "-0.002384992035289053636643328044400916977658"
+        },
+        "mixContributionPp": {
+          "fraction": "-95212008625/49135983219666",
+          "decimal": "-0.001937724705728340975522525951518438418821"
+        },
+        "earlierWeight": {
+          "fraction": "6373/115668",
+          "decimal": "0.05509734758100771172666597503198810388353"
+        },
+        "laterWeight": {
+          "fraction": "760/133313",
+          "decimal": "0.005700869382580843578645743475880071710936"
+        }
+      },
+      {
+        "domain": "recipetool.net",
+        "withinRateContributionPp": {
+          "fraction": "1790617371770/104590331141751",
+          "decimal": "0.01712029546348008973942566258200935326744"
+        },
+        "mixContributionPp": {
+          "fraction": "781097561030/104590331141751",
+          "decimal": "0.007468162233575688131519658654383232290206"
+        },
+        "earlierWeight": {
+          "fraction": "65/2142",
+          "decimal": "0.03034547152194211017740429505135387488329"
+        },
+        "laterWeight": {
+          "fraction": "6261/133313",
+          "decimal": "0.04696466211097192321829078934537516971338"
+        }
+      },
+      {
+        "domain": "gen8x.com",
+        "withinRateContributionPp": {
+          "fraction": "3193755732925/2084582330307666",
+          "decimal": "0.001532084238886180029434886620699642106702"
+        },
+        "mixContributionPp": {
+          "fraction": "74043136025/122622490018098",
+          "decimal": "0.0006038299826897324053139128305796824513364"
+        },
+        "earlierWeight": {
+          "fraction": "167/19278",
+          "decimal": "0.008662724348998858802780371407822388214545"
+        },
+        "laterWeight": {
+          "fraction": "1619/133313",
+          "decimal": "0.01214435201368208651819402458874978434211"
+        }
+      },
+      {
+        "domain": "viryd.com",
+        "withinRateContributionPp": {
+          "fraction": "0",
+          "decimal": "0"
+        },
+        "mixContributionPp": {
+          "fraction": "0",
+          "decimal": "0"
+        },
+        "earlierWeight": {
+          "fraction": "5/28917",
+          "decimal": "0.0001729086696406957844866341598367742158592"
+        },
+        "laterWeight": {
+          "fraction": "5/133313",
+          "decimal": "0.00003750571962224239196477462813078994546668"
+        }
+      },
+      {
+        "domain": "ml3x.com",
+        "withinRateContributionPp": {
+          "fraction": "0",
+          "decimal": "0"
+        },
+        "mixContributionPp": {
+          "fraction": "0",
+          "decimal": "0"
+        },
+        "earlierWeight": {
+          "fraction": "83/16524",
+          "decimal": "0.005022996853062212539336722343258290970709"
+        },
+        "laterWeight": {
+          "fraction": "943/133313",
+          "decimal": "0.007073578720754915124556494865466983715017"
+        }
+      },
+      {
+        "domain": "claudkit.com",
+        "withinRateContributionPp": {
+          "fraction": "480244375/1708752975426",
+          "decimal": "0.0002810496203409816224224814173903766963108"
+        },
+        "mixContributionPp": {
+          "fraction": "-34464534875/87146401746726",
+          "decimal": "-0.0003954785760996127055601596539584488662730"
+        },
+        "earlierWeight": {
+          "fraction": "89/57834",
+          "decimal": "0.001538887159802192481931044022547290521147"
+        },
+        "laterWeight": {
+          "fraction": "127/133313",
+          "decimal": "0.0009526452784049567559052755545220646148538"
+        }
+      },
+      {
+        "domain": "claudhq.com",
+        "withinRateContributionPp": {
+          "fraction": "-383086579115/125431811131284",
+          "decimal": "-0.003054142132365768076923424981794969656382"
+        },
+        "mixContributionPp": {
+          "fraction": "36283505/12975704599788",
+          "decimal": "0.000002796264720806977073199637971067738645180"
+        },
+        "earlierWeight": {
+          "fraction": "230/28917",
+          "decimal": "0.007953798803472006086385171352491613929522"
+        },
+        "laterWeight": {
+          "fraction": "1061/133313",
+          "decimal": "0.007958713703839835574925176089353626428030"
+        }
+      },
+      {
+        "domain": "goldgramprice.com",
+        "withinRateContributionPp": {
+          "fraction": "1264086703444025/351203530230317016",
+          "decimal": "0.003599299536126658724498366415973011860668"
+        },
+        "mixContributionPp": {
+          "fraction": "499637349032375/351203530230317016",
+          "decimal": "0.001422643299470013984294725049201436164743"
+        },
+        "earlierWeight": {
+          "fraction": "5231/115668",
+          "decimal": "0.04522426254452398243247916450530829615797"
+        },
+        "laterWeight": {
+          "fraction": "8708/133313",
+          "decimal": "0.06531996129409734984585149235258376902478"
+        }
+      },
+      {
+        "domain": "bestchromeextensions.com",
+        "withinRateContributionPp": {
+          "fraction": "-849304625/357231113946",
+          "decimal": "-0.002377465433003641260044881275493891018901"
+        },
+        "mixContributionPp": {
+          "fraction": "-77220725/357231113946",
+          "decimal": "-0.0002161646116067955072546311220577222189865"
+        },
+        "earlierWeight": {
+          "fraction": "695/57834",
+          "decimal": "0.01201715254002835702182107410865580800221"
+        },
+        "laterWeight": {
+          "fraction": "1335/133313",
+          "decimal": "0.01001402713913871865459482571092091543960"
+        }
+      },
+      {
+        "domain": "kappafy.com",
+        "withinRateContributionPp": {
+          "fraction": "5716647950/13306583636487",
+          "decimal": "0.0004296104925327942146589705782736104036900"
+        },
+        "mixContributionPp": {
+          "fraction": "-152025434825/279438256366227",
+          "decimal": "-0.0005440394482914252977966488148416825736522"
+        },
+        "earlierWeight": {
+          "fraction": "173/28917",
+          "decimal": "0.005982639969568074143237541930352387868728"
+        },
+        "laterWeight": {
+          "fraction": "419/133313",
+          "decimal": "0.003142979304343912446648113837360197430108"
+        }
+      },
+      {
+        "domain": "pictureeditor.net",
+        "withinRateContributionPp": {
+          "fraction": "154361645/210740657148",
+          "decimal": "0.0007324720682236182546536546970680607911075"
+        },
+        "mixContributionPp": {
+          "fraction": "3717955/210740657148",
+          "decimal": "0.00001764232422122958464183786554773811822621"
+        },
+        "earlierWeight": {
+          "fraction": "113/19278",
+          "decimal": "0.005861603900819587094096898018466645917626"
+        },
+        "laterWeight": {
+          "fraction": "820/133313",
+          "decimal": "0.006150938018047752282223039013449551056536"
+        }
+      },
+      {
+        "domain": "englishlearner.org",
+        "withinRateContributionPp": {
+          "fraction": "9844277165525/419019980906592",
+          "decimal": "0.02349357456469238829195304317856562992213"
+        },
+        "mixContributionPp": {
+          "fraction": "105314962131725/2933139866346144",
+          "decimal": "0.03590519611426420529113088360434387530351"
+        },
+        "earlierWeight": {
+          "fraction": "767/115668",
+          "decimal": "0.006631047480720683335062420029740291178200"
+        },
+        "laterWeight": {
+          "fraction": "1984/133313",
+          "decimal": "0.01488226954610578113162257244229745036118"
+        }
+      },
+      {
+        "domain": "claudflow.com",
+        "withinRateContributionPp": {
+          "fraction": "-121065891380/6997948250121",
+          "decimal": "-0.01730019815135195891505576837772103445125"
+        },
+        "mixContributionPp": {
+          "fraction": "418973575460/48985637750847",
+          "decimal": "0.008552988073586030205387550199160911097484"
+        },
+        "earlierWeight": {
+          "fraction": "655/57834",
+          "decimal": "0.01132551786146557388387453746930871113878"
+        },
+        "laterWeight": {
+          "fraction": "2425/133313",
+          "decimal": "0.01819027401678756010291569464343312355134"
+        }
+      },
+      {
+        "domain": "krzen.com",
+        "withinRateContributionPp": {
+          "fraction": "-376546375/200460625092",
+          "decimal": "-0.001878405671074739382166068657327201706200"
+        },
+        "mixContributionPp": {
+          "fraction": "203239475/200460625092",
+          "decimal": "0.001013862322871260459732897858143330626904"
+        },
+        "earlierWeight": {
+          "fraction": "52/28917",
+          "decimal": "0.001798250164263236158660995262302451844936"
+        },
+        "laterWeight": {
+          "fraction": "802/133313",
+          "decimal": "0.006015917427407679671149850352178707252856"
+        }
+      },
+      {
+        "domain": "heytensor.com",
+        "withinRateContributionPp": {
+          "fraction": "-901702418721625/126065162192915484",
+          "decimal": "-0.007152669326215313434818882956024065889030"
+        },
+        "mixContributionPp": {
+          "fraction": "-5401745245259725/378195486578746452",
+          "decimal": "-0.01428294476521996720240328564379727303385"
+        },
+        "earlierWeight": {
+          "fraction": "29117/115668",
+          "decimal": "0.2517290866964069578448663415983677421586"
+        },
+        "laterWeight": {
+          "fraction": "10108/133313",
+          "decimal": "0.07582156278832521959598838822920495375545"
+        }
+      },
+      {
+        "domain": "grammarhelper.org",
+        "withinRateContributionPp": {
+          "fraction": "20040425/44546805576",
+          "decimal": "0.0004498734475092634417813860620065036826828"
+        },
+        "mixContributionPp": {
+          "fraction": "13374775/44546805576",
+          "decimal": "0.0003002409449355843975141065006092952266508"
+        },
+        "earlierWeight": {
+          "fraction": "1/6426",
+          "decimal": "0.0001556178026766262060379707438530967942733"
+        },
+        "laterWeight": {
+          "fraction": "104/133313",
+          "decimal": "0.0007801189681426417528673122651204308657070"
+        }
+      },
+      {
+        "domain": "b2berp.com",
+        "withinRateContributionPp": {
+          "fraction": "-4253069525/6761691084834",
+          "decimal": "-0.0006289949469207987577250954217146650141596"
+        },
+        "mixContributionPp": {
+          "fraction": "-1592705525/6761691084834",
+          "decimal": "-0.0002355484012826801647080753774692060651363"
+        },
+        "earlierWeight": {
+          "fraction": "877/38556",
+          "decimal": "0.02274613549123353044921672372652764809628"
+        },
+        "laterWeight": {
+          "fraction": "1380/133313",
+          "decimal": "0.01035157861573890018227779736409802494880"
+        }
+      },
+      {
+        "domain": "writingassistant.org",
+        "withinRateContributionPp": {
+          "fraction": "0",
+          "decimal": "0"
+        },
+        "mixContributionPp": {
+          "fraction": "0",
+          "decimal": "0"
+        },
+        "earlierWeight": {
+          "fraction": "155/57834",
+          "decimal": "0.002680084379430784659542829477470000345817"
+        },
+        "laterWeight": {
+          "fraction": "832/133313",
+          "decimal": "0.006240951745141134022938498120963446925656"
+        }
+      },
+      {
+        "domain": "aiwebsitepipeline.com",
+        "withinRateContributionPp": {
+          "fraction": "0",
+          "decimal": "0"
+        },
+        "mixContributionPp": {
+          "fraction": "0",
+          "decimal": "0"
+        },
+        "earlierWeight": {
+          "fraction": "29/57834",
+          "decimal": "0.0005014351419580177750112390635266452259916"
+        },
+        "laterWeight": {
+          "fraction": "1183/133313",
+          "decimal": "0.008873853262622549938865677015744901097417"
+        }
+      },
+      {
+        "domain": "kickllm.com",
+        "withinRateContributionPp": {
+          "fraction": "-18862054224725/10757819675874726",
+          "decimal": "-0.001753334299423578402898114292657219510164"
+        },
+        "mixContributionPp": {
+          "fraction": "42659505010925/10757819675874726",
+          "decimal": "0.003965441538920043775917504936990569566922"
+        },
+        "earlierWeight": {
+          "fraction": "1976/28917",
+          "decimal": "0.06833350624200297402911781996749317010755"
+        },
+        "laterWeight": {
+          "fraction": "11298/133313",
+          "decimal": "0.08474792405841890888360474972433296077652"
+        }
+      },
+      {
+        "domain": "taxbreakcalc.com",
+        "withinRateContributionPp": {
+          "fraction": "0",
+          "decimal": "0"
+        },
+        "mixContributionPp": {
+          "fraction": "0",
+          "decimal": "0"
+        },
+        "earlierWeight": {
+          "fraction": "1/6426",
+          "decimal": "0.0001556178026766262060379707438530967942733"
+        },
+        "laterWeight": {
+          "fraction": "369/133313",
+          "decimal": "0.002767922108121488527000367556052297975441"
+        }
+      },
+      {
+        "domain": "lochbot.com",
+        "withinRateContributionPp": {
+          "fraction": "-929971625/882797752809",
+          "decimal": "-0.001053436783273287766971919290206481284994"
+        },
+        "mixContributionPp": {
+          "fraction": "-596462225/882797752809",
+          "decimal": "-0.0006756499131336700778944223081612608735976"
+        },
+        "earlierWeight": {
+          "fraction": "229/12852",
+          "decimal": "0.01781823840647370059134765017117958294429"
+        },
+        "laterWeight": {
+          "fraction": "519/133313",
+          "decimal": "0.003893093696788760285943606399975996339442"
+        }
+      },
+      {
+        "domain": "paraphrasetool.org",
+        "withinRateContributionPp": {
+          "fraction": "-35518525555/21192286083444",
+          "decimal": "-0.001676011989227913193077236288565711841418"
+        },
+        "mixContributionPp": {
+          "fraction": "99280543165/63576858250332",
+          "decimal": "0.001561583033469282109939558051997639671456"
+        },
+        "earlierWeight": {
+          "fraction": "95/38556",
+          "decimal": "0.002463948542379914928934536777674032575993"
+        },
+        "laterWeight": {
+          "fraction": "1302/133313",
+          "decimal": "0.009766489389631918867627313165257701799524"
+        }
+      },
+      {
+        "domain": "lakelevelnow.com",
+        "withinRateContributionPp": {
+          "fraction": "9096600788650/2163451164575967",
+          "decimal": "0.004204671192766636514248480936266627546847"
+        },
+        "mixContributionPp": {
+          "fraction": "213655738377125/6490353493727901",
+          "decimal": "0.03291896790885057735331885965335691905117"
+        },
+        "earlierWeight": {
+          "fraction": "203/1377",
+          "decimal": "0.1474219317356572258533042846768336964415"
+        },
+        "laterWeight": {
+          "fraction": "24881/133313",
+          "decimal": "0.1866359619842025908951115045044369266313"
+        }
+      },
+      {
+        "domain": "lockml.com",
+        "withinRateContributionPp": {
+          "fraction": "-3417585425/819832556466",
+          "decimal": "-0.004168638337237993918903477692328894774185"
+        },
+        "mixContributionPp": {
+          "fraction": "220653875/48225444498",
+          "decimal": "0.004575465862406948508785935545240477173631"
+        },
+        "earlierWeight": {
+          "fraction": "11/6426",
+          "decimal": "0.001711795829442888266417678182384064737006"
+        },
+        "laterWeight": {
+          "fraction": "29/4597",
+          "decimal": "0.006308462040461170328475092451598868827496"
+        }
+      },
+      {
+        "domain": "zovo.one",
+        "withinRateContributionPp": {
+          "fraction": "297508284181775/10734708878808831",
+          "decimal": "0.02771461131741355484699014834518124426437"
+        },
+        "mixContributionPp": {
+          "fraction": "-469611723958975/10734708878808831",
+          "decimal": "-0.04374703862589379473260268662058393982447"
+        },
+        "earlierWeight": {
+          "fraction": "1658/28917",
+          "decimal": "0.05733651485285472213576788740187432997891"
+        },
+        "laterWeight": {
+          "fraction": "3359/133313",
+          "decimal": "0.02519634244222243892193559517826468536452"
+        }
+      },
+      {
+        "domain": "invokebot.com",
+        "withinRateContributionPp": {
+          "fraction": "0",
+          "decimal": "0"
+        },
+        "mixContributionPp": {
+          "fraction": "0",
+          "decimal": "0"
+        },
+        "earlierWeight": {
+          "fraction": "4/9639",
+          "decimal": "0.0004149808071376698827679219836082581180620"
+        },
+        "laterWeight": {
+          "fraction": "184/133313",
+          "decimal": "0.001380210482098520024303706315213069993174"
+        }
+      },
+      {
+        "domain": "enhio.com",
+        "withinRateContributionPp": {
+          "fraction": "93848280475/51402198562218",
+          "decimal": "0.001825763938120363067700834832070255874722"
+        },
+        "mixContributionPp": {
+          "fraction": "1580498126575/1490663758304322",
+          "decimal": "0.001060264675900397206343457181824867592650"
+        },
+        "earlierWeight": {
+          "fraction": "223/19278",
+          "decimal": "0.01156758999896254798215582529308019504098"
+        },
+        "laterWeight": {
+          "fraction": "2601/133313",
+          "decimal": "0.01951047534749049230007576155363692963177"
+        }
+      },
+      {
+        "domain": "neovistainc.com",
+        "withinRateContributionPp": {
+          "fraction": "-8290025/5442369912",
+          "decimal": "-0.001523238062470017565391832189741093071073"
+        },
+        "mixContributionPp": {
+          "fraction": "50355625/92520288504",
+          "decimal": "0.0005442657585079075598209831539891498218150"
+        },
+        "earlierWeight": {
+          "fraction": "1/2754",
+          "decimal": "0.0003631082062454611474219317356572258533043"
+        },
+        "laterWeight": {
+          "fraction": "72/133313",
+          "decimal": "0.0005400823625602904442927546450833752147202"
+        }
+      },
+      {
+        "domain": "gpt0x.com",
+        "withinRateContributionPp": {
+          "fraction": "-1094406864625/1488435561356184",
+          "decimal": "-0.0007352732580695896379808015648353930825163"
+        },
+        "mixContributionPp": {
+          "fraction": "924086737625/1488435561356184",
+          "decimal": "0.0006208443023109585548431233282673209125541"
+        },
+        "earlierWeight": {
+          "fraction": "835/38556",
+          "decimal": "0.02165681087249714700695092851955597053636"
+        },
+        "laterWeight": {
+          "fraction": "5780/133313",
+          "decimal": "0.04335661188331220511127947011919317695949"
+        }
+      }
+    ]
+  },
+  "limitations": [
+    "Convenience cohort of properties accessible to one service account, not representative of Google, independent publishers, or the web.",
+    "Raw site-list response and permission levels were not retained; completeness of cohort against all accessible properties cannot be independently established. Script truncates listed entries to 400 before deduplication.",
+    "Selected tg.zovo.one URL prefix overlaps selected sc-domain:zovo.one domain property. Overlapping prefix has zero counts in both periods, so measured aggregate counts are unaffected; selected cohort must not be described as 38 disjoint sites.",
+    "Both verification routes use Google Search Analytics; agreement validates route consistency, not external accuracy or independence.",
+    "Absent daily dates are not returned rows, not proof that API queried them incorrectly. Flat/daily exact count agreement bounds aggregate impact but no per-date claim should treat omitted dates as directly observed zero rows.",
+    "Final-data request and three-day lag reduce incomplete-period risk but do not make subsequent GSC revisions impossible.",
+    "Property impressions are aggregated byProperty; do not compare or combine with historical page-grouped band totals as identical measurement.",
+    "Two-period CTR decomposition is an arithmetic identity, not a causal estimate, significance test, ranking effect, or buyer outcome prediction.",
+    "Midpoint within-rate contribution still includes each property changing its query, page, country, device, or rank mix; it is not an isolated content effect.",
+    "Midpoint rate/mix split is symmetric but not unique among legitimate decomposition conventions; method and formula must be stated.",
+    "Largest property selected by combined-period impressions and removed identically from both periods; selection is descriptive sensitivity, not an unbiased counterfactual.",
+    "28-day windows match weekday counts but do not control seasonality, product/site changes, or search changes.",
+    "Zero-impression properties have undefined individual CTR and are excluded from per-property decomposition terms; they contribute no impressions or clicks to pooled totals. No undefined rate is recoded as observed zero."
+  ],
+  "selectedSiteUrls": [
+    "sc-domain:ml0x.com",
+    "sc-domain:bugbountyreality.com",
+    "sc-domain:abwex.com",
+    "sc-domain:ingredientcalculator.com",
+    "sc-domain:dismissticket.com",
+    "https://tg.zovo.one/",
+    "sc-domain:epochpilot.com",
+    "sc-domain:recipetool.net",
+    "sc-domain:gen8x.com",
+    "sc-domain:viryd.com",
+    "sc-domain:ml3x.com",
+    "https://tgtools-site.lipmichal.workers.dev/",
+    "sc-domain:claudkit.com",
+    "sc-domain:claudhq.com",
+    "https://goldgramprice.com/",
+    "sc-domain:bestchromeextensions.com",
+    "sc-domain:kappafy.com",
+    "sc-domain:pictureeditor.net",
+    "sc-domain:englishlearner.org",
+    "sc-domain:claudflow.com",
+    "sc-domain:krzen.com",
+    "sc-domain:heytensor.com",
+    "sc-domain:grammarhelper.org",
+    "sc-domain:b2berp.com",
+    "sc-domain:writingassistant.org",
+    "sc-domain:aiwebsitepipeline.com",
+    "sc-domain:belikenative.com",
+    "sc-domain:kickllm.com",
+    "https://taxbreakcalc.com/",
+    "sc-domain:lochbot.com",
+    "sc-domain:paraphrasetool.org",
+    "https://lakelevelnow.com/",
+    "sc-domain:lockml.com",
+    "sc-domain:zovo.one",
+    "sc-domain:invokebot.com",
+    "sc-domain:enhio.com",
+    "sc-domain:neovistainc.com",
+    "sc-domain:gpt0x.com"
+  ],
+  "coverageOverlaps": [
+    {
+      "domainProperty": "sc-domain:zovo.one",
+      "overlappingProperty": "https://tg.zovo.one/",
+      "overlapCounts": {
+        "earlier": {
+          "clicks": 0,
+          "impressions": 0
+        },
+        "later": {
+          "clicks": 0,
+          "impressions": 0
+        }
+      }
+    }
+  ],
+  "coverageOverlapConclusion": "The selected tg.zovo.one URL-prefix overlaps sc-domain:zovo.one, but it has zero clicks and impressions in both periods. Thus observed pooled numerators and denominators are unaffected. Describe 36 properties with impressions, not 38 disjoint sites. The method should exclude covered prefixes in future harvests.",
+  "missingDateConclusion": "Four property-period slices with zero aggregate impressions omit many/all dates. aiwebsitepipeline.com earlier has seven returned daily rows and 21 absent dates; its flat/daily counts agree exactly. No malformed or repeated dates were found."
+}

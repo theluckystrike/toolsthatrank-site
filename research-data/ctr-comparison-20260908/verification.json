@@ -1,0 +1,64 @@
+{
+  "rawSha256": "4083300e256cbfc087100acace5b1b249e14e7a0ec068b2240b5b31aea591e7b",
+  "fetchedAt": "2026-09-08T03:29:08.279Z",
+  "auditedAt": "2026-09-08T03:33:48.165181+00:00",
+  "method": "Independent Python integer sums and Fraction arithmetic; no dependence on recorded verified booleans",
+  "periodChecks": {
+    "days": {
+      "earlier": 28,
+      "later": 28
+    },
+    "adjacent": true,
+    "overlap": []
+  },
+  "propertyCount": 38,
+  "nonzeroBoth": 36,
+  "zeroBoth": [
+    "tg.zovo.one",
+    "tgtools-site.lipmichal.workers.dev"
+  ],
+  "oneZeroPeriod": [],
+  "duplicateDomains": [],
+  "issues": [],
+  "limitations": [
+    "Convenience cohort of properties accessible to one service account, not representative of Google, independent publishers, or the web.",
+    "Raw site-list response and permission levels were not retained; completeness of cohort against all accessible properties cannot be independently established. Script truncates listed entries to 400 before deduplication.",
+    "Selected tg.zovo.one URL prefix overlaps selected sc-domain:zovo.one domain property. Overlapping prefix has zero counts in both periods, so measured aggregate counts are unaffected; selected cohort must not be described as 38 disjoint sites.",
+    "Both verification routes use Google Search Analytics; agreement validates route consistency, not external accuracy or independence.",
+    "Absent daily dates are not returned rows, not proof that API queried them incorrectly. Flat/daily exact count agreement bounds aggregate impact but no per-date claim should treat omitted dates as directly observed zero rows.",
+    "Final-data request and three-day lag reduce incomplete-period risk but do not make subsequent GSC revisions impossible.",
+    "Property impressions are aggregated byProperty; do not compare or combine with historical page-grouped band totals as identical measurement.",
+    "Two-period CTR decomposition is an arithmetic identity, not a causal estimate, significance test, ranking effect, or buyer outcome prediction.",
+    "Midpoint within-rate contribution still includes each property changing its query, page, country, device, or rank mix; it is not an isolated content effect.",
+    "Midpoint rate/mix split is symmetric but not unique among legitimate decomposition conventions; method and formula must be stated.",
+    "Largest property selected by combined-period impressions and removed identically from both periods; selection is descriptive sensitivity, not an unbiased counterfactual.",
+    "28-day windows match weekday counts but do not control seasonality, product/site changes, or search changes.",
+    "Zero-impression properties have undefined individual CTR and are excluded from per-property decomposition terms; they contribute no impressions or clicks to pooled totals. No undefined rate is recoded as observed zero."
+  ],
+  "coverageOverlaps": [
+    {
+      "domainProperty": "sc-domain:zovo.one",
+      "overlappingProperty": "https://tg.zovo.one/",
+      "overlapCounts": {
+        "earlier": {
+          "clicks": 0,
+          "impressions": 0
+        },
+        "later": {
+          "clicks": 0,
+          "impressions": 0
+        }
+      }
+    }
+  ],
+  "coverageOverlapConclusion": "The selected tg.zovo.one URL-prefix overlaps sc-domain:zovo.one, but it has zero clicks and impressions in both periods. Thus observed pooled numerators and denominators are unaffected. Describe 36 properties with impressions, not 38 disjoint sites. The method should exclude covered prefixes in future harvests.",
+  "missingDateConclusion": "Four property-period slices with zero aggregate impressions omit many/all dates. aiwebsitepipeline.com earlier has seven returned daily rows and 21 absent dates; its flat/daily counts agree exactly. No malformed or repeated dates were found.",
+  "sourceAuthentication": "Independent recomputation of recorded responses, not independent authentication of Google source values.",
+  "dataset": "data.json",
+  "verificationRoutes": [
+    "dimensions=[] period totals",
+    "dimensions=[date] summed daily totals"
+  ],
+  "allRawCountsAgree": true,
+  "largestPropertyByCombinedImpressions": "belikenative.com"
+}

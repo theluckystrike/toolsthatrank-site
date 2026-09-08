@@ -1,0 +1,578 @@
+{
+  "title": "Two-period Search Console CTR comparison",
+  "fetchedAt": "2026-09-08T03:29:08.279Z",
+  "sourceEndpoint": "https://searchconsole.googleapis.com/webmasters/v3/sites/{site}/searchAnalytics/query",
+  "sourceAggregation": "byProperty",
+  "searchType": "web",
+  "dataState": "final",
+  "periods": [
+    {
+      "name": "earlier",
+      "startDate": "2026-07-12",
+      "endDate": "2026-08-08"
+    },
+    {
+      "name": "later",
+      "startDate": "2026-08-09",
+      "endDate": "2026-09-05"
+    }
+  ],
+  "cohort": "Properties with impressions in both periods, accessible to one operator. Not an industry benchmark.",
+  "sourceAuthentication": "Private Search Console API. Published numbers can be recomputed, but source readings require authorized access to authenticate.",
+  "crossCheck": "Period totals compared with the integer sum of daily rows from the same provider, not an independent provider.",
+  "rawSha256": "4083300e256cbfc087100acace5b1b249e14e7a0ec068b2240b5b31aea591e7b",
+  "queriedSelections": 38,
+  "includedProperties": 36,
+  "exclusions": [
+    {
+      "property": "tg.zovo.one",
+      "reason": "No impressions or clicks in either period. The tg.zovo.one prefix also overlaps zovo.one."
+    },
+    {
+      "property": "tgtools-site.lipmichal.workers.dev",
+      "reason": "No impressions or clicks in either period."
+    }
+  ],
+  "rows": [
+    {
+      "property": "ml0x.com",
+      "earlier": {
+        "clicks": 10,
+        "impressions": 1044,
+        "dailyRouteClicks": 10,
+        "dailyRouteImpressions": 1044
+      },
+      "later": {
+        "clicks": 31,
+        "impressions": 2351,
+        "dailyRouteClicks": 31,
+        "dailyRouteImpressions": 2351
+      }
+    },
+    {
+      "property": "bugbountyreality.com",
+      "earlier": {
+        "clicks": 4,
+        "impressions": 517,
+        "dailyRouteClicks": 4,
+        "dailyRouteImpressions": 517
+      },
+      "later": {
+        "clicks": 3,
+        "impressions": 1505,
+        "dailyRouteClicks": 3,
+        "dailyRouteImpressions": 1505
+      }
+    },
+    {
+      "property": "abwex.com",
+      "earlier": {
+        "clicks": 2,
+        "impressions": 1109,
+        "dailyRouteClicks": 2,
+        "dailyRouteImpressions": 1109
+      },
+      "later": {
+        "clicks": 2,
+        "impressions": 1475,
+        "dailyRouteClicks": 2,
+        "dailyRouteImpressions": 1475
+      }
+    },
+    {
+      "property": "ingredientcalculator.com",
+      "earlier": {
+        "clicks": 191,
+        "impressions": 19760,
+        "dailyRouteClicks": 191,
+        "dailyRouteImpressions": 19760
+      },
+      "later": {
+        "clicks": 209,
+        "impressions": 34381,
+        "dailyRouteClicks": 209,
+        "dailyRouteImpressions": 34381
+      }
+    },
+    {
+      "property": "dismissticket.com",
+      "earlier": {
+        "clicks": 0,
+        "impressions": 161,
+        "dailyRouteClicks": 0,
+        "dailyRouteImpressions": 161
+      },
+      "later": {
+        "clicks": 1,
+        "impressions": 1519,
+        "dailyRouteClicks": 1,
+        "dailyRouteImpressions": 1519
+      }
+    },
+    {
+      "property": "epochpilot.com",
+      "earlier": {
+        "clicks": 5,
+        "impressions": 6373,
+        "dailyRouteClicks": 5,
+        "dailyRouteImpressions": 6373
+      },
+      "later": {
+        "clicks": 0,
+        "impressions": 760,
+        "dailyRouteClicks": 0,
+        "dailyRouteImpressions": 760
+      }
+    },
+    {
+      "property": "recipetool.net",
+      "earlier": {
+        "clicks": 8,
+        "impressions": 3510,
+        "dailyRouteClicks": 8,
+        "dailyRouteImpressions": 3510
+      },
+      "later": {
+        "clicks": 42,
+        "impressions": 6261,
+        "dailyRouteClicks": 42,
+        "dailyRouteImpressions": 6261
+      }
+    },
+    {
+      "property": "gen8x.com",
+      "earlier": {
+        "clicks": 1,
+        "impressions": 1002,
+        "dailyRouteClicks": 1,
+        "dailyRouteImpressions": 1002
+      },
+      "later": {
+        "clicks": 4,
+        "impressions": 1619,
+        "dailyRouteClicks": 4,
+        "dailyRouteImpressions": 1619
+      }
+    },
+    {
+      "property": "viryd.com",
+      "earlier": {
+        "clicks": 0,
+        "impressions": 20,
+        "dailyRouteClicks": 0,
+        "dailyRouteImpressions": 20
+      },
+      "later": {
+        "clicks": 0,
+        "impressions": 5,
+        "dailyRouteClicks": 0,
+        "dailyRouteImpressions": 5
+      }
+    },
+    {
+      "property": "ml3x.com",
+      "earlier": {
+        "clicks": 0,
+        "impressions": 581,
+        "dailyRouteClicks": 0,
+        "dailyRouteImpressions": 581
+      },
+      "later": {
+        "clicks": 0,
+        "impressions": 943,
+        "dailyRouteClicks": 0,
+        "dailyRouteImpressions": 943
+      }
+    },
+    {
+      "property": "claudkit.com",
+      "earlier": {
+        "clicks": 1,
+        "impressions": 178,
+        "dailyRouteClicks": 1,
+        "dailyRouteImpressions": 178
+      },
+      "later": {
+        "clicks": 1,
+        "impressions": 127,
+        "dailyRouteClicks": 1,
+        "dailyRouteImpressions": 127
+      }
+    },
+    {
+      "property": "claudhq.com",
+      "earlier": {
+        "clicks": 7,
+        "impressions": 920,
+        "dailyRouteClicks": 7,
+        "dailyRouteImpressions": 920
+      },
+      "later": {
+        "clicks": 4,
+        "impressions": 1061,
+        "dailyRouteClicks": 4,
+        "dailyRouteImpressions": 1061
+      }
+    },
+    {
+      "property": "goldgramprice.com",
+      "earlier": {
+        "clicks": 2,
+        "impressions": 5231,
+        "dailyRouteClicks": 2,
+        "dailyRouteImpressions": 5231
+      },
+      "later": {
+        "clicks": 9,
+        "impressions": 8708,
+        "dailyRouteClicks": 9,
+        "dailyRouteImpressions": 8708
+      }
+    },
+    {
+      "property": "bestchromeextensions.com",
+      "earlier": {
+        "clicks": 3,
+        "impressions": 1390,
+        "dailyRouteClicks": 3,
+        "dailyRouteImpressions": 1390
+      },
+      "later": {
+        "clicks": 0,
+        "impressions": 1335,
+        "dailyRouteClicks": 0,
+        "dailyRouteImpressions": 1335
+      }
+    },
+    {
+      "property": "kappafy.com",
+      "earlier": {
+        "clicks": 1,
+        "impressions": 692,
+        "dailyRouteClicks": 1,
+        "dailyRouteImpressions": 692
+      },
+      "later": {
+        "clicks": 1,
+        "impressions": 419,
+        "dailyRouteClicks": 1,
+        "dailyRouteImpressions": 419
+      }
+    },
+    {
+      "property": "pictureeditor.net",
+      "earlier": {
+        "clicks": 0,
+        "impressions": 678,
+        "dailyRouteClicks": 0,
+        "dailyRouteImpressions": 678
+      },
+      "later": {
+        "clicks": 1,
+        "impressions": 820,
+        "dailyRouteClicks": 1,
+        "dailyRouteImpressions": 820
+      }
+    },
+    {
+      "property": "englishlearner.org",
+      "earlier": {
+        "clicks": 25,
+        "impressions": 767,
+        "dailyRouteClicks": 25,
+        "dailyRouteImpressions": 767
+      },
+      "later": {
+        "clicks": 108,
+        "impressions": 1984,
+        "dailyRouteClicks": 108,
+        "dailyRouteImpressions": 1984
+      }
+    },
+    {
+      "property": "claudflow.com",
+      "earlier": {
+        "clicks": 24,
+        "impressions": 1310,
+        "dailyRouteClicks": 24,
+        "dailyRouteImpressions": 1310
+      },
+      "later": {
+        "clicks": 16,
+        "impressions": 2425,
+        "dailyRouteClicks": 16,
+        "dailyRouteImpressions": 2425
+      }
+    },
+    {
+      "property": "krzen.com",
+      "earlier": {
+        "clicks": 1,
+        "impressions": 208,
+        "dailyRouteClicks": 1,
+        "dailyRouteImpressions": 208
+      },
+      "later": {
+        "clicks": 0,
+        "impressions": 802,
+        "dailyRouteClicks": 0,
+        "dailyRouteImpressions": 802
+      }
+    },
+    {
+      "property": "heytensor.com",
+      "earlier": {
+        "clicks": 30,
+        "impressions": 29117,
+        "dailyRouteClicks": 30,
+        "dailyRouteImpressions": 29117
+      },
+      "later": {
+        "clicks": 6,
+        "impressions": 10108,
+        "dailyRouteClicks": 6,
+        "dailyRouteImpressions": 10108
+      }
+    },
+    {
+      "property": "grammarhelper.org",
+      "earlier": {
+        "clicks": 0,
+        "impressions": 18,
+        "dailyRouteClicks": 0,
+        "dailyRouteImpressions": 18
+      },
+      "later": {
+        "clicks": 1,
+        "impressions": 104,
+        "dailyRouteClicks": 1,
+        "dailyRouteImpressions": 104
+      }
+    },
+    {
+      "property": "b2berp.com",
+      "earlier": {
+        "clicks": 1,
+        "impressions": 2631,
+        "dailyRouteClicks": 1,
+        "dailyRouteImpressions": 2631
+      },
+      "later": {
+        "clicks": 0,
+        "impressions": 1380,
+        "dailyRouteClicks": 0,
+        "dailyRouteImpressions": 1380
+      }
+    },
+    {
+      "property": "writingassistant.org",
+      "earlier": {
+        "clicks": 0,
+        "impressions": 310,
+        "dailyRouteClicks": 0,
+        "dailyRouteImpressions": 310
+      },
+      "later": {
+        "clicks": 0,
+        "impressions": 832,
+        "dailyRouteClicks": 0,
+        "dailyRouteImpressions": 832
+      }
+    },
+    {
+      "property": "aiwebsitepipeline.com",
+      "earlier": {
+        "clicks": 0,
+        "impressions": 58,
+        "dailyRouteClicks": 0,
+        "dailyRouteImpressions": 58
+      },
+      "later": {
+        "clicks": 0,
+        "impressions": 1183,
+        "dailyRouteClicks": 0,
+        "dailyRouteImpressions": 1183
+      }
+    },
+    {
+      "property": "belikenative.com",
+      "earlier": {
+        "clicks": 1160,
+        "impressions": 309177,
+        "dailyRouteClicks": 1160,
+        "dailyRouteImpressions": 309177
+      },
+      "later": {
+        "clicks": 1068,
+        "impressions": 329175,
+        "dailyRouteClicks": 1068,
+        "dailyRouteImpressions": 329175
+      }
+    },
+    {
+      "property": "kickllm.com",
+      "earlier": {
+        "clicks": 20,
+        "impressions": 7904,
+        "dailyRouteClicks": 20,
+        "dailyRouteImpressions": 7904
+      },
+      "later": {
+        "clicks": 26,
+        "impressions": 11298,
+        "dailyRouteClicks": 26,
+        "dailyRouteImpressions": 11298
+      }
+    },
+    {
+      "property": "taxbreakcalc.com",
+      "earlier": {
+        "clicks": 0,
+        "impressions": 18,
+        "dailyRouteClicks": 0,
+        "dailyRouteImpressions": 18
+      },
+      "later": {
+        "clicks": 0,
+        "impressions": 369,
+        "dailyRouteClicks": 0,
+        "dailyRouteImpressions": 369
+      }
+    },
+    {
+      "property": "lochbot.com",
+      "earlier": {
+        "clicks": 2,
+        "impressions": 2061,
+        "dailyRouteClicks": 2,
+        "dailyRouteImpressions": 2061
+      },
+      "later": {
+        "clicks": 0,
+        "impressions": 519,
+        "dailyRouteClicks": 0,
+        "dailyRouteImpressions": 519
+      }
+    },
+    {
+      "property": "paraphrasetool.org",
+      "earlier": {
+        "clicks": 1,
+        "impressions": 285,
+        "dailyRouteClicks": 1,
+        "dailyRouteImpressions": 285
+      },
+      "later": {
+        "clicks": 1,
+        "impressions": 1302,
+        "dailyRouteClicks": 1,
+        "dailyRouteImpressions": 1302
+      }
+    },
+    {
+      "property": "lakelevelnow.com",
+      "earlier": {
+        "clicks": 141,
+        "impressions": 17052,
+        "dailyRouteClicks": 141,
+        "dailyRouteImpressions": 17052
+      },
+      "later": {
+        "clicks": 212,
+        "impressions": 24881,
+        "dailyRouteClicks": 212,
+        "dailyRouteImpressions": 24881
+      }
+    },
+    {
+      "property": "lockml.com",
+      "earlier": {
+        "clicks": 3,
+        "impressions": 198,
+        "dailyRouteClicks": 3,
+        "dailyRouteImpressions": 198
+      },
+      "later": {
+        "clicks": 4,
+        "impressions": 841,
+        "dailyRouteClicks": 4,
+        "dailyRouteImpressions": 841
+      }
+    },
+    {
+      "property": "zovo.one",
+      "earlier": {
+        "clicks": 68,
+        "impressions": 6632,
+        "dailyRouteClicks": 68,
+        "dailyRouteImpressions": 6632
+      },
+      "later": {
+        "clicks": 57,
+        "impressions": 3359,
+        "dailyRouteClicks": 57,
+        "dailyRouteImpressions": 3359
+      }
+    },
+    {
+      "property": "invokebot.com",
+      "earlier": {
+        "clicks": 0,
+        "impressions": 48,
+        "dailyRouteClicks": 0,
+        "dailyRouteImpressions": 48
+      },
+      "later": {
+        "clicks": 0,
+        "impressions": 184,
+        "dailyRouteClicks": 0,
+        "dailyRouteImpressions": 184
+      }
+    },
+    {
+      "property": "enhio.com",
+      "earlier": {
+        "clicks": 1,
+        "impressions": 1338,
+        "dailyRouteClicks": 1,
+        "dailyRouteImpressions": 1338
+      },
+      "later": {
+        "clicks": 5,
+        "impressions": 2601,
+        "dailyRouteClicks": 5,
+        "dailyRouteImpressions": 2601
+      }
+    },
+    {
+      "property": "neovistainc.com",
+      "earlier": {
+        "clicks": 2,
+        "impressions": 42,
+        "dailyRouteClicks": 2,
+        "dailyRouteImpressions": 42
+      },
+      "later": {
+        "clicks": 1,
+        "impressions": 72,
+        "dailyRouteClicks": 1,
+        "dailyRouteImpressions": 72
+      }
+    },
+    {
+      "property": "gpt0x.com",
+      "earlier": {
+        "clicks": 1,
+        "impressions": 2505,
+        "dailyRouteClicks": 1,
+        "dailyRouteImpressions": 2505
+      },
+      "later": {
+        "clicks": 1,
+        "impressions": 5780,
+        "dailyRouteClicks": 1,
+        "dailyRouteImpressions": 5780
+      }
+    }
+  ]
+}
