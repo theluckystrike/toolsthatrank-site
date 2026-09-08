@@ -21,7 +21,7 @@ function totals(properties,period,route) {
 }
 
 function measure(raw,route) {
-  const properties=raw.properties.filter(p=>['earlier','later'].some(t=>totals([p],t,route).impressions>0));
+  const properties=raw.properties.filter(p=>['earlier','later'].every(t=>totals([p],t,route).impressions>0));
   if (!properties.length || properties.length>200) throw new Error('Invalid cohort');
   const ranked=properties.slice().sort((a,b)=>['earlier','later'].reduce((sum,t)=>sum+totals([b],t,route).impressions-totals([a],t,route).impressions,0));
   const largest=ranked[0];
