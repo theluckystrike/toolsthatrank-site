@@ -41,7 +41,7 @@ statistical significance or a typical property's experience.
 
 `calculator-source.js` records the working browser calculator after the claim
 review. Its measured presets were filled from the validated field counts in
-this dataset. Formatting changes only whitespace and quote style for reading.
+this dataset. This revision separates parsing, arithmetic and rendering into bounded functions.
 It runs in the matching calculator markup, rather than as a standalone Node
 program. The page calculates inline and does not fetch this file to run.
 
@@ -49,7 +49,10 @@ The calculator accepts digit-only whole counts up to 1,000,000,000,000 per field
 It rejects strings longer than 64 digits before numeric conversion, including
 excessive leading zeros, and never silently truncates a submitted count. These
 are locally defined tool limits, not thresholds supplied by Google. The source
-shows both checks in `calculate()`. Invalid inputs clear calculated output.
+shows both checks in `readCounts()`. Invalid inputs clear calculated output.
+The matching markup has unnamed count fields and initially disabled action
+buttons. Initialization enables them after required elements and presets pass
+checks. Without JavaScript, pressing Enter does not submit entered counts.
 
 Comparison results use unrounded ratios and display rounded results. The code
 also states whether clicks, impressions and CTR rose, fell or stayed unchanged.
