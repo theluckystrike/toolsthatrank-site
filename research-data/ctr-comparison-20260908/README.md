@@ -36,3 +36,21 @@ CTR is computed from summed clicks divided by summed impressions. Display
 percentages are rounded; the calculator uses the raw counts. Neither the
 exclusion check nor the symmetric click decomposition establishes causation,
 statistical significance or a typical property's experience.
+
+## Calculator source snapshot
+
+`calculator-source.js` records the working browser calculator after the claim
+review. Its measured presets were filled from the validated field counts in
+this dataset. Formatting changes only whitespace and quote style for reading.
+It runs in the matching calculator markup, rather than as a standalone Node
+program. The page calculates inline and does not fetch this file to run.
+
+The calculator accepts digit-only whole counts up to 1,000,000,000,000 per field.
+It rejects strings longer than 64 digits before numeric conversion, including
+excessive leading zeros, and never silently truncates a submitted count. These
+are locally defined tool limits, not thresholds supplied by Google. The source
+shows both checks in `calculate()`. Invalid inputs clear calculated output.
+
+Comparison results use unrounded ratios and display rounded results. The code
+also states whether clicks, impressions and CTR rose, fell or stayed unchanged.
+The components are descriptive arithmetic, not a causal or significance test.
