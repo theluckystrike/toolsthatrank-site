@@ -40,8 +40,10 @@ verify.mjs verifies the ECDSA signature in the browser against the embedded publ
   re-checked against the embedded public key before anything is revealed. The page never
   takes the Worker's word for "paid".
 - **No external requests except the Worker origin.** Fonts are the sales page's stack with
-  a `system-ui` fallback (not loaded from a remote host). The only network call the page
-  can make is to `WORKER_ORIGIN`, and only for the `#s=` session-exchange path.
+  a `system-ui` fallback (not loaded from a remote host). The only network call the delivery
+  code makes is to `WORKER_ORIGIN`, and only for the `#s=` session-exchange path. The site-wide
+  `/site-analytics.js` tag also runs here (Google Analytics under the consent banner). It sends
+  Google the path only, never the `#` fragment, so the receipt token stays in the browser.
 
 ## Placeholders to fill before deploy
 
