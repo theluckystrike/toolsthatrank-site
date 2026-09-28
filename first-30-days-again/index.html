@@ -316,17 +316,18 @@ table.data tr:last-child td,table.data tr:last-child th{border-bottom:0}
 <section class="in sec">
   <p class="crumb"><a href="/">ToolsThatRank</a> / measured data</p>
   <p class="kicker">Replication, same properties</p>
-  <h1>We Re-measured the First 30 Days on 74 Brand-New Pages. The Clock Did Not Slow Down.</h1>
+  <h1>We Re-measured the First 30 Days on 74 Brand-New Pages. The Silence Persisted.</h1>
   <p class="lede">Our first study measured 1,185 new pages and found 17.8% got their first
     Google impression within 30 days. Numbers like that age fast, so we re-ran the same
     measurement on every page this fleet published after that study closed: 74 pages,
     published 2026-08-26 to 2026-09-18, watched daily through 2026-09-25. By day 24,
     29.9% had been shown (Kaplan-Meier), with the empirical share at 18.4%.
-    The honest reading: still slow, still silence for most pages in month one, and no
-    evidence the clock has sped up.</p>
+    The honest reading: still slow, still silence for most pages in month one. These two
+    cohorts are not comparable samples, so this page makes no claim about whether Google
+    itself changed; it only describes what these 74 pages did.</p>
   <div class="answer">
     <div class="a hl"><span class="k">PAGES RE-MEASURED</span><span class="v">74</span><span class="d">of the 98 newly committed content pages; 24 sat on domains without a Search Console property and are counted as excluded, not missing</span></div>
-    <div class="a hl"><span class="k">SHOWN BY DAY 24 (KM)</span><span class="v">29.9%</span><span class="d">11 of 74 pages had earned a first impression; 63 still censored at window close</span></div>
+    <div class="a hl"><span class="k">SHOWN BY DAY 24 (KM, 29.9%)</span><span class="v">29.9%</span><span class="d">Kaplan-Meier; the raw count is 11 of 74 pages (14.9%) with 63 censored at window close. The two figures estimate the same thing differently: KM credits pages censored before their event window, the raw count does not</span></div>
     <div class="a"><span class="k">FIRST STUDY, DAY 30</span><span class="v">17.8%</span><span class="d">the original 1,185-page curve, for comparison</span></div>
   </div>
   <p class="stamp">Verified 2026-09-28 against the Search Console searchAnalytics endpoint.
@@ -368,7 +369,7 @@ table.data tr:last-child td,table.data tr:last-child th{border-bottom:0}
       <tbody>
 <tr><th scope="row">day 7</th><td class="num">12.2%</td><td class="num">4.1%</td></tr>
 <tr><th scope="row">day 14</th><td class="num">14.3%</td><td class="num">9.0%</td></tr>
-<tr class="deep"><th scope="row">day 24 (fresh window limit)</th><td class="num">29.9%</td><td class="num">14.1%</td></tr>
+<tr class="deep"><th scope="row">day 24 (fresh window limit)</th><td class="num">29.9%</td><td class="num">14.1% (read from the original curve between its printed day-14 and day-30 points; the original study does not print day 24)</td></tr>
 <tr><th scope="row">day 30</th><td class="num">beyond this study's window</td><td class="num">17.8%</td></tr>
       </tbody>
     </table>
@@ -381,10 +382,13 @@ table.data tr:last-child td,table.data tr:last-child th{border-bottom:0}
   <h2>What the comparison does and does not say</h2>
   <p>The fresh cohort's day-7 share (12.2%) is higher than the original study's (4.1%).
     That is a small sample, 9 events in the first week, and the confidence interval is wide
-    enough to cover the original figure. What we can say: nothing in the fresh data shows
-    Google slowing down further, and nothing shows a step change either. The median wait in
-    the fresh cohort had not been reached by day 24, consistent with the original median
-    of 78 days.</p>
+    enough to cover the original figure. This is a descriptive comparison, not a causal one.
+    The two cohorts differ in size (74 versus 1,185), composition (different pages, different
+    weeks, different site mix), and observation length (24 days of follow-up versus up to
+    142), so no conclusion about whether Google's indexing behavior changed can be drawn
+    from them. The median wait in the fresh cohort had not been reached by day 24, which is
+    consistent with the original median of 78 days and equally consistent with many other
+    medians; it is an observation, not a test.</p>
   <p>One honest anomaly. 25 of the 98 newly committed pages had impressions dated before
     their git first-commit date. These are old pages whose git history was re-created, not
     new pages that Google ranked instantly. The first study caught the same class of bug by
@@ -469,7 +473,7 @@ table.data tr:last-child td,table.data tr:last-child th{border-bottom:0}
   'use strict';
   /* NASA Power of 10: bounded loops, guards on every input, no recursion.
      Data is inlined below; the tool reads nothing from your account. */
-  var CURVE = [[3,10.2],[4,12.24],[11,14.5],[16,16.75],[18,19.06],[26,29.85]];
+  var CURVE = [[0,0],[3,10.2],[4,12.2],[7,12.2],[11,14.3],[14,14.3],[16,16.7],[18,19.1],[24,29.9],[26,29.9],[30,29.9]];
   var LAST_DAY = 30;
   var N_PAGES = 74;
   var MAX_POINTS = 200;
