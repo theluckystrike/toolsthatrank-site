@@ -43,7 +43,9 @@ verify.mjs verifies the ECDSA signature in the browser against the embedded publ
   a `system-ui` fallback (not loaded from a remote host). The only network call the delivery
   code makes is to `WORKER_ORIGIN`, and only for the `#s=` session-exchange path. The site-wide
   `/site-analytics.js` tag also runs here (Google Analytics under the consent banner). It sends
-  Google the path only, never the `#` fragment, so the receipt token stays in the browser.
+  Google the path only, never the `#` fragment, so the receipt token stays in the browser. After the
+  gate resolves, the page fires a `ttr:gate` window event; the analytics script turns a gate-confirmed `#s=`
+  session (or a `#s=...&tier=ttr_vetting` redirect) into one GA4 `purchase` with the session id as transaction_id.
 
 ## Placeholders to fill before deploy
 

@@ -21,6 +21,14 @@ var MR_CONSENT_MODE = 'basic'; // 'basic' | 'advanced'
   var REGION = ('AT BE BG HR CY CZ DK EE FI FR DE GR IE IT LV LT LU MT NL PL PT RO SK SI ES SE ' +
     'IS LI NO GB CH AX GF GP MQ RE YT MF').split(' ');
   var VALUE = { weekly: 9.99, lifetime: 199 };
+  /* ToolsThatRank Stripe payment links: buy.stripe.com slug -> tier (the link's metadata.tier) and its live USD price,
+     read from /v1/payment_links/<id>/line_items on 2026-09-29. Update the price here if Stripe's changes. */
+  var TTR = {
+    '4gMaEY5Am0ti6RT9UV43S0j': { item_id: 'ttr_pipeline', item_name: 'ToolsThatRank full pipeline', price: 99 },
+    '8x2bJ29QCdg41xzaYZ43S0x': { item_id: 'ttr_vetting', item_name: 'ToolsThatRank pipeline plus niche vetting', price: 279 }
+  };
+  function ttrTier(id) { for (var k in TTR) if (TTR[k].item_id === id) return TTR[k]; return null; }
+  function ttrItem(t) { return [{ item_id: t.item_id, item_name: t.item_name, price: t.price, quantity: 1 }]; }
 
   function get(k) { try { return w.localStorage.getItem(k); } catch (e) { return null; } }
   function put(k, v) { try { w.localStorage.setItem(k, v); } catch (e) {} }
@@ -97,6 +105,29 @@ var MR_CONSENT_MODE = 'basic'; // 'basic' | 'advanced'
     }
     var rk = 'mr_ret_' + h1.toString(16) + h2.toString(16);
     if (!get(rk)) track('checkout_return', { has_session: true }, function () { put(rk, '1'); });
+  }
+
+  /* purchase on /get/. Both payment links redirect to /get/#s=<checkout session id>. One purchase per session id per
+     browser (localStorage), and GA also dedupes on transaction_id. ttr_pipeline counts only when the delivery gate opens,
+     which needs the licence Worker to confirm with Stripe that the session is paid and then sign a token. ttr_vetting
+     has no automatic gate, so its link redirects with &tier=ttr_vetting and a well-formed live session id is enough.
+     cs_test_ ids never send. page_location still drops the fragment; the id reaches Google only as transaction_id. */
+  function purchase(id, t) {
+    if (!t || !/^cs_live_[A-Za-z0-9]+$/.test(id) || get('ttr_purchase_' + id)) return;
+    track('purchase', { transaction_id: id, currency: 'USD', value: t.price, items: ttrItem(t), tier: t.item_id },
+      function () { put('ttr_purchase_' + id, '1'); });
+  }
+  if (/^\/get(\/|\/index\.html)?$/.test(location.pathname)) {
+    var fr = location.hash.replace(/^#/, ''), fsid = (/(?:^|&)s=([^&]+)/.exec(fr) || [])[1];
+    var ftier = (/(?:^|&)tier=([^&]+)/.exec(fr) || [])[1];
+    try { fsid = fsid ? decodeURIComponent(fsid) : ''; } catch (e) { fsid = ''; }
+    if (/^cs_(live|test)_[A-Za-z0-9]+$/.test(fsid)) {
+      if (ftier === 'ttr_vetting') purchase(fsid, ttrTier('ttr_vetting'));
+      else w.addEventListener('ttr:gate', function (e) {
+        var g = e && e.detail;
+        if (g && g.open === true && g.session === fsid) purchase(fsid, ttrTier('ttr_pipeline'));
+      });
+    }
   }
 
   /* ---------- consent banner ---------- */
@@ -302,6 +333,11 @@ var MR_CONSENT_MODE = 'basic'; // 'basic' | 'advanced'
       return;
     }
     if (STRIPE.test(href) || a.hasAttribute('data-mr-checkout')) {
+      var slug = (/^https:\/\/buy\.stripe\.com\/([A-Za-z0-9]+)/i.exec(href) || [])[1], tt = slug && TTR[slug];
+      if (tt) {
+        track('begin_checkout', { currency: 'USD', value: tt.price, items: ttrItem(tt), tier: tt.item_id, placement: placement(a) });
+        return;
+      }
       var plan = planOf(a, href), cp = { plan: plan, currency: 'USD', placement: placement(a) };
       if (VALUE[plan]) cp.value = VALUE[plan];
       track('begin_checkout', cp);

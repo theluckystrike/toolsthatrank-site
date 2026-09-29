@@ -362,6 +362,12 @@ async function main() {
   }
 
   const gate = await resolveTokenGate(token);
+  /* Tells /site-analytics.js the gate result, so a Worker-confirmed paid session counts as a purchase. */
+  try {
+    window.dispatchEvent(new CustomEvent('ttr:gate', {
+      detail: { open: gate.open === true, reason: gate.reason, session: frag.kind === 'session' ? frag.value : null }
+    }));
+  } catch (e) { /* analytics must never block delivery */ }
   if (gate.open) {
     revealDownload(gate.payload, token);
   } else {
