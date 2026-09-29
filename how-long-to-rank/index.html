@@ -394,9 +394,11 @@ table.data tr:last-child td,table.data tr:last-child th{border-bottom:0}
   <h1>How Long Does It Take to Rank on Google? Measured Daily on 1,185 New Pages</h1>
   <p class="lede">On the 26 small, low authority sites we measured, the median new page waited 78 days
     for its first Google impression, and about 1 page in 5 reached the top 10 for any real query
-    within 90 days under a strict definition. That is the honest answer for sites like ours, meaning young
+    within 90 days under a strict definition.</p>
+  <p>That is the honest answer for sites like ours, meaning young
     sites with little authority publishing long tail tool and content pages. Established sites and
-    competitive keywords run on different clocks. Enter your page's publish date below to see where it
+    competitive keywords run on different clocks.</p>
+  <p>Enter your page's publish date below to see where it
     sits against 1,185 measured pages.</p>
   <div class="answer">
     <div class="a hl"><span class="k">MEDIAN WAIT</span><span class="v">78 days</span><span class="d">to the first Google impression. 95% interval 55 to 100 days by site bootstrap</span></div>
@@ -459,16 +461,19 @@ table.data tr:last-child td,table.data tr:last-child th{border-bottom:0}
     17.8% inside the first month. For a small new site, the first month of a page's
     life is mostly silence, and that silence is normal.</p>
   <p>Clicks run far behind impressions. By day 120 only 11.1% of pages had earned a
-    single click, and the median page had not earned one inside our window. This is not a separate
+    single click, and the median page had not earned one inside our window.</p>
+  <p>This is not a separate
     mystery. A null model that predicts clicks purely from each page's impression stream and the
     fleet's blended CTR of 0.176% expects 110
-    clicked pages, and we observed 102. The click curve is impression
+    clicked pages, and we observed 102.</p>
+  <p>The click curve is impression
     volume working through a thin deep-position CTR, which we measured on the
     <a href="/ctr-by-position/">position bands page</a>. It carries no extra signal about quality.</p>
   <p>The two top 10 columns disagree on purpose, and the loose one flatters. About half of pages hit a
     top 10 average position for at least one query within 90 days. But for 65.3%
     of those pages the trigger was a single impression on a long tail query, and
-    84.2% of them had still never received a click. The strict
+    84.2% of them had still never received a click.</p>
+  <p>The strict
     definition, position 10 or better on at least 3 impressions in a day, drops the 90 day share to
     20.4%. We publish both so you can pick the definition that matches your
     question.</p>
@@ -481,21 +486,25 @@ table.data tr:last-child td,table.data tr:last-child th{border-bottom:0}
   <p class="kicker">Context</p>
   <h2>What other studies measured</h2>
   <p>The numbers people quote for this question measure different things, so we quote them with their
-    own definitions attached. Ahrefs, May 2025, method in their words. "We took 1M random URLs seen by
+    own definitions attached.</p>
+  <p>Ahrefs, May 2025, method in their words. "We took 1M random URLs seen by
     our crawler in September 2023 and looked if any of them made it to the top 10 within a year." Their
     result. "Only 1.74% of newly published pages rank in the top 10 within a year (down from 5.7% in
-    2017)." Filtered to 2M random URLs with non-empty English content, their figure rises to 6.11%.
-    And of the pages that did reach the top 10, "40.82% of pages that ranked in the top 10 did so
+    2017)." Filtered to 2M random URLs with non-empty English content, their figure rises to 6.11%.</p>
+  <p>And of the pages that did reach the top 10, "40.82% of pages that ranked in the top 10 did so
     within 1 month."</p>
   <p>Search Engine Land's guide says SEO "typically takes three to six months to produce measurable
     results", with six to 12 months for competitive industries. Note the estimand, measurable results,
-    not a ranking. Orbit Media puts it at "about 2-3 months to rank for low-competition keywords and
-    about 4-12 months to achieve significant success in search". The line most of these trace back to
+    not a ranking.</p>
+  <p>Orbit Media puts it at "about 2-3 months to rank for low-competition keywords and
+    about 4-12 months to achieve significant success in search".</p>
+  <p>The line most of these trace back to
     is Google's Maile Ohye. "In most cases, the SEO will need four months to a year to help your
     business first implement improvements and then see the potential benefit."</p>
   <p>We draw no ratio between those figures and ours. Ahrefs samples the broad web and asks about the
     top 10 in their rank database. We track one operator's small new sites and ask when Google first
-    shows, clicks, and ranks a page for any query it chooses. Different populations, different
+    shows, clicks, and ranks a page for any query it chooses.</p>
+  <p>Different populations, different
     estimands, honestly different answers. What our data adds is the day by day curve, which none of
     the studies above publish.</p>
 </section>
@@ -560,9 +569,11 @@ table.data tr:last-child td,table.data tr:last-child th{border-bottom:0}
   <p>Our first draft said the median was 91 days. It was wrong. The join matched URLs exactly, and
     Google reports impressions under trivially different forms of the same address, with and without
     a trailing slash or an .html suffix. That mismatch counted 93 pages as never shown when Google had
-    in fact shown them. An independent reviewer rebuilt the whole join from raw data, found the
+    in fact shown them.</p>
+  <p>An independent reviewer rebuilt the whole join from raw data, found the
     variants, and the median fell from 91 days to 78. Every figure on this page is from the fixed
-    join, and the two implementations now agree to the decimal. Two more checks moved the draft. We
+    join, and the two implementations now agree to the decimal.</p>
+  <p>Two more checks moved the draft. We
     deleted every 180 and 365 day figure, because our deepest observation is 142
     days and quoting past it would be extrapolation dressed as measurement. And we verified that not
     one page had an impression dated before its publish date, the check that would have exposed a
@@ -581,17 +592,21 @@ table.data tr:last-child td,table.data tr:last-child th{border-bottom:0}
   <p>Read this before you generalize. Every number here comes from one operator's portfolio.
     1,185 pages published between 2026-04-05 and 2026-08-29 on 26 of that
     operator's own websites, joined from git first commit dates to daily Search Console data across
-    35 properties and 177,173 page day rows. The sites share one profile. Young domains, low
+    35 properties and 177,173 page day rows.</p>
+  <p>The sites share one profile. Young domains, low
     authority, tool and calculator pages plus supporting articles, largely template built, targeting
-    low competition long tail queries in English. No site was excluded for performing badly. The worst
+    low competition long tail queries in English.</p>
+  <p>No site was excluded for performing badly. The worst
     site, 5.0% of pages shown within 90 days, counts the same as the best at 94.2%. That
-    spread is the point. These numbers describe small new sites like these, not Google in general. If
+    spread is the point.</p>
+  <p>These numbers describe small new sites like these, not Google in general. If
     your site is established, has real authority, or competes on head terms, your timeline will differ
     in both directions.</p>
   <p>Three more honest caveats. Publish dates come from git commits, and a commit can precede the
-    deploy by hours or occasionally longer, so every duration here carries a small upward bias.
-    Publication was batchy, 263 of the pages went live on a single day,
-    which is why the confidence interval resamples sites rather than pages. And calendar cohorts
+    deploy by hours or occasionally longer, so every duration here carries a small upward bias.</p>
+  <p>Publication was batchy, 263 of the pages went live on a single day,
+    which is why the confidence interval resamples sites rather than pages.</p>
+  <p>And calendar cohorts
     differ. April pages ran a median of 80
     days, May pages 44, and the June cohort
     had not reached its median when the window closed. Cohort and site batches are confounded, one
