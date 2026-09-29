@@ -374,6 +374,25 @@ table.data tr:last-child td,table.data tr:last-child th{border-bottom:0}
     clicks on some sites.</p>
 </section>
 <section class="wht bt sec in body">
+  <p class="kicker">Your own numbers</p>
+  <h2>How does your desktop CTR compare to your mobile CTR?</h2>
+  <p>Read both device rows for one property from the Search Console performance report and
+    type the totals below. The tool divides clicks by impressions per device and shows the
+    gap in percentage points. Everything runs in this page; nothing is sent anywhere.</p>
+  <div class="tool">
+    <div class="row">
+      <label for="dci">Desktop clicks<input type="number" id="dci" min="0" step="1" inputmode="numeric" placeholder="494"></label>
+      <label for="dii">Desktop impressions<input type="number" id="dii" min="0" step="1" inputmode="numeric" placeholder="130977"></label>
+      <label for="mci">Mobile clicks<input type="number" id="mci" min="0" step="1" inputmode="numeric" placeholder="479"></label>
+      <label for="mii">Mobile impressions<input type="number" id="mii" min="0" step="1" inputmode="numeric" placeholder="83201"></label>
+    </div>
+    <div id="ctrout" class="toolout empty">The reading appears here.</div>
+  </div>
+  <p class="stamp">With a positive gap, mobile is the stronger surface for clicks on your
+    queries; with a negative one, desktop is. A single property's totals can flip with one
+    ranking change, so read the gap as a signal, not a verdict.</p>
+</section>
+<section class="wht bt sec in body">
   <p class="kicker">Reading it</p>
   <h2>What the comparison does and does not say</h2>
   <p>The 0.58% mobile CTR is not a mobile bonus. Mobile rows skew toward queries where this
@@ -509,6 +528,50 @@ table.data tr:last-child td,table.data tr:last-child th{border-bottom:0}
   }
  ]
 }
+</script>
+
+<script>
+  var CTR_FIELDS = ['dci', 'dii', 'mci', 'mii'];
+
+  function ctr(clicks, impr) {
+    if (impr <= 0 || clicks < 0) { return null; }
+    return (clicks / impr) * 100;
+  }
+
+  function readNum(id) {
+    var el = document.getElementById(id);
+    var v = parseFloat(el.value);
+    if (isNaN(v) || v < 0) { return null; }
+    return v;
+  }
+
+  function readCTR() {
+    var out = document.getElementById('ctrout');
+    var dc = readNum('dci'), di = readNum('dii'), mc = readNum('mci'), mi = readNum('mii');
+    if (dc === null || di === null || mc === null || mi === null) {
+      out.className = 'toolout empty';
+      out.textContent = 'Enter non-negative totals for both devices.';
+      return;
+    }
+    if (di === 0 || mi === 0) {
+      out.className = 'toolout empty';
+      out.textContent = 'Each device needs at least 1 impression for a rate to exist.';
+      return;
+    }
+    var dRate = ctr(dc, di), mRate = ctr(mc, mi);
+    var gap = mRate - dRate;
+    var dir = gap > 0 ? 'Mobile' : gap < 0 ? 'Desktop' : 'Neither device';
+    var word = gap > 0 ? 'higher' : gap < 0 ? 'higher' : 'equal';
+    out.className = 'toolout';
+    out.innerHTML = '<p class="tl">Desktop CTR <span class="hi">' + dRate.toFixed(2) +
+      '%</span> (' + Math.round(dc) + ' over ' + Math.round(di) + '). Mobile CTR <span class="hi">' +
+      mRate.toFixed(2) + '%</span> (' + Math.round(mc) + ' over ' + Math.round(mi) + '). ' + dir +
+      ' is ' + word + ' by ' + Math.abs(gap).toFixed(2) + ' percentage points.</p>';
+  }
+
+  CTR_FIELDS.forEach(function (id) {
+    document.getElementById(id).addEventListener('input', readCTR);
+  });
 </script>
 
 </body>
