@@ -319,12 +319,13 @@ table.data tr:last-child td,table.data tr:last-child th{border-bottom:0}
   <h1>We Re-measured the First 30 Days on 49 Measurable New Pages. The Clock Did Not Slow Down.</h1>
   <p class="lede">Our first study measured 1,185 new pages and found 17.8% got their first
     Google impression within 30 days. Numbers like that age fast, so we re-ran the same
-    measurement on every page this fleet published after that study closed: 49 measurable
-    pages (74 in scope, 25 excluded as pre-existing re-adds), published 2026-08-26 to
-    2026-09-18, watched daily through 2026-09-25. By day 24, 19.1% had been shown
-    (Kaplan-Meier), with the raw empirical share at 18.4% (9 of 49 pages).
-    The honest reading: still slow, still silence for most pages in month one, and no
-    evidence the clock has sped up.</p>
+    measurement on every page this fleet published after that study closed.</p>
+  <p class="lede">The fresh cohort: 49 measurable pages (74 in scope, 25 excluded as
+    pre-existing re-adds), published 2026-08-26 to 2026-09-18, watched daily through
+    2026-09-25. By day 24, 19.1% had been shown (Kaplan-Meier); the raw empirical share is
+    18.4% (9 of 49 pages).</p>
+  <p class="lede">The honest reading: still slow, still silence for most pages in month
+    one, and no evidence the clock has sped up.</p>
   <div class="answer">
     <div class="a hl"><span class="k">PAGES RE-MEASURED</span><span class="v">49</span><span class="d">of the 98 newly committed content pages: 24 sat on domains without a Search Console property (excluded, not missing) and 25 turned out to be pre-existing pages re-added by git history (dropped, not instant rankings)</span></div>
     <div class="a hl"><span class="k">SHOWN BY DAY 24 (KM)</span><span class="v">19.1%</span><span class="d">the raw count is 9 of 49 pages (18.4%), with 38 still censored at window close; KM credits censored pages' full at-risk time, the raw count does not</span></div>
@@ -347,19 +348,21 @@ table.data tr:last-child td,table.data tr:last-child th{border-bottom:0}
     </div>
     <div id="ttrout" class="toolout empty">The reading appears here.</div>
   </div>
-  <p class="stamp">Step lookup on the published curve, capped at day 30 where this study's
-    observation is thickest. The tool says so instead of guessing beyond the data.</p>
+  <p class="stamp">Step lookup on the published curve, capped at day 24, where the fresh
+    window closes; past that the original study's curve is the one with data. The tool says so instead of guessing beyond the data.</p>
 </section>
 <section class="bt sec in body">
   <p class="kicker">The re-measurement</p>
   <h2>What the fresh cohort shows</h2>
-  <p>We committed to one rule before looking: same join, same estimand, same Kaplan-Meier
+  <p>One rule was fixed before looking: same join, same estimand, same Kaplan-Meier
     machinery as the first study, on a fresh GSC pull made for this page. Every filter is
-    counted. Of 98 pages newly added to git since 2026-08-26, 24 sat on domains with no
-    Search Console property in the account (mostly an off-fleet links site). 25 further
-    URL matches turned out to be pre-existing pages re-added by git history; impressions
-    dated before the first commit exposed them and they were dropped rather than counted
-    as instant rankings. That leaves 49 pages in the measured cohort.</p>
+    counted.</p>
+  <p>Of 98 pages newly added to git since 2026-08-26, 24 sat on domains with no Search
+    Console property in the account (mostly an off-fleet links site). Those are excluded,
+    not missing.</p>
+  <p>25 further URL matches turned out to be pre-existing pages re-added by git history;
+    impressions dated before the first commit exposed them. They were dropped rather than
+    counted as instant rankings. That leaves 49 pages in the measured cohort.</p>
   <div class="wrapx">
     <table class="data">
       <caption>First impression within N days, fresh cohort vs original study. Kaplan-Meier
@@ -381,17 +384,18 @@ table.data tr:last-child td,table.data tr:last-child th{border-bottom:0}
   <p class="kicker">Reading it</p>
   <h2>What the comparison does and does not say</h2>
   <p>The fresh cohort's day-7 share (12.2%) is higher than the original study's (4.1%).
-    That is a small sample, 9 events in the first week, and the confidence interval is wide
-    enough to cover the original figure. What we can say: nothing in the fresh data shows
-    Google slowing down further, and nothing shows a step change either. The median wait in
-    the fresh cohort had not been reached by day 24, consistent with the original median
-    of 78 days.</p>
+    That is a small sample: 9 events in the first week, and the confidence interval is wide
+    enough to cover the original figure.</p>
+  <p>What we can say: nothing in the fresh data shows Google slowing down further, and
+    nothing shows a step change either. The median wait in the fresh cohort had not been
+    reached by day 24, consistent with the original median of 78 days.</p>
   <p>One honest anomaly. 25 of the 98 newly committed pages had impressions dated before
     their git first-commit date. These are old pages whose git history was re-created, not
-    new pages that Google ranked instantly. The first study caught the same class of bug by
-    checking for negative durations, and we applied the same check here. Dropping them moved
-    the day-24 Kaplan-Meier share from 12.4% to 19.1%, the largest single judgment call
-    in this page, and we would rather show both numbers than hide one.</p>
+    new pages that Google ranked instantly.</p>
+  <p>The first study caught the same class of bug by checking for negative durations, and
+    we applied the same check here. Dropping them moved the day-24 Kaplan-Meier share from
+    12.4% to 19.1% — the largest single judgment call on this page, and we would rather
+    show both numbers than hide one.</p>
 </section>
 <section class="bt sec in body">
   <p class="kicker">Method</p>
@@ -470,8 +474,8 @@ table.data tr:last-child td,table.data tr:last-child th{border-bottom:0}
   'use strict';
   /* NASA Power of 10: bounded loops, guards on every input, no recursion.
      Data is inlined below; the tool reads nothing from your account. */
-  var CURVE = [[0,0.0],[1,6.12],[2,8.16],[3,10.2],[4,12.24],[11,14.5],[16,16.75],[18,19.06],[26,29.85]];
-  var LAST_DAY = 30;
+  var CURVE = [[0,0.0],[1,6.12],[2,8.16],[3,10.2],[4,12.24],[11,14.5],[16,16.75],[18,19.06],[24,19.1]];
+  var LAST_DAY = 24;
   var N_PAGES = 49;
   var MAX_POINTS = 200;
   var MS_PER_DAY = 86400000;
@@ -494,7 +498,7 @@ table.data tr:last-child td,table.data tr:last-child th{border-bottom:0}
       '17.8% shown by day 30 on 1,185 pages.';
     var tail;
     if (day > LAST_DAY) {
-      tail = 'This re-measurement\u2019s window closes at day 30. Past that, the original study\u2019s curve is the one with data.';
+      tail = 'This re-measurement\u2019s window closes at day 24. Past that, the original study\u2019s curve is the one with data.';
     } else if (day < 7) {
       tail = 'It is far too early to conclude anything. Most measured pages were still invisible at this age.';
     } else if (shown < 50) {
