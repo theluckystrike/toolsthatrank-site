@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CTR by position calculator, measured on our own properties · ToolsThatRank</title>
-<meta name="description" content="A free click through rate calculator that places your page against our own measured Search Console curve across our own properties. No signup.">
+<title>CTR by position calculator, five measured bands · ToolsThatRank</title>
+<meta name="description" content="Enter a page's average position, impressions and clicks. See its CTR beside what the same position band recorded on our own 52 Search Console properties.">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
 <meta name="author" content="Michael Lip">
 <meta name="date" content="2026-10-10">
@@ -13,14 +13,14 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://toolsthatrank.com/ctr-by-position-calculator/">
 <meta property="og:site_name" content="ToolsThatRank">
-<meta property="og:title" content="CTR by position calculator, measured on our own properties">
-<meta property="og:description" content="A free click through rate calculator that places your page against our own measured Search Console curve across our own properties. No signup.">
+<meta property="og:title" content="CTR by position calculator, five measured bands">
+<meta property="og:description" content="Enter a page's average position, impressions and clicks. See its CTR beside what the same position band recorded on our own 52 Search Console properties.">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://toolsthatrank.com/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://toolsthatrank.com/og.png">
-<meta name="twitter:title" content="What pages below position 30 actually earn">
-<meta name="twitter:description" content="Click through rate measured on 34 Search Console properties. Pages averaging position 31 to 50 returned 0.1108% and pages averaging 51 to 100 returned 0.1119%, with every impression and click count shown.">
+<meta name="twitter:title" content="CTR by position calculator, five measured bands">
+<meta name="twitter:description" content="Enter a page's average position, impressions and clicks. See its CTR beside what the same position band recorded on our own 52 Search Console properties.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -291,9 +291,92 @@ table.data tr:last-child td,table.data tr:last-child th{border-bottom:0}
 .crumb{font-family:var(--mono);font-size:11.5px;color:var(--faint);margin-bottom:10px}
 .crumb a{color:var(--mut);border-bottom-color:var(--line2)}
 
+/* calculator page additions, same tokens */
+h2[id]{scroll-margin-top:110px}
+.tool .btn-p{min-height:46px}
+.toolerr{margin:14px 0 0;font-size:14px;line-height:1.5;color:#8A2A1C}
+.tool input[aria-invalid="true"]{border-color:#8A2A1C;background:#FBF3F1}
+.toolout.empty{margin-bottom:0}
+.tgrid{grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr))}
+.tgrid i{line-height:1.5}
+.cmp{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:6px;font-family:var(--mono);font-size:12.5px;color:var(--body)}
+.cmp li{display:flex;flex-wrap:wrap;gap:2px 14px;padding:7px 11px;border:1px solid var(--line3);border-radius:3px;background:var(--paper)}
+.cmp li.me{border-color:var(--acc);background:#F4F7F5}
+.cmp .cb{flex:0 0 92px;font-weight:600;color:var(--ink)}
+.cmp .cr{flex:0 0 68px;color:var(--ink)}
+table.data.wide{min-width:800px}
+table.data td.grp{border-left:1px solid var(--line2)}
+.wrapx:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.body p.stamp{font-size:12.5px;line-height:1.6;max-width:none;color:var(--faint)}
+.body .notes .nt p{margin:0;font-size:14px;line-height:1.6;max-width:none}
+@media (max-width:520px){.tool label{flex:1 1 100%}.tool input{width:100%}.tool .btn-p{width:100%;justify-content:center}}
 </style>
 
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":"Your CTR by position, against our measured 52 property curve","url":"https://toolsthatrank.com/ctr-by-position-calculator/","description":"An interactive click through rate calculator that places a page's clicks over impressions against a curve measured across our own Search Console properties.","author":{"@id":"#michael-lip"},"dateModified":"2026-10-10","datePublished":"2026-10-10"},{"@type":"Person","@id":"#michael-lip","name":"Michael Lip","url":"https://github.com/theluckystrike","description":"Builds and operates ToolsThatRank and the measured portfolio."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://toolsthatrank.com/"},{"@type":"ListItem","position":2,"name":"CTR by position calculator","item":"https://toolsthatrank.com/ctr-by-position-calculator/"},{"@type":"ListItem","position":3,"name":"How we measured this","item":"https://toolsthatrank.com/ctr-by-position-calculator/#how-we-measured-this"}]},{"@type":"Dataset","name":"Search Console position band readings for one operator's properties","description":"Click through rate by average position band, read from one operator's authenticated Search Console properties over a single 90 day window. Not an industry benchmark.","creator":{"@id":"#michael-lip"},"temporalCoverage":"2026-07-10/2026-10-07"}]}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "https://toolsthatrank.com/ctr-by-position-calculator/#webpage",
+   "url": "https://toolsthatrank.com/ctr-by-position-calculator/",
+   "name": "CTR by position calculator",
+   "description": "Enter a page's average position, impressions and clicks. See its CTR beside what the same position band recorded on our own 52 Search Console properties.",
+   "inLanguage": "en",
+   "datePublished": "2026-10-10",
+   "dateModified": "2026-10-10",
+   "author": {
+    "@id": "https://toolsthatrank.com/ctr-by-position-calculator/#author"
+   },
+   "breadcrumb": {
+    "@id": "https://toolsthatrank.com/ctr-by-position-calculator/#breadcrumb"
+   }
+  },
+  {
+   "@type": "Person",
+   "@id": "https://toolsthatrank.com/ctr-by-position-calculator/#author",
+   "name": "Michael Lip",
+   "url": "https://github.com/theluckystrike",
+   "description": "Builds and operates ToolsThatRank and the Search Console properties this page reports."
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://toolsthatrank.com/ctr-by-position-calculator/#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "ToolsThatRank",
+     "item": "https://toolsthatrank.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "CTR by position calculator",
+     "item": "https://toolsthatrank.com/ctr-by-position-calculator/"
+    }
+   ]
+  },
+  {
+   "@type": "Dataset",
+   "@id": "https://toolsthatrank.com/ctr-by-position-calculator/#dataset",
+   "name": "CTR by average position band, 52 Search Console properties of one operator",
+   "description": "Clicks, impressions and click through rate in five average position bands, read from one operator's 52 Search Console properties over 90 days, pooled and with the largest property removed. Not an industry benchmark.",
+   "creator": {
+    "@id": "https://toolsthatrank.com/ctr-by-position-calculator/#author"
+   },
+   "dateModified": "2026-10-10",
+   "temporalCoverage": "2026-07-10/2026-10-07",
+   "isAccessibleForFree": true,
+   "measurementTechnique": "Google Search Console Search Analytics API. Pages banded by rounded average position. Rate is band clicks divided by band impressions.",
+   "variableMeasured": [
+    "clicks",
+    "impressions",
+    "click through rate",
+    "average position"
+   ]
+  }
+ ]
+}</script>
 <script src="/site-analytics.js" defer></script>
 
 </head>
@@ -308,20 +391,199 @@ table.data tr:last-child td,table.data tr:last-child th{border-bottom:0}
       <a href="/#proof">proof</a>
       <a href="/#tools">shipped</a>
       <a href="/#how">method</a>
-      <a href="/ctr-by-position/" aria-current="page">position bands</a>
+      <a href="/ctr-by-position/">position bands</a>
       <a href="/zero-click-pages/">click coverage</a>
       <a href="/search-console-hidden-queries/">hidden queries</a>
-      <a href="/search-console-average-position/">average position</a>
-      <a href="/ctr-comparison/">ctr comparison</a>
       <a href="/how-long-to-rank/">time to rank</a>
-      <a href="/first-30-days-again/">first 30 days, re-run</a>
       <a class="gh" href="https://github.com/theluckystrike" target="_blank" rel="noopener">github <span aria-hidden="true">&#8599;</span></a>
     </nav>
   </div>
 </header>
 <main id="main">
 <section class="in sec">
-<p>By <a href="https://github.com/theluckystrike">Michael Lip</a>. ToolsThatRank sells the pipeline that produced this page; the calculator is free and needs no signup.</p><h1>Your CTR by position, measured against our own fleet</h1><p>A page's click through rate is its clicks divided by its impressions, and both numbers come straight from Search Console's Pages report. Below you can enter your own row and see where it sits on a curve we measured ourselves.</p><p>Across our own 52 properties over the last 90 days, pages at positions 1 to 10 earned 0.5559% per impression on average, while pages at positions 51 to 100 earned 0.078%. <a href="#how-we-measured-this">Read on 2026-10-10 from the Search Console searchAnalytics/query endpoint, window 2026-07-10 to 2026-10-07.</a> These readings come from one operator's properties and are not an industry benchmark. If you want the metric's definition, Google's help answer on position and impressions <a href="https://support.google.com/webmasters/answer/7042828?hl=en">defines both terms</a>.</p><h2>Enter your row</h2><p>Paste the impressions and clicks for one page from your own Pages report. Nothing leaves the browser; the arithmetic runs locally on this page.</p><form id="ctr-form"><label for="impressions">Impressions</label> <input id="impressions" type="number" min="0" step="1" required> <label for="clicks">Clicks</label> <input id="clicks" type="number" min="0" step="1" required> <button type="submit">Calculate</button></form><p id="ctr-error" role="alert" hidden></p><div id="ctr-result" hidden><p>Your CTR: <span id="ctr-value"></span>%</p><p id="ctr-band"></p><p id="ctr-place"></p><p>Your result is computed from your own rows with the formula on this page, so it is not an API verified portfolio reading.</p></div><h2>Every band, with the counts behind it</h2><p>Before you read the table, one caution. A band measures pages by their average topmost position across all their queries, so it is not the same measurement as a published CTR-at-rank curve and the two should not be compared by accident.</p><table><caption>Read on 2026-10-10 from the Search Console searchAnalytics/query endpoint, window 2026-07-10 to 2026-10-07.</caption><thead><tr><th>Position band</th><th>CTR percent</th><th>Impressions</th><th>Clicks</th><th>Pages</th></tr></thead><tbody><tr><td>1 to 10</td><td><a href="#how-we-measured-this">0.5559%</a></td><td>773293</td><td>4299</td><td>2009</td></tr><tr><td>11 to 20</td><td><a href="#how-we-measured-this">0.3297%</a></td><td>319705</td><td>1054</td><td>846</td></tr><tr><td>21 to 30</td><td><a href="#how-we-measured-this">0.344%</a></td><td>208135</td><td>716</td><td>414</td></tr><tr><td>31 to 50</td><td><a href="#how-we-measured-this">0.1671%</a></td><td>109548</td><td>183</td><td>631</td></tr><tr><td>51 to 100</td><td><a href="#how-we-measured-this">0.078%</a></td><td>69190</td><td>54</td><td>485</td></tr></tbody></table><p>Each rate sits next to the impressions and clicks it was computed from, so you can redo the division yourself.</p><h3>The concentration check</h3><p>The largest property, belikenative.com, carries 64.14% of pooled impressions, so every band is also reported with it removed. Pooled, then without that property: 1 to 10 0.5559% and 0.8587%; 11 to 20 0.3297% and 0.7942%; 21 to 30 0.344% and 0.3825%; 31 to 50 0.1671% and 0.21%; 51 to 100 0.078% and 0.0817%. Both readings ship side by side and we do not explain why they differ.</p><h3>The property extremes</h3><p>Scoped to properties with at least 20 clicks in the window (13 of 52): the lowest CTR among them is 0.0814% at an average position of 21.01; the highest is 25% at an average position of 9.7; across those 13 properties the Spearman rank correlation between average position and CTR is 0.165. Property level averages mix page mixes and query types, so they say nothing about any single page.</p><h2 id="how-we-measured-this">How we measured this</h2><p>We measured our own Search Console properties through the <a href="https://developers.google.com/webmaster-tools/v1/searchanalytics/query">Google Search Analytics API via the searchAnalytics/query method</a>, based on a 90 day window from 2026-07-10 to 2026-10-07, with Search Console's finalisation lag leaving the last three days unread, read on 2026-10-10 across 52 verified properties. We ran two routes, dimensions [page] and dimensions [page, date]; the daily route rebuilds each page's position as an impression weighted mean, and both routes place pages into the same bands and agree on every band to the printed precision. An independent Python recomputation over the same checksummed export reproduced the totals and the per property table. Both routes come from the same provider, so their agreement cannot catch an upstream Google error. CTR was kept to four decimals in the arithmetic and printed as the token value; percentages appear to two decimals on the page. No per property file is published yet, and query text is never collected or published. Counts and averages are recomputed in code, never guessed, and every figure here was fetched, recomputed, and checked before a human approved the page.</p><p>For background on the metric itself, <a href="https://support.google.com/webmasters/answer/7042828?hl=en">Google's help answer</a> defines position and impressions, and Google's Search Central post on performance data filtering and limits <a href="https://developers.google.com/search/blog/2022/10/performance-data-deep-dive">notes that anonymized queries are omitted from query tables and that the interface export stops at 1,000 rows of data</a> (read 2026-09-18). Public explainers cover the metric too, for example <a href="https://seotesting.com/google-search-console/average-position/">SEOTesting's average position page</a> (read 2026-09-18), which says Google averages the position across all impressions. The new part of this page is the interactive placement of your row against this measured fleet, not the curve itself.</p><h2>What this cannot tell you</h2><p>A different window gives different numbers. The curve is built from property level aggregates, so a page whose own mix of queries differs from its property's mix can sit anywhere on the curve. CTR says nothing about why a click happened or whether it was useful. A band is an average over many pages, not a target.</p><p>No ranking, traffic, or revenue outcome is promised. The operator sells the software described here and owns every site in the dataset. These figures come from one operator's properties, not from a representative sample of the web. Search Console is authenticated, so readers cannot recheck the private source readings without access. Figures are read on the stamped date and change as Search Console reprocesses data.</p><script>(function(){var bands=[{lo:1,hi:10,ctr:0.5559},{lo:11,hi:20,ctr:0.3297},{lo:21,hi:30,ctr:0.344},{lo:31,hi:50,ctr:0.1671},{lo:51,hi:100,ctr:0.078}];var form=document.getElementById('ctr-form');var err=document.getElementById('ctr-error');var out=document.getElementById('ctr-result');form.addEventListener('submit',function(e){e.preventDefault();err.hidden=true;out.hidden=true;var i=document.getElementById('impressions').value;var c=document.getElementById('clicks').value;if(i===''||c===''){err.textContent='Enter both impressions and clicks.';err.hidden=false;return;}var im=Number(i),cl=Number(c);if(!Number.isInteger(im)||!Number.isInteger(cl)||im<0||cl<0){err.textContent='Impressions and clicks must be whole numbers of 0 or larger.';err.hidden=false;return;}if(cl>im){err.textContent='Clicks cannot exceed impressions. Compute nothing until that is fixed.';err.hidden=false;return;}var ctr=cl/im*100;document.getElementById('ctr-value').textContent=ctr.toFixed(2);var above=[];for(var b=0;b<bands.length;b++){if(ctr>=bands[b].ctr){above.push(bands[b]);}}if(above.length>0){var top=above[0];document.getElementById('ctr-band').textContent='Your CTR sits at or above the measured CTR for position band '+top.lo+' to '+top.hi+', which measured '+top.ctr.toFixed(2)+'% on this fleet.';document.getElementById('ctr-place').textContent='The best position band whose measured CTR your figure meets or exceeds is '+top.lo+' to '+top.hi+'.';}else{document.getElementById('ctr-band').textContent='Your CTR sits below the measured CTR for every band on this fleet, including 51 to 100 at '+bands[4].ctr.toFixed(2)+'%.';document.getElementById('ctr-place').textContent='No band on the measured curve has a CTR your figure meets or exceeds.';}out.hidden=false;});})();</script>
+  <p class="crumb"><a href="/">ToolsThatRank</a> / measured data</p>
+  <p class="kicker">First party measurement</p>
+  <h1>CTR by position calculator</h1>
+  <p class="lede">Type one page's average position, impressions and clicks from Search Console.
+    You get its click through rate beside the rate that pages in the same position band recorded
+    on our own 52 properties. On that fleet the 1 to 10 band recorded 7.1 times the rate
+    of the 51 to 100 band.</p>
+  <p class="hline"><strong>One operator's sites, not an industry benchmark.</strong>
+    Every rate here was read from Search Console properties we own. For a curve drawn from many
+    sites, see <a href="https://backlinko.com/google-ctr-stats" rel="nofollow noopener" target="_blank">Backlinko's CTR study</a>
+    (read 2026-10-10).</p>
+
+  <div class="answer">
+    <div class="a hl">
+      <span class="k">Average position 1 to 10</span>
+      <span class="v">0.5559%</span>
+      <span class="d">4,299 clicks on 773,293 impressions</span>
+    </div>
+    <div class="a hl">
+      <span class="k">Average position 51 to 100</span>
+      <span class="v">0.0780%</span>
+      <span class="d">54 clicks on 69,190 impressions</span>
+    </div>
+    <div class="a">
+      <span class="k">Whole fleet, 90 days</span>
+      <span class="v">6,228</span>
+      <span class="d">clicks from 1,436,949 impressions across 52 properties</span>
+    </div>
+  </div>
+  <p class="stamp">Read 2026-10-10 from the Search Console searchAnalytics/query endpoint.
+    Window 2026-07-10 to 2026-10-07. Each rate is the band's clicks divided by the band's impressions.</p>
+  <p class="stamp">By <a href="https://github.com/theluckystrike" target="_blank" rel="noopener">Michael Lip</a>.
+    ToolsThatRank sells the pipeline that produced this page. The calculator is free and needs no signup.</p>
+</section>
+
+<section class="wht bt sec in">
+  <p class="kicker">Your row</p>
+  <h2>Compare one page with its band</h2>
+  <p class="sub">Open the Pages tab of the Search Console Performance report and pick one page.
+    Copy its average position, impressions and clicks. An example row is loaded. Replace it with
+    your own.</p>
+  <form id="cbp-form" class="tool" novalidate>
+    <div class="row">
+      <label for="cbp-pos">Average position
+        <input id="cbp-pos" name="position" type="text" inputmode="decimal" value="14.2" aria-describedby="cbp-err">
+      </label>
+      <label for="cbp-imp">Impressions
+        <input id="cbp-imp" name="impressions" type="text" inputmode="numeric" value="5000" aria-describedby="cbp-err">
+      </label>
+      <label for="cbp-clk">Clicks
+        <input id="cbp-clk" name="clicks" type="text" inputmode="numeric" value="20" aria-describedby="cbp-err">
+      </label>
+      <button id="cbp-go" class="btn-p" type="submit">Calculate</button>
+    </div>
+    <p id="cbp-err" class="toolerr" role="alert" hidden></p>
+    <div id="cbp-out" class="toolout empty" role="status" aria-live="polite">Enter an average position, impressions and clicks, then press Calculate.</div>
+    <noscript><p class="toolerr">The calculator needs JavaScript. The table below works without it.</p></noscript>
+  </form>
+  <p class="stamp">The numbers you type stay in your browser. Nothing is fitted between bands.
+    A decimal position is rounded first, the same rule the dataset uses, so 20.5 reads as 21.
+    A position outside 1 to 100 returns no reading.</p>
+</section>
+
+<section class="bt sec in body">
+  <p class="kicker">The measurement</p>
+  <h2>Every band, with the counts behind it</h2>
+  <p>A band measures pages by their average topmost position across all their queries. It is
+    therefore not the same measurement as a published CTR at rank curve, and the two should not
+    be compared.</p>
+  <p>One property, belikenative.com, supplies 64.14% of the fleet's impressions
+    (921,701 of 1,436,949). So each band is shown twice, once for all 52 properties and
+    once with that property removed. Read them together.</p>
+  <div class="wrapx" role="region" aria-label="CTR by average position band, scrollable table" tabindex="0">
+    <table class="data wide">
+      <caption>CTR by average position band. Read 2026-10-10.</caption>
+      <thead>
+        <tr>
+          <th scope="col" rowspan="2">Band</th>
+          <th scope="colgroup" colspan="4">All 52 properties</th>
+          <th scope="colgroup" colspan="4" class="grp">Largest property removed</th>
+        </tr>
+        <tr>
+          <th scope="col">CTR</th><th scope="col">Impressions</th><th scope="col">Clicks</th><th scope="col">Pages</th>
+          <th scope="col" class="grp">CTR</th><th scope="col">Impressions</th><th scope="col">Clicks</th><th scope="col">Pages</th>
+        </tr>
+      </thead>
+      <tbody>
+<tr><th scope="row">1 to 10</th><td class="num">0.5559%</td><td class="num sm">773,293</td><td class="num sm">4,299</td><td class="num sm">2,009</td><td class="num grp">0.8587%</td><td class="num sm">184,351</td><td class="num sm">1,583</td><td class="num sm">1,315</td></tr>
+<tr><th scope="row">11 to 20</th><td class="num">0.3297%</td><td class="num sm">319,705</td><td class="num sm">1,054</td><td class="num sm">846</td><td class="num grp">0.7942%</td><td class="num sm">74,536</td><td class="num sm">592</td><td class="num sm">418</td></tr>
+<tr><th scope="row">21 to 30</th><td class="num">0.3440%</td><td class="num sm">208,135</td><td class="num sm">716</td><td class="num sm">414</td><td class="num grp">0.3825%</td><td class="num sm">162,613</td><td class="num sm">622</td><td class="num sm">293</td></tr>
+<tr><th scope="row">31 to 50</th><td class="num">0.1671%</td><td class="num sm">109,548</td><td class="num sm">183</td><td class="num sm">631</td><td class="num grp">0.2100%</td><td class="num sm">54,774</td><td class="num sm">115</td><td class="num sm">548</td></tr>
+<tr><th scope="row">51 to 100</th><td class="num">0.0780%</td><td class="num sm">69,190</td><td class="num sm">54</td><td class="num sm">485</td><td class="num grp">0.0817%</td><td class="num sm">59,979</td><td class="num sm">49</td><td class="num sm">465</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="stamp">Read 2026-10-10 from the searchAnalytics/query endpoint, window 2026-07-10 to 2026-10-07.
+    CTR is clicks divided by impressions inside the band, shown to four decimals.
+    Pages is the number of page rows in the band.</p>
+
+  <h3>Where the curve does something unexpected</h3>
+  <p>Pooled, the 21 to 30 band (0.3440%) sits above the 11 to 20 band (0.3297%). With the
+    largest property removed the order is the usual one, 0.7942% then 0.3825%.
+    Every band also reads higher with that property removed. We report the shape and do not
+    explain it, because this export measured no cause.</p>
+
+  <h3>Why these rates differ from our position bands page</h3>
+  <p>Our <a href="/ctr-by-position/">position bands page</a> reads 34 properties over 2026-05-15 to
+    2026-08-12. This page reads 52 properties over 2026-07-10 to 2026-10-07. The two windows
+    overlap from 2026-07-10 to 2026-08-12. The rate in every band differs between the two pages.
+    They are two separate readings of a small fleet, and neither corrects the other.</p>
+</section>
+
+<section class="wht bt sec in body">
+  <p class="kicker">Method</p>
+  <h2 id="how-we-measured-this">How we measured this</h2>
+  <p>We measured these bands on 2026-10-10 against the
+    <a href="https://developers.google.com/webmaster-tools/v1/searchanalytics/query" rel="nofollow noopener" target="_blank">Google Search Console Search Analytics API</a>,
+    method searchAnalytics/query, with read only access, on the 52 verified properties in the
+    operator's account. The window is 90 days, 2026-07-10 to 2026-10-07, and ends three days
+    before the read date. All 52 properties returned data.</p>
+  <div class="notes">
+    <div class="nt"><h3>Route one</h3><p>Query grouped by page. Search Console returns one average
+      position per page for the window. We round it to a whole number, put the page in the band
+      that holds it, then sum clicks and impressions inside the band.</p></div>
+    <div class="nt"><h3>Route two</h3><p>Query grouped by page and date. Each page's position is
+      rebuilt as the impression weighted mean of its daily rows, then banded the same way. The
+      export records the same impressions, clicks and page count as route one in all five bands.</p></div>
+    <div class="nt"><h3>The rate</h3><p>Pooled. The band's clicks divided by the band's
+      impressions, not a mean of page rates. A page with many impressions moves the rate more
+      than a page with few.</p></div>
+    <div class="nt"><h3>Filters</h3><p>No minimum impression filter was applied.
+      4,385 of the 4,386 page rows fall in a band. The export marks no property as
+      cut short by the row limit.</p></div>
+  </div>
+  <h3>Band sums and property totals do not match</h3>
+  <p>The five bands sum to 1,479,871 impressions and 6,306 clicks. The same window read
+    at property level gives 1,436,949 impressions and 6,228 clicks, and the sum of the
+    daily rows gives the same two figures. The band sums are 2.99% and 1.25% higher.
+    Search Console
+    <a href="https://support.google.com/webmasters/answer/7042828?hl=en" rel="nofollow noopener" target="_blank">counts impressions by page differently from impressions by property</a>,
+    and its report overview says
+    <a href="https://support.google.com/webmasters/answer/7576553?hl=en" rel="nofollow noopener" target="_blank">totals can differ between the two</a>.
+    We print both and adjust neither. The 64.14% share uses the property totals. The band
+    rates use the page rows.</p>
+  <h3>What the checks cannot catch</h3>
+  <p>Both routes call the same API, so their agreement cannot catch an error on Google's side.
+    A separate script recomputed every figure on this page from the saved export before release.
+    That checks our arithmetic. It does not check the export step. Query text is never collected
+    or published, and no per property file is published.</p>
+  <p>The calculator divides a band's clicks by its impressions without rounding. It rounds only
+    what it displays, to four decimals.</p>
+</section>
+
+<section class="bt sec in body">
+  <p class="kicker">Limits</p>
+  <h2>What this cannot tell you</h2>
+  <p>It cannot tell you what CTR your page should have. A band rate is what our pages recorded,
+    pooled, in one window. A different window gives different numbers, as the two band pages on
+    this site show.</p>
+  <p>The sample is one operator's fleet, and most of it is small. 12 of the 52 properties
+    recorded no click in the window, and 13 recorded 20 or more. Among those 13,
+    property CTR ran from 0.0814% (40 clicks on 49,160 impressions, average
+    position 21.01) to 25.0000% (37 clicks on 148 impressions,
+    average position 9.7). A band rate hides a spread that wide.</p>
+  <p>A page's average position mixes every query the page appears for, so two pages in one band
+    can face different queries. CTR also says nothing about why a click happened or whether it
+    was useful. A band is an average over many pages, not a target.</p>
+  <p>Related readings on this site are the <a href="/ctr-by-position/">position bands page</a>
+    for the earlier window, the <a href="/ctr-comparison/">CTR comparison calculator</a> for two
+    periods, and the <a href="/search-console-average-position/">average position calculator</a>.</p>
+  <div class="disc">
+    <p>ToolsThatRank sells the pipeline that produced this page.</p>
+    <p>No ranking, traffic, or revenue outcome is promised.</p>
+    <p>The operator sells the software described here and owns every site in the dataset.</p>
+    <p>These figures come from one operator's properties, not from a representative sample of the web.</p>
+    <p>Search Console is authenticated, so readers cannot recheck the private source readings without access.</p>
+    <p>Figures are read on the stamped date and change as Search Console reprocesses data.</p>
+  </div>
+  <div class="srcs">
+    <a href="https://support.google.com/webmasters/answer/7042828?hl=en" rel="nofollow noopener" target="_blank">Search Console, what impressions, position and clicks mean</a><br>
+    <a href="https://support.google.com/webmasters/answer/7576553?hl=en" rel="nofollow noopener" target="_blank">Search Console, Performance report overview</a><br>
+    <a href="https://developers.google.com/webmaster-tools/v1/searchanalytics/query" rel="nofollow noopener" target="_blank">Search Analytics API reference</a>
+  </div>
 </section>
 </main>
 <footer>
@@ -352,5 +614,204 @@ table.data tr:last-child td,table.data tr:last-child th{border-bottom:0}
   </div>
 </footer>
 </div>
+<script>
+(function () {
+  'use strict';
+  // Band comparison. No fitting and no interpolation. A position maps to the band
+  // its rounded value falls in, or to nothing. c, i are pooled clicks and impressions
+  // of the band. xc, xi are the same counts with the largest property removed.
+  // Every count is copied by the build script from the fleet export read 2026-10-10.
+  var BANDS = [
+    {lo: 1, hi: 10, c: 4299, i: 773293, xc: 1583, xi: 184351},
+    {lo: 11, hi: 20, c: 1054, i: 319705, xc: 592, xi: 74536},
+    {lo: 21, hi: 30, c: 716, i: 208135, xc: 622, xi: 162613},
+    {lo: 31, hi: 50, c: 183, i: 109548, xc: 115, xi: 54774},
+    {lo: 51, hi: 100, c: 54, i: 69190, xc: 49, xi: 59979}
+  ];
+  var N_PROPS = 52;
+  var MAX_IMP = 1000000000;
+  var PROMPT = 'Enter an average position, impressions and clicks, then press Calculate.';
+  var CHANGED = 'Values changed. Press Calculate to read the band again.';
+
+  function parseCount(raw) {
+    var s = String(raw == null ? '' : raw).replace(/[\s,]/g, '');
+    if (!/^\d{1,10}$/.test(s)) { return NaN; }
+    return Number(s);
+  }
+
+  function parsePos(raw) {
+    var s = String(raw == null ? '' : raw).trim();
+    if (!/^\d{1,3}(\.\d{1,6})?$/.test(s)) { return NaN; }
+    return Number(s);
+  }
+
+  function findBand(pos) {
+    if (typeof pos !== 'number' || !isFinite(pos) || pos < 1) { return null; }
+    var r = Math.round(pos);
+    if (r > 100) { return null; }
+    for (var k = 0; k < BANDS.length; k++) {
+      if (r >= BANDS[k].lo && r <= BANDS[k].hi) { return BANDS[k]; }
+    }
+    return null;
+  }
+
+  function rate(clicks, impressions) { return clicks / impressions * 100; }
+  function whole(v) { return Math.round(v).toLocaleString('en-US'); }
+  function pct(v) {
+    if (v > 0 && v < 0.00005) { return 'under 0.0001%'; }
+    return v.toFixed(4) + '%';
+  }
+  function label(b) { return b.lo + ' to ' + b.hi; }
+  function round4(v) { return Math.round(v * 10000) / 10000; }
+
+  function clicksLabel(v) {
+    if (v >= 100) { return whole(v) + ' clicks'; }
+    if (v >= 1) { return v.toFixed(1) + ' clicks'; }
+    return 'under 1 click';
+  }
+
+  function gapText(mine, band) {
+    var d = round4(mine - band);
+    if (d === 0) { return 'Your CTR matches this rate to four decimals.'; }
+    var times = (mine / band).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    return 'Your CTR is ' + Math.abs(d).toFixed(4) + ' percentage points ' +
+      (d > 0 ? 'above' : 'below') + ', ' + times + ' times this rate.';
+  }
+
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) { n.className = cls; }
+    if (text != null) { n.textContent = text; }
+    return n;
+  }
+
+  function card(title, mine, clicks, impressions, userImp) {
+    var r = rate(clicks, impressions);
+    var box = el('div');
+    box.appendChild(el('span', 'tk', title));
+    box.appendChild(el('b', '', pct(r)));
+    box.appendChild(el('i', '', whole(clicks) + ' clicks on ' + whole(impressions) + ' impressions'));
+    box.appendChild(el('i', '', gapText(mine, r)));
+    box.appendChild(el('i', '', 'This rate on your ' + whole(userImp) + (userImp === 1 ? ' impression is ' : ' impressions is ') + clicksLabel(r / 100 * userImp) + '.'));
+    return box;
+  }
+
+  function compareList(mine, own) {
+    var ul = el('ul', 'cmp');
+    for (var k = 0; k < BANDS.length; k++) {
+      var b = BANDS[k], r = rate(b.c, b.i), d = round4(mine - r);
+      var word = d === 0 ? 'equal' : (d > 0 ? 'you are above' : 'you are below');
+      var li = el('li', b === own ? 'me' : '');
+      li.appendChild(el('span', 'cb', label(b)));
+      li.appendChild(el('span', 'cr', pct(r)));
+      li.appendChild(el('span', '', word + (b === own ? ', your band' : '')));
+      ul.appendChild(li);
+    }
+    return ul;
+  }
+
+  function render(out, v) {
+    var mine = rate(v.clk, v.imp), b = v.band, r = Math.round(v.pos);
+    out.className = 'toolout live';
+    out.textContent = '';
+    var lead = el('p', 'tl');
+    lead.appendChild(document.createTextNode('Your CTR is '));
+    lead.appendChild(el('span', 'hi', pct(mine)));
+    lead.appendChild(document.createTextNode(', from ' + whole(v.clk) + (v.clk === 1 ? ' click on ' : ' clicks on ') +
+      whole(v.imp) + (v.imp === 1 ? ' impression. ' : ' impressions. ') +
+      (r === v.pos ? 'Position ' + r + ' is in band ' + label(b) + '.'
+        : 'Position ' + v.pos + ' rounds to ' + r + ', which is in band ' + label(b) + '.')));
+    out.appendChild(lead);
+    var grid = el('div', 'tgrid');
+    grid.appendChild(card('Band ' + label(b) + ', all ' + N_PROPS + ' properties', mine, b.c, b.i, v.imp));
+    grid.appendChild(card('Band ' + label(b) + ', largest property removed', mine, b.xc, b.xi, v.imp));
+    out.appendChild(grid);
+    out.appendChild(el('p', 'tn', 'Your CTR against the pooled rate of each of the five bands.'));
+    out.appendChild(compareList(mine, b));
+    out.appendChild(el('p', 'tn', 'Your CTR comes from the numbers you typed and the formula clicks divided by ' +
+      'impressions, times 100. It is not a verified reading. The band rates are what our sites recorded, ' +
+      'not a forecast for yours.'));
+  }
+
+  function validate(posEl, impEl, clkEl) {
+    var v = { pos: parsePos(posEl.value), imp: parseCount(impEl.value), clk: parseCount(clkEl.value), errors: [], bad: [] };
+    v.band = findBand(v.pos);
+    if (!v.band) {
+      v.errors.push('Average position must be a number from 1 to 100, for example 14.2.');
+      v.bad.push(posEl);
+    }
+    var impOk = !isNaN(v.imp) && v.imp >= 1 && v.imp <= MAX_IMP;
+    if (!impOk) {
+      v.errors.push('Impressions must be a whole number from 1 to 1,000,000,000.');
+      v.bad.push(impEl);
+    }
+    if (isNaN(v.clk)) {
+      v.errors.push('Clicks must be a whole number, 0 or more.');
+      v.bad.push(clkEl);
+    } else if (impOk && v.clk > v.imp) {
+      v.errors.push('Clicks cannot be more than impressions.');
+      v.bad.push(clkEl);
+    }
+    return v;
+  }
+
+  function wire() {
+    var form = document.getElementById('cbp-form');
+    var posEl = document.getElementById('cbp-pos');
+    var impEl = document.getElementById('cbp-imp');
+    var clkEl = document.getElementById('cbp-clk');
+    var out = document.getElementById('cbp-out');
+    var err = document.getElementById('cbp-err');
+    if (!form || !posEl || !impEl || !clkEl || !out || !err) { return; }
+    var fields = [posEl, impEl, clkEl];
+
+    function reset(text) {
+      for (var k = 0; k < fields.length; k++) { fields[k].removeAttribute('aria-invalid'); }
+      err.hidden = true;
+      err.textContent = '';
+      out.className = 'toolout empty';
+      out.textContent = text;
+    }
+
+    function run(fromUser) {
+      var empty = false;
+      for (var k = 0; k < fields.length; k++) { if (String(fields[k].value).trim() === '') { empty = true; } }
+      if (empty) {
+        reset(PROMPT);
+        if (!fromUser) { return; }
+        for (var m = 0; m < fields.length; m++) {
+          if (String(fields[m].value).trim() === '') { fields[m].setAttribute('aria-invalid', 'true'); }
+        }
+        err.textContent = 'Enter all three values.';
+        err.hidden = false;
+        return;
+      }
+      var v = validate(posEl, impEl, clkEl);
+      if (v.errors.length > 0) {
+        reset('No reading. Correct the marked values.');
+        for (var j = 0; j < v.bad.length; j++) { v.bad[j].setAttribute('aria-invalid', 'true'); }
+        err.textContent = v.errors.join(' ');
+        err.hidden = false;
+        return;
+      }
+      reset('');
+      render(out, v);
+    }
+
+    form.addEventListener('submit', function (e) { e.preventDefault(); run(true); });
+    for (var k = 0; k < fields.length; k++) {
+      fields[k].addEventListener('input', function () { reset(CHANGED); });
+    }
+    // pageshow also fires on a Back or Forward return, after the browser restores the fields.
+    window.addEventListener('pageshow', function () { run(false); });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', wire);
+  } else {
+    wire();
+  }
+})();
+</script>
 </body>
 </html>
