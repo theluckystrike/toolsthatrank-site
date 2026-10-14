@@ -336,7 +336,7 @@ var MR_CONSENT_MODE = 'basic'; // 'basic' | 'advanced'
     // clean() removes checkout session IDs, email addresses and other non-campaign parameters.
     var referral = a.tagName === 'A' && a.hostname === 'toolsthatrank.com' && /^\/pricing(\/|$)/.test(a.pathname) && a.origin !== location.origin;
     var gumroad = a.tagName === 'A' && a.hostname === 'theluckystrike.gumroad.com' && /^\/l\/sia-(snapshot|audit)$/.test(a.pathname);
-    var offer = a.tagName === 'A' && a.origin === location.origin &&
+    var offer = a.tagName === 'A' && a.origin === location.origin && a.hash !== '#main' &&
       (/^\/pricing(\/|$)/.test(a.pathname) || ((a.pathname === '/' || a.pathname === '/index.html') && /^#(pricing|pipeline|build|audit|plans)$/.test(a.hash)));
     var agencyCta = referral || gumroad || offer || STRIPE.test(href) || a.hasAttribute('data-mr-checkout');
     if (agencyCta) track('cta_click', {
