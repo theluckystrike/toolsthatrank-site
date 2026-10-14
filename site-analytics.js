@@ -332,6 +332,18 @@ var MR_CONSENT_MODE = 'basic'; // 'basic' | 'advanced'
       track('telegram_click', { target: tg[3] === 'addlist/' ? 'addlist' : tg[3].toLowerCase(), placement: placement(a), link_url: clip(href) });
       return;
     }
+    // Measure offer and referral CTAs on every page through the existing consent gate.
+    // clean() removes checkout session IDs, email addresses and other non-campaign parameters.
+    var referral = a.tagName === 'A' && a.hostname === 'toolsthatrank.com' && /^\/pricing(\/|$)/.test(a.pathname) && a.origin !== location.origin;
+    var gumroad = a.tagName === 'A' && a.hostname === 'theluckystrike.gumroad.com' && /^\/l\/sia-(snapshot|audit)$/.test(a.pathname);
+    var offer = a.tagName === 'A' && a.origin === location.origin &&
+      (/^\/pricing(\/|$)/.test(a.pathname) || ((a.pathname === '/' || a.pathname === '/index.html') && /^#(pricing|pipeline|build|audit|plans)$/.test(a.hash)));
+    var agencyCta = referral || gumroad || offer || STRIPE.test(href) || a.hasAttribute('data-mr-checkout');
+    if (agencyCta) track('cta_click', {
+      cta_target: referral ? 'toolsthatrank' : gumroad ? a.pathname.slice(3) : STRIPE.test(href) ? 'stripe' : a.hash.slice(1) || 'pricing',
+      placement: placement(a), page_path: location.pathname,
+      link_text: clip(a.textContent), link_url: clip(clean(href))
+    });
     if (STRIPE.test(href) || a.hasAttribute('data-mr-checkout')) {
       var slug = (/^https:\/\/buy\.stripe\.com\/([A-Za-z0-9]+)/i.exec(href) || [])[1], tt = slug && TTR[slug];
       if (tt) {
@@ -347,7 +359,7 @@ var MR_CONSENT_MODE = 'basic'; // 'basic' | 'advanced'
       track('case_cta_click', { cta_target: a.hash.slice(1), placement: placement(a), link_text: clip(a.textContent), link_url: clip(href) });
       return;
     }
-    if (HOME && a.getAttribute('data-track')) track('cta_click', { placement: placement(a) });
+    if (HOME && !agencyCta && a.getAttribute('data-track')) track('cta_click', { placement: placement(a) });
   }
   d.addEventListener('click', function (e) { try { onClick(e); } catch (err) {} }, true);
 
