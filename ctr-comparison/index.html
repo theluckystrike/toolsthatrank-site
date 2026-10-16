@@ -308,6 +308,24 @@ main>section.tool-section:first-of-type{padding-top:0;border-top:0}
 </style><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2786%27 fill=%27%231D6B4F%27%3E%E2%97%88%3C/text%3E%3C/svg%3E">
 <noscript><style>#calculator-results,#calculator-status{display:none!important}</style></noscript>
 <script src="/site-analytics.js" defer></script>
+<style id="scta-css">
+/* Support CTA (tips). Outline buttons only: the filled green button stays on the paid pipeline. */
+[data-support-cta][hidden]{display:none!important}
+.scta{background:var(--white,#fff);border:1px solid var(--line,#E2DFD5);border-radius:4px;padding:16px 18px;margin-top:18px;color:var(--ink,#16150F);font:400 15px/1.55 var(--sans,'IBM Plex Sans',system-ui,sans-serif);text-align:left}
+.tool .scta,.wht .scta{background:var(--paper,#F6F5F1)}
+.scta .scta-h{margin:0;font-family:var(--sans,'IBM Plex Sans',system-ui,sans-serif);font-size:16px;font-weight:600;letter-spacing:-.018em;line-height:1.3;color:var(--ink,#16150F)}
+.scta p{margin:6px 0 0;font-size:14px;line-height:1.55;color:var(--mut,#6A6860);max-width:64ch}
+.scta-btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;align-items:center}
+.scta a.scta-b{min-height:44px;display:inline-flex;align-items:center;gap:8px;padding:0 16px;border-radius:3px;font-family:var(--sans,'IBM Plex Sans',system-ui,sans-serif);font-size:14.5px;font-weight:500;line-height:1;border:1px solid var(--acc,#1D6B4F);background:var(--white,#fff);color:var(--acc,#1D6B4F);text-decoration:none;white-space:nowrap}
+.scta a.scta-b.alt{border-color:var(--line2,#DAD7CC);color:var(--ink,#16150F)}
+.scta a.scta-b:hover{border-color:var(--ink,#16150F);color:var(--ink,#16150F)}
+.scta a:focus-visible{outline:2px solid var(--acc,#1D6B4F);outline-offset:2px;border-radius:3px}
+.scta a.scta-why{min-height:44px;display:inline-flex;align-items:center;padding:0 6px;font-family:var(--mono,'IBM Plex Mono',monospace);font-size:12.5px;color:var(--mut,#6A6860);border-bottom:0;text-decoration:underline;text-underline-offset:3px}
+.scta-top{display:flex;gap:12px;align-items:center}
+.scta-top img{width:44px;height:44px;border-radius:50%;flex:none;border:1px solid var(--line,#E2DFD5);display:block;max-width:none}
+.scta-foot{max-width:1080px;margin:clamp(40px,5cqw,72px) auto 0;padding:0 20px}
+.scta-foot .scta{max-width:760px;margin:0}
+</style>
 </head><body><a class="skip" href="#main">Skip to content</a><div class="frame"><header><div class="in"><a class="brand" href="/"><span aria-hidden="true" class="g">◈</span><span class="n">ToolsThatRank</span></a><nav aria-label="Primary" class="top"><a href="/#build">the pipeline</a><a href="/#proof">proof</a><a href="/#tools">shipped</a><a href="/#how">method</a><a href="/ctr-by-position/">position bands</a><a href="/zero-click-pages/">click coverage</a><a href="/search-console-hidden-queries/">hidden queries</a><a href="/how-long-to-rank/">time to rank</a><a class="gh" href="https://github.com/theluckystrike" target="_blank" rel="noopener">github <span aria-hidden="true">&#8599;</span></a></nav>
 </div>
 </header>
@@ -328,7 +346,7 @@ main>section.tool-section:first-of-type{padding-top:0;border-top:0}
 </div>
 <div aria-atomic="true" aria-live="polite" class="hc result-panel" id="calculator-results"><h3>Largest property</h3><p data-source-id="harvest"><a href="https://raw.githubusercontent.com/theluckystrike/toolsthatrank-site/ff05db5055435937525646008f96c4c1d77d4452/research-data/ctr-comparison-20260908/gsc-harvest.json">Measured counts source</a> · <a href="https://raw.githubusercontent.com/theluckystrike/toolsthatrank-site/ff05db5055435937525646008f96c4c1d77d4452/research-data/ctr-comparison-20260908/gsc-harvest.json">Recorded API responses and fetch timestamp</a></p><table><caption>Counts and CTR</caption><thead><tr><th scope="col">Period</th><th scope="col">Clicks</th><th scope="col">Impressions</th><th scope="col">CTR</th><th scope="col">Source</th></tr></thead><tbody><tr data-source-id="harvest"><th scope="row">Earlier</th><td>1,160</td><td>309,177</td><td>0.3752%</td><td><a href="https://raw.githubusercontent.com/theluckystrike/toolsthatrank-site/ff05db5055435937525646008f96c4c1d77d4452/research-data/ctr-comparison-20260908/gsc-harvest.json">Counts source</a> · <a href="https://support.google.com/webmasters/answer/7576553?hl=en">CTR definition</a></td></tr><tr data-source-id="harvest"><th scope="row">Later</th><td>1,068</td><td>329,175</td><td>0.3244%</td><td><a href="https://raw.githubusercontent.com/theluckystrike/toolsthatrank-site/ff05db5055435937525646008f96c4c1d77d4452/research-data/ctr-comparison-20260908/gsc-harvest.json">Counts source</a> · <a href="https://support.google.com/webmasters/answer/7576553?hl=en">CTR definition</a></td></tr></tbody></table><table><caption>Change and symmetric components</caption><tbody><tr data-source-id="harvest"><th scope="row">CTR change</th><td>-0.0507 percentage points</td><td><a href="#comparison-formula">Calculation method</a> · <a href="https://raw.githubusercontent.com/theluckystrike/toolsthatrank-site/ff05db5055435937525646008f96c4c1d77d4452/research-data/ctr-comparison-20260908/gsc-harvest.json">Input counts</a></td></tr><tr data-source-id="harvest"><th scope="row">Relative CTR change</th><td>-13.5244%</td><td><a href="#comparison-formula">Calculation method</a> · <a href="https://raw.githubusercontent.com/theluckystrike/toolsthatrank-site/ff05db5055435937525646008f96c4c1d77d4452/research-data/ctr-comparison-20260908/gsc-harvest.json">Input counts</a></td></tr><tr data-source-id="harvest"><th scope="row">Net click change</th><td>-92 clicks</td><td><a href="#comparison-formula">Calculation method</a> · <a href="https://raw.githubusercontent.com/theluckystrike/toolsthatrank-site/ff05db5055435937525646008f96c4c1d77d4452/research-data/ctr-comparison-20260908/gsc-harvest.json">Input counts</a></td></tr><tr data-source-id="harvest"><th scope="row">Impression component</th><td>+69.9567 click equivalents</td><td><a href="#comparison-formula">Calculation method</a> · <a href="https://raw.githubusercontent.com/theluckystrike/toolsthatrank-site/ff05db5055435937525646008f96c4c1d77d4452/research-data/ctr-comparison-20260908/gsc-harvest.json">Input counts</a></td></tr><tr data-source-id="harvest"><th scope="row">CTR component</th><td>-161.9567 click equivalents</td><td><a href="#comparison-formula">Calculation method</a> · <a href="https://raw.githubusercontent.com/theluckystrike/toolsthatrank-site/ff05db5055435937525646008f96c4c1d77d4452/research-data/ctr-comparison-20260908/gsc-harvest.json">Input counts</a></td></tr></tbody></table><p data-source-id="harvest">Clicks fell. Impressions rose. CTR fell. <a href="#comparison-formula">How this is calculated</a> · <a href="https://raw.githubusercontent.com/theluckystrike/toolsthatrank-site/ff05db5055435937525646008f96c4c1d77d4452/research-data/ctr-comparison-20260908/gsc-harvest.json">Measured input counts</a></p></div>
 </form>
-<div class="sample-group">
+<aside class="scta" data-support-cta="result" aria-label="Tip the author"><p class="scta-h">Hope the split explains the CTR change.</p><p>This calculator is free, and I built it alone. If it showed whether impressions or CTR moved your clicks, a $3 coffee helps keep it running.</p><div class="scta-btns"><a class="scta-b" data-rail="bmc" href="https://buymeacoffee.com/michaellip" target="_blank" rel="noopener"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><path d="M6 2v2M10 2v2M14 2v2"/></svg>Buy me a coffee</a><a class="scta-b alt" data-rail="paypal" href="https://paypal.me/najzzz/3USD" target="_blank" rel="noopener">Tip $3 with PayPal</a></div></aside><div class="sample-group">
 <div class="two density-grid"><div class="reading-group"><h3>Sample and dates</h3><p class="sample-scope" data-source-id="operator">These figures come from one operator's properties, not from a representative sample of the web. <a href="https://github.com/theluckystrike/toolsthatrank-site/blob/ff05db5055435937525646008f96c4c1d77d4452/research-data/ctr-comparison-20260908/README.md">Operator disclosure</a>. For a separate published organic curve, see <a href="https://www.advancedwebranking.com/free-seo-tools/google-organic-ctr">Advanced Web Ranking</a>.</p><p class="measurement-dates" data-source-id="harvest">Measured sample windows: <time datetime="2026-07-12">July 12</time> through <time datetime="2026-08-08">August 8, 2026</time> (earlier), and <time datetime="2026-08-09">August 9</time> through <time datetime="2026-09-05">September 5, 2026</time> (later). Fetched <time datetime="2026-09-08T03:29:08.279Z">September 8, 2026 at 03:29 UTC</time>. <a href="https://raw.githubusercontent.com/theluckystrike/toolsthatrank-site/ff05db5055435937525646008f96c4c1d77d4452/research-data/ctr-comparison-20260908/gsc-harvest.json">Dated source snapshot</a></p><p data-source-id="google-api">Both date boundaries are inclusive in Pacific Time. <a href="https://developers.google.com/webmaster-tools/v1/searchanalytics/query">Google's date convention</a></p></div><div class="reading-group"><h3>Using the comparison</h3><aside class="scope hc"><p data-source-id="operator">These figures come from one operator's properties, not from a representative sample of the web. <a href="https://github.com/theluckystrike/toolsthatrank-site/blob/ff05db5055435937525646008f96c4c1d77d4452/research-data/ctr-comparison-20260908/README.md">Operator disclosure</a></p>
 <p>Don't use this sample as an industry benchmark.</p>
 <p data-source-id="awr">Advanced Web Ranking publishes monthly datasets aggregating Google Search Console data. <a href="https://www.advancedwebranking.com/free-seo-tools/google-organic-ctr">Advanced Web Ranking organic CTR study, a different dataset</a></p>
@@ -375,10 +393,12 @@ main>section.tool-section:first-of-type{padding-top:0;border-top:0}
 </aside>
 <nav aria-label="Related research" class="in related"><a href="/search-console-hidden-queries/">Search Console hidden queries</a><br/><a href="/ctr-by-position/">CTR by position research</a></nav>
 </main>
+<section class="scta-foot" data-support-cta="footer" aria-labelledby="scta-fh"><div class="scta"><div class="scta-top"><picture><source srcset="/assets/michael-128.webp" type="image/webp"><img src="/assets/michael-128.jpg" width="44" height="44" loading="lazy" decoding="async" alt="Michael Lip"></picture><h2 class="scta-h" id="scta-fh">Measured by one person, free to read</h2></div><p>I'm Michael. Since August 2026 I have published nine free studies and calculators here, all read from my own Search Console data. The domain and my hours are what it costs. If one answered your question, a small tip helps. The studies stay free either way.</p><div class="scta-btns"><a class="scta-b" data-rail="bmc" href="https://buymeacoffee.com/michaellip" target="_blank" rel="noopener"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><path d="M6 2v2M10 2v2M14 2v2"/></svg>Buy me a coffee</a><a class="scta-b alt" data-rail="paypal" href="https://paypal.me/najzzz" target="_blank" rel="noopener">Tip with PayPal</a><a class="scta-why" href="/support/">Why I ask</a></div></div></section>
 <footer><div class="in"><div class="fr"><div class="l"><a class="footer-brand" href="/"><span aria-hidden="true">◈</span>ToolsThatRank</a><p>Compare your counts with transparent arithmetic. Measured samples and their sources are documented on this page.</p>
 <p><a href="mailto:support@toolsthatrank.com">support@toolsthatrank.com</a></p>
 </div>
-<nav aria-label="Footer"><a href="/">Home</a><a href="/search-console-hidden-queries/">Hidden queries</a><a href="/privacy/">Privacy</a><a href="/privacy/#analytics" data-mr-consent-open>Cookie settings</a><a href="/terms/">Terms</a><a href="https://github.com/theluckystrike">Michael Lip on GitHub</a></nav>
+<nav aria-label="Footer"><a href="/">Home</a><a href="/search-console-hidden-queries/">Hidden queries</a><a href="/privacy/">Privacy</a><a href="/privacy/#analytics" data-mr-consent-open>Cookie settings</a><a href="/terms/">Terms</a><a href="https://github.com/theluckystrike">Michael Lip on GitHub</a><a href="/support/">why I ask for tips</a>
+</nav>
 </div>
 <p class="copy">ToolsThatRank · Measured samples, reproducible calculations</p>
 </div>
@@ -797,5 +817,36 @@ comparisonPage?.addEventListener("focusin", (event) => {
     behavior: "instant",
   });
 });
+</script>
+<script>
+(function(){
+  'use strict';
+  var d=document;
+  d.addEventListener('click',function(e){
+    var a=e.target&&e.target.closest?e.target.closest('[data-support-cta] a[data-rail]'):null;
+    if(!a)return;
+    var r=a.closest('[data-support-cta]');
+    var p={cta_position:r.getAttribute('data-support-cta'),rail:a.getAttribute('data-rail')};
+    try{
+      if(typeof window.mrTrack==='function'&&window.__mrAnalytics){window.mrTrack('support_click',p);}
+      else if(typeof gtag==='function'){gtag('event','support_click',p);}
+    }catch(x){}
+  },true);
+  var cs=d.querySelectorAll('[data-support-cta][data-reveal-for]');
+  Array.prototype.forEach.call(cs,function(c){
+    var t=d.getElementById(c.getAttribute('data-reveal-for'));
+    if(!t||typeof MutationObserver!=='function')return;
+    var sel=c.getAttribute('data-reveal-sel'),re=c.getAttribute('data-reveal-re');
+    function ok(){
+      var s=(t.textContent||'').trim();
+      if(sel)return !!d.querySelector(sel);
+      if(re)return new RegExp(re).test(s);
+      return s!=='';
+    }
+    var mo=new MutationObserver(function(){if(ok()){c.hidden=false;mo.disconnect();}});
+    mo.observe(t,{childList:true,subtree:true,characterData:true,attributes:true});
+    if(ok())c.hidden=false;
+  });
+})();
 </script>
 </body></html>

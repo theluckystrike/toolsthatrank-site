@@ -314,6 +314,24 @@ textarea[aria-invalid=true]{border:2px solid #8A6414}
 .result-panel .sub{display:block;font-family:var(--sans);font-size:13px;font-weight:400;letter-spacing:0;text-transform:none;color:var(--mut);margin-top:4px}
 .result-note{margin-top:14px}
 </style><script src="/site-analytics.js" defer></script>
+<style id="scta-css">
+/* Support CTA (tips). Outline buttons only: the filled green button stays on the paid pipeline. */
+[data-support-cta][hidden]{display:none!important}
+.scta{background:var(--white,#fff);border:1px solid var(--line,#E2DFD5);border-radius:4px;padding:16px 18px;margin-top:18px;color:var(--ink,#16150F);font:400 15px/1.55 var(--sans,'IBM Plex Sans',system-ui,sans-serif);text-align:left}
+.tool .scta,.wht .scta{background:var(--paper,#F6F5F1)}
+.scta .scta-h{margin:0;font-family:var(--sans,'IBM Plex Sans',system-ui,sans-serif);font-size:16px;font-weight:600;letter-spacing:-.018em;line-height:1.3;color:var(--ink,#16150F)}
+.scta p{margin:6px 0 0;font-size:14px;line-height:1.55;color:var(--mut,#6A6860);max-width:64ch}
+.scta-btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;align-items:center}
+.scta a.scta-b{min-height:44px;display:inline-flex;align-items:center;gap:8px;padding:0 16px;border-radius:3px;font-family:var(--sans,'IBM Plex Sans',system-ui,sans-serif);font-size:14.5px;font-weight:500;line-height:1;border:1px solid var(--acc,#1D6B4F);background:var(--white,#fff);color:var(--acc,#1D6B4F);text-decoration:none;white-space:nowrap}
+.scta a.scta-b.alt{border-color:var(--line2,#DAD7CC);color:var(--ink,#16150F)}
+.scta a.scta-b:hover{border-color:var(--ink,#16150F);color:var(--ink,#16150F)}
+.scta a:focus-visible{outline:2px solid var(--acc,#1D6B4F);outline-offset:2px;border-radius:3px}
+.scta a.scta-why{min-height:44px;display:inline-flex;align-items:center;padding:0 6px;font-family:var(--mono,'IBM Plex Mono',monospace);font-size:12.5px;color:var(--mut,#6A6860);border-bottom:0;text-decoration:underline;text-underline-offset:3px}
+.scta-top{display:flex;gap:12px;align-items:center}
+.scta-top img{width:44px;height:44px;border-radius:50%;flex:none;border:1px solid var(--line,#E2DFD5);display:block;max-width:none}
+.scta-foot{max-width:1080px;margin:clamp(40px,5cqw,72px) auto 0;padding:0 20px}
+.scta-foot .scta{max-width:760px;margin:0}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a><div class="frame"><header><div class="in"><a class="brand" href="/"><span aria-hidden="true" class="g">◈</span><span class="n">ToolsThatRank</span></a><nav aria-label="Primary" class="top"><a href="/#build">the pipeline</a><a href="/#proof">proof</a><a href="/#tools">shipped</a><a href="/#how">method</a><a href="/ctr-by-position/">position bands</a><a href="/zero-click-pages/">click coverage</a><a href="/search-console-hidden-queries/">hidden queries</a><a href="/how-long-to-rank/">time to rank</a><a class="gh" href="https://github.com/theluckystrike" target="_blank" rel="noopener">github <span aria-hidden="true">&#8599;</span></a></nav>
@@ -446,13 +464,46 @@ textarea[aria-invalid=true]{border:2px solid #8A6414}
 <p class="related">Related reading: <a href="/search-console-hidden-queries/">hidden queries in Search Console</a>, <a href="/ctr-by-position/">CTR by position</a>, <a href="/ctr-comparison/">CTR comparison</a>. Other guides, including <a href="https://www.seotesting.com/">SEOTesting</a>, read on 2026-09-18, also describe the metric averaging across impressions. The new part of this page is the measured cohort and the calculator.</p>
 </section>
 </main>
+<section class="scta-foot" data-support-cta="footer" aria-labelledby="scta-fh"><div class="scta"><div class="scta-top"><picture><source srcset="/assets/michael-128.webp" type="image/webp"><img src="/assets/michael-128.jpg" width="44" height="44" loading="lazy" decoding="async" alt="Michael Lip"></picture><h2 class="scta-h" id="scta-fh">Measured by one person, free to read</h2></div><p>I'm Michael. Since August 2026 I have published nine free studies and calculators here, all read from my own Search Console data. The domain and my hours are what it costs. If one answered your question, a small tip helps. The studies stay free either way.</p><div class="scta-btns"><a class="scta-b" data-rail="bmc" href="https://buymeacoffee.com/michaellip" target="_blank" rel="noopener"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><path d="M6 2v2M10 2v2M14 2v2"/></svg>Buy me a coffee</a><a class="scta-b alt" data-rail="paypal" href="https://paypal.me/najzzz" target="_blank" rel="noopener">Tip with PayPal</a><a class="scta-why" href="/support/">Why I ask</a></div></div></section>
 <footer><div class="in"><div class="fr"><div class="l"><a class="footer-brand" href="/"><span aria-hidden="true">◈</span>ToolsThatRank</a><p>Compare your counts with transparent arithmetic. Measured samples and their sources are documented on this page.</p>
 <p><a href="mailto:support@toolsthatrank.com">support@toolsthatrank.com</a></p>
 </div>
-<nav aria-label="Footer"><a href="/">Home</a><a href="/search-console-hidden-queries/">Hidden queries</a><a href="/privacy/">Privacy</a><a href="/privacy/#analytics" data-mr-consent-open>Cookie settings</a><a href="/terms/">Terms</a><a href="https://github.com/theluckystrike">Michael Lip on GitHub</a></nav>
+<nav aria-label="Footer"><a href="/">Home</a><a href="/search-console-hidden-queries/">Hidden queries</a><a href="/privacy/">Privacy</a><a href="/privacy/#analytics" data-mr-consent-open>Cookie settings</a><a href="/terms/">Terms</a><a href="https://github.com/theluckystrike">Michael Lip on GitHub</a><a href="/support/">why I ask for tips</a>
+</nav>
 </div>
 <p class="copy">ToolsThatRank · Measured samples, reproducible calculations</p>
 </div>
 </footer>
+<script>
+(function(){
+  'use strict';
+  var d=document;
+  d.addEventListener('click',function(e){
+    var a=e.target&&e.target.closest?e.target.closest('[data-support-cta] a[data-rail]'):null;
+    if(!a)return;
+    var r=a.closest('[data-support-cta]');
+    var p={cta_position:r.getAttribute('data-support-cta'),rail:a.getAttribute('data-rail')};
+    try{
+      if(typeof window.mrTrack==='function'&&window.__mrAnalytics){window.mrTrack('support_click',p);}
+      else if(typeof gtag==='function'){gtag('event','support_click',p);}
+    }catch(x){}
+  },true);
+  var cs=d.querySelectorAll('[data-support-cta][data-reveal-for]');
+  Array.prototype.forEach.call(cs,function(c){
+    var t=d.getElementById(c.getAttribute('data-reveal-for'));
+    if(!t||typeof MutationObserver!=='function')return;
+    var sel=c.getAttribute('data-reveal-sel'),re=c.getAttribute('data-reveal-re');
+    function ok(){
+      var s=(t.textContent||'').trim();
+      if(sel)return !!d.querySelector(sel);
+      if(re)return new RegExp(re).test(s);
+      return s!=='';
+    }
+    var mo=new MutationObserver(function(){if(ok()){c.hidden=false;mo.disconnect();}});
+    mo.observe(t,{childList:true,subtree:true,characterData:true,attributes:true});
+    if(ok())c.hidden=false;
+  });
+})();
+</script>
 </body>
 </html>
