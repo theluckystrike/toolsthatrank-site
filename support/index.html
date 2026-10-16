@@ -221,6 +221,13 @@ html{overflow-x:hidden}
 .scta-top img{width:44px;height:44px;border-radius:50%;flex:none;border:1px solid var(--line,#E2DFD5);display:block;max-width:none}
 .scta-foot{max-width:1080px;margin:clamp(40px,5cqw,72px) auto 0;padding:0 20px}
 .scta-foot .scta{max-width:760px;margin:0}
+.scta a.scta-b small{font-family:var(--mono,'IBM Plex Mono',monospace);font-size:11.5px;font-weight:400;color:var(--mut,#6A6860);margin-left:4px}
+.scta-me{display:flex;gap:10px;align-items:center;margin-top:8px}
+.scta-me img{width:32px;height:32px;border-radius:50%;flex:none;border:1px solid var(--line,#E2DFD5);display:block;max-width:none}
+.scta .scta-me p{margin:0}
+.scta button.scta-x{min-height:44px;padding:0 6px;background:none;border:0;cursor:pointer;font-family:var(--mono,'IBM Plex Mono',monospace);font-size:12.5px;color:var(--mut,#6A6860);text-decoration:underline;text-underline-offset:3px}
+.scta button.scta-x:focus-visible{outline:2px solid var(--acc,#1D6B4F);outline-offset:2px;border-radius:3px}
+@media (max-width:420px){.scta a.scta-b{white-space:normal;padding:8px 14px}}
 </style>
 <style>
 .scta-page{max-width:680px;padding:clamp(18px,2.4cqw,26px);margin:0}
@@ -229,6 +236,12 @@ html{overflow-x:hidden}
 .scta-page p strong{color:var(--ink,#16150F);font-weight:600}
 .scta-page .scta-top img{width:48px;height:48px}
 .scta-page .scta-sm{font-family:var(--mono,'IBM Plex Mono',monospace);font-size:12px;color:var(--mut,#6A6860)}
+.scta-page .scta-post{margin:20px 0 0}
+.scta-tab{border-collapse:collapse;margin-top:8px;font-size:14.5px;width:100%;max-width:560px}
+.scta-tab th,.scta-tab td{text-align:left;padding:8px 10px 8px 0;border-bottom:1px solid var(--line,#E2DFD5);vertical-align:top}
+.scta-tab th{font-family:var(--mono,'IBM Plex Mono',monospace);font-size:12px;font-weight:500;color:var(--mut,#6A6860)}
+.scta-tab td:last-child{white-space:nowrap;padding-right:0}
+.scta-ul{margin:8px 0 0;padding-left:20px;font-size:15.5px;line-height:1.65;color:var(--body,#4A4840)}
 .scta-page .scta-pre{margin:0 0 16px;padding:10px 12px;background:var(--paper,#F6F5F1);border:1px solid var(--line3,#EDEBE3);border-radius:3px;font-size:14px;color:var(--mut,#6A6860)}
 </style>
 </head>
@@ -239,7 +252,7 @@ html{overflow-x:hidden}
   <a class="brand" href="/"><span class="g" aria-hidden="true">&#9672;</span><span class="n">ToolsThatRank</span></a>
   <nav class="top" aria-label="Primary"><a href="/">home</a><a href="/pricing/">pricing</a><a href="/privacy/">privacy</a><a href="/terms/">terms</a><a href="/terms/#refunds">refunds</a></nav>
 </div></header>
-<main id="main"><section class="in sec"><div class="scta scta-page" data-support-cta="support_page"><p class="scta-pre">Need help with a purchase or a refund? Email <a href="mailto:support@toolsthatrank.com">support@toolsthatrank.com</a>. This page is only about tips.</p><div class="scta-top"><picture><source srcset="/assets/michael-128.webp" type="image/webp"><img src="/assets/michael-128.jpg" width="48" height="48" decoding="async" alt="Michael Lip"></picture><h1 class="scta-h">Why a site that sells a pipeline also takes tips</h1></div><p>I'm Michael Lip. I run ToolsThatRank on my own. I registered the domain in August 2026. Since then I have published nine free studies and calculators here, each read from my own Search Console properties, plus the open-source rules_sitemap.</p><p>The pipeline is a $99 product with its own <a href="/pricing/">pricing page</a>. The studies are separate and free. A tip is for the studies. It does not buy the pipeline.</p><p><strong>What it costs.</strong> GitHub Pages hosts the site for free. I pay for the domain each year. The hours to pull, check and re-check the Search Console data are my own.</p><p><strong>Where a tip goes.</strong> The domain renewal first, then time for the next measurement.</p><div class="scta-btns"><a class="scta-b" data-rail="bmc" href="https://buymeacoffee.com/michaellip" target="_blank" rel="noopener"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><path d="M6 2v2M10 2v2M14 2v2"/></svg>Buy me a coffee</a><a class="scta-b alt" data-rail="paypal" href="https://paypal.me/najzzz" target="_blank" rel="noopener">Tip with PayPal</a></div><p class="scta-sm">Or pick an amount on PayPal:</p><div class="scta-btns"><a class="scta-b alt" data-rail="paypal" href="https://paypal.me/najzzz/3USD" target="_blank" rel="noopener">$3</a><a class="scta-b alt" data-rail="paypal" href="https://paypal.me/najzzz/5USD" target="_blank" rel="noopener">$5</a><a class="scta-b alt" data-rail="paypal" href="https://paypal.me/najzzz/10USD" target="_blank" rel="noopener">$10</a></div><p class="scta-sm">Card or PayPal. No account needed for card. PayPal shows my legal name, Michał Lip.</p><p>This is a tip. You get nothing extra, and you owe nothing. The site stays free either way.</p><p>Michael</p></div></section></main>
+<main id="main"><section class="in sec"><div class="scta scta-page" data-support-cta="support_page"><div class="scta-top"><picture><source srcset="/assets/michael-128.webp" type="image/webp"><img src="/assets/michael-128.jpg" width="48" height="48" decoding="async" alt="Michael Lip"></picture><h1 class="scta-h">Why a site that sells a pipeline also takes tips</h1></div><p>Hi, I'm Michael. I run ToolsThatRank on my own. I registered the domain in August 2026. Since then I have published nine free studies and calculators here, each read from my own Search Console properties, plus the open-source rules_sitemap.</p><p>The pipeline is a $99 product with its own <a href="/pricing/">pricing page</a>. The studies are separate and free. A tip is for the studies. It does not buy the pipeline.</p><p><strong>What it costs each year.</strong> Not much in money, but more in hours.</p><table class="scta-tab"><thead><tr><th scope="col">Item</th><th scope="col">Cost per year</th></tr></thead><tbody><tr><td>Domain toolsthatrank.com (Porkbun renewal)</td><td>about $11</td></tr><tr><td>Hosting on GitHub Pages</td><td>$0</td></tr><tr><td>My hours to pull, check and re-check the Search Console data</td><td>unpaid</td></tr></tbody></table><p class="scta-sm">Domain price: Porkbun .com renewal list price, <a href="https://porkbun.com/products/domains" target="_blank" rel="noopener">porkbun.com/products/domains</a>, checked 17 October 2026.</p><p><strong>What tips pay for.</strong></p><ul class="scta-ul"><li>The domain comes first, and $3 covers three months of it.</li><li>Then the hours it takes to re-pull and re-check the data when a study is measured again.</li><li>After that, time for the next study, measured the same careful way.</li></ul><p><strong>Tips unlock nothing, and everyone reads the same studies.</strong> A tip also does not buy the pipeline; that stays a separate product.</p><div class="scta-btns"><a class="scta-b" data-rail="paypal" href="https://paypal.me/najzzz/3USD" target="_blank" rel="noopener">Tip $3</a><a class="scta-b alt" data-rail="paypal" href="https://paypal.me/najzzz/5USD" target="_blank" rel="noopener">Tip $5</a><a class="scta-b alt" data-rail="paypal" href="https://paypal.me/najzzz/10USD" target="_blank" rel="noopener">Tip $10</a><a class="scta-b alt" data-rail="bmc" href="https://buymeacoffee.com/michaellip" target="_blank" rel="noopener"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><path d="M6 2v2M10 2v2M14 2v2"/></svg><span>Buy me a coffee <small>card, any amount</small></span></a></div><p>Prefer monthly? On Buy Me a Coffee you can tick &#8220;Make this monthly&#8221;. You can cancel at any time.</p><p class="scta-sm">PayPal shows my legal name, Micha&#322; Lip. Buy Me a Coffee takes a card, and you do not need an account.</p><p>It is a tip, not a purchase. You get nothing extra, and you owe nothing. The site stays free either way.</p><p class="scta-sm">Some study pages count how often you see a result, so the thank-you note can change from your third visit. The use count on this site stays in your browser, and I never see it.</p><p>Michael</p><p class="scta-pre scta-post">Need help with a purchase or a refund? Email <a href="mailto:support@toolsthatrank.com">support@toolsthatrank.com</a>. This page is only about tips.</p></div></section></main>
 <footer><div class="in"><div class="copy">&#169; 2026 toolsthatrank.com &#183; <a href="/">home</a> &#183; <a href="/pricing/">pricing</a> &#183; <a href="/privacy/">privacy</a> &#183; <a href="/privacy/#analytics" data-mr-consent-open>cookie settings</a> &#183; <a href="/terms/">terms</a> &#183; <a href="/terms/#refunds">refunds</a> &#183; <a href="/support/" aria-current="page">why I ask for tips</a></div></div></footer>
 </div>
 <script>
@@ -267,9 +280,10 @@ html{overflow-x:hidden}
       if(re)return new RegExp(re).test(s);
       return s!=='';
     }
-    var mo=new MutationObserver(function(){if(ok()){c.hidden=false;mo.disconnect();}});
+    function show(){if(window.sctShown){window.sctShown();}else{c.hidden=false;}}
+    var mo=new MutationObserver(function(){if(ok()){show();mo.disconnect();}});
     mo.observe(t,{childList:true,subtree:true,characterData:true,attributes:true});
-    if(ok())c.hidden=false;
+    if(ok())show();
   });
 })();
 </script>

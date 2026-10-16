@@ -384,7 +384,15 @@ table.data tr:last-child td,table.data tr:last-child th{border-bottom:0}
 .scta-top img{width:44px;height:44px;border-radius:50%;flex:none;border:1px solid var(--line,#E2DFD5);display:block;max-width:none}
 .scta-foot{max-width:1080px;margin:clamp(40px,5cqw,72px) auto 0;padding:0 20px}
 .scta-foot .scta{max-width:760px;margin:0}
+.scta a.scta-b small{font-family:var(--mono,'IBM Plex Mono',monospace);font-size:11.5px;font-weight:400;color:var(--mut,#6A6860);margin-left:4px}
+.scta-me{display:flex;gap:10px;align-items:center;margin-top:8px}
+.scta-me img{width:32px;height:32px;border-radius:50%;flex:none;border:1px solid var(--line,#E2DFD5);display:block;max-width:none}
+.scta .scta-me p{margin:0}
+.scta button.scta-x{min-height:44px;padding:0 6px;background:none;border:0;cursor:pointer;font-family:var(--mono,'IBM Plex Mono',monospace);font-size:12.5px;color:var(--mut,#6A6860);text-decoration:underline;text-underline-offset:3px}
+.scta button.scta-x:focus-visible{outline:2px solid var(--acc,#1D6B4F);outline-offset:2px;border-radius:3px}
+@media (max-width:420px){.scta a.scta-b{white-space:normal;padding:8px 14px}}
 </style>
+<script src="/assets/support-v3.js?v=3" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -438,7 +446,7 @@ table.data tr:last-child td,table.data tr:last-child th{border-bottom:0}
       <input type="date" id="pubdate" min="2016-01-01" max="2036-12-31">
       <button class="btn-s" type="button" id="ttrbtn">Check the curve</button>
     </div>
-    <div id="ttrout" class="toolout empty">The reading appears here.</div><aside class="scta" data-support-cta="result" hidden data-reveal-for="ttrout" data-reveal-re="^Day \d" aria-label="Tip the author"><p class="scta-h">Hope your page beats the 78-day median.</p><p>This study and its lookup are free. I built them from 1,185 of my own pages. If the reading beat a guess, a $3 coffee helps me keep measuring.</p><div class="scta-btns"><a class="scta-b" data-rail="bmc" href="https://buymeacoffee.com/michaellip" target="_blank" rel="noopener"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><path d="M6 2v2M10 2v2M14 2v2"/></svg>Buy me a coffee</a><a class="scta-b alt" data-rail="paypal" href="https://paypal.me/najzzz/3USD" target="_blank" rel="noopener">Tip $3 with PayPal</a></div></aside>
+    <div id="ttrout" class="toolout empty">The reading appears here.</div><aside class="scta" data-support-cta="result" hidden data-reveal-for="ttrout" data-reveal-re="^Day \d" aria-label="Tip the author"><div class="scta-me"><picture><source srcset="/assets/michael-128.webp" type="image/webp"><img src="/assets/michael-128.jpg" width="32" height="32" loading="lazy" decoding="async" alt="Michael Lip"></picture><div><p class="scta-h" data-sct-variant="first">Now you know where your page stands.</p><p class="scta-h" data-sct-variant="returning" hidden>Back again? That's visit <span data-sct-uses></span>.</p></div></div><p data-sct-variant="first">I'm Michael, and I measure these numbers on my own Search Console sites. $3 covers three months of the domain, which costs about $11 a year. The study stays free, and a tip is separate from the pipeline.</p><p data-sct-variant="returning" hidden>I'm glad these studies keep coming in handy. If they've earned a coffee, $3 covers three months of the domain. They stay free either way, and a tip is separate from the pipeline.</p><div class="scta-btns"><a class="scta-b" data-rail="paypal" href="https://paypal.me/najzzz/3USD" target="_blank" rel="noopener">Tip $3 with PayPal</a><a class="scta-b alt" data-rail="bmc" href="https://buymeacoffee.com/michaellip" target="_blank" rel="noopener"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><path d="M6 2v2M10 2v2M14 2v2"/></svg><span>Buy me a coffee <small>card, no account</small></span></a><button type="button" class="scta-x" data-sct-dismiss>Not now</button></div></aside>
   </div>
   <p class="stamp">Step lookup on the published curve. No fitting, no interpolation, no reading of
     your Search Console. Beyond day 138 the tool says so instead of guessing.</p>
@@ -650,7 +658,7 @@ table.data tr:last-child td,table.data tr:last-child th{border-bottom:0}
     <a href="/search-console-hidden-queries/">the hidden queries census</a>, all measured on the same
     properties.</p>
 </section></main>
-<section class="scta-foot" data-support-cta="footer" aria-labelledby="scta-fh"><div class="scta"><div class="scta-top"><picture><source srcset="/assets/michael-128.webp" type="image/webp"><img src="/assets/michael-128.jpg" width="44" height="44" loading="lazy" decoding="async" alt="Michael Lip"></picture><h2 class="scta-h" id="scta-fh">Measured by one person, free to read</h2></div><p>I'm Michael. Since August 2026 I have published nine free studies and calculators here, all read from my own Search Console data. The domain and my hours are what it costs. If one answered your question, a small tip helps. The studies stay free either way.</p><div class="scta-btns"><a class="scta-b" data-rail="bmc" href="https://buymeacoffee.com/michaellip" target="_blank" rel="noopener"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><path d="M6 2v2M10 2v2M14 2v2"/></svg>Buy me a coffee</a><a class="scta-b alt" data-rail="paypal" href="https://paypal.me/najzzz" target="_blank" rel="noopener">Tip with PayPal</a><a class="scta-why" href="/support/">Why I ask</a></div></div></section>
+<section class="scta-foot" data-support-cta="footer" aria-labelledby="scta-fh"><div class="scta"><div class="scta-top"><picture><source srcset="/assets/michael-128.webp" type="image/webp"><img src="/assets/michael-128.jpg" width="44" height="44" loading="lazy" decoding="async" alt="Michael Lip"></picture><h2 class="scta-h" id="scta-fh">The studies here are one person's work</h2></div><p>I'm Michael, and I build each study and calculator from my own Search Console data. The domain is about $11 a year, so $3 covers three months of it, and GitHub Pages hosting costs nothing. The studies stay free either way.</p><div class="scta-btns"><a class="scta-b" data-rail="paypal" href="https://paypal.me/najzzz/3USD" target="_blank" rel="noopener">Tip $3 with PayPal</a><a class="scta-b alt" data-rail="bmc" href="https://buymeacoffee.com/michaellip" target="_blank" rel="noopener"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><path d="M6 2v2M10 2v2M14 2v2"/></svg><span>Buy me a coffee <small>card, no account</small></span></a><a class="scta-why" href="/support/">Why I ask</a></div></div></section>
 <footer>
   <div class="in">
     <div class="fr">
@@ -755,6 +763,7 @@ table.data tr:last-child td,table.data tr:last-child th{border-bottom:0}
   'use strict';
   var d=document;
   d.addEventListener('click',function(e){
+    if(window.sctShown)return;
     var a=e.target&&e.target.closest?e.target.closest('[data-support-cta] a[data-rail]'):null;
     if(!a)return;
     var r=a.closest('[data-support-cta]');
@@ -775,9 +784,10 @@ table.data tr:last-child td,table.data tr:last-child th{border-bottom:0}
       if(re)return new RegExp(re).test(s);
       return s!=='';
     }
-    var mo=new MutationObserver(function(){if(ok()){c.hidden=false;mo.disconnect();}});
+    function show(){if(window.sctShown){window.sctShown();}else{c.hidden=false;}}
+    var mo=new MutationObserver(function(){if(ok()){show();mo.disconnect();}});
     mo.observe(t,{childList:true,subtree:true,characterData:true,attributes:true});
-    if(ok())c.hidden=false;
+    if(ok())show();
   });
 })();
 </script>
