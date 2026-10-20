@@ -1,0 +1,211 @@
+{
+  "title": "ToolsThatRank publishing case study",
+  "study_window_utc": [
+    "2026-10-10",
+    "2026-10-20"
+  ],
+  "checked_at": "2026-10-20T23:11:50.554756+00:00",
+  "scope": "The operator publishing runs combined for this case study, not the entire portfolio.",
+  "counts": {
+    "page_attempts": 27,
+    "published_pages": 19,
+    "websites_with_published_pages": 15,
+    "targets_held_at_run_closeout": 8
+  },
+  "counting_rule": "A published page has a release receipt and returned HTTP 200 in the source check. A revised release of the same URL counts once.",
+  "traffic_results": "No incremental clicks, rankings, leads or revenue are attributed to these pages by this case study.",
+  "formal_workflow_acceptance": "Publication and the formal launcher acceptance audit are separate. These runs retained incomplete acceptance records.",
+  "later_owner_changes": "Some pages changed after the original release reviews. Current HTTP status does not renew those reviews.",
+  "pages": [
+    {
+      "name": "FSA microloan calculator",
+      "website": "assetloancalculator.com",
+      "url": "https://assetloancalculator.com/fsa-microloan-calculator/",
+      "category": "Money and tax",
+      "release_date_utc": "2026-10-20",
+      "checked_at": "2026-10-20T23:11:47.609755+00:00",
+      "http_status": 200,
+      "final_url": "https://assetloancalculator.com/fsa-microloan-calculator/"
+    },
+    {
+      "name": "Unnatural links manual action guide",
+      "website": "handsofflinks.com",
+      "url": "https://handsofflinks.com/unnatural-links-manual-action/",
+      "category": "Search and code",
+      "release_date_utc": "2026-10-20",
+      "checked_at": "2026-10-20T23:11:47.610025+00:00",
+      "http_status": 200,
+      "final_url": "https://handsofflinks.com/unnatural-links-manual-action/"
+    },
+    {
+      "name": "Gold in an American Gold Eagle",
+      "website": "goldgramprice.com",
+      "url": "https://goldgramprice.com/learn/how-much-gold-is-in-an-american-gold-eagle/",
+      "category": "Money and tax",
+      "release_date_utc": "2026-10-20",
+      "checked_at": "2026-10-20T23:11:47.610276+00:00",
+      "http_status": 200,
+      "final_url": "https://goldgramprice.com/learn/how-much-gold-is-in-an-american-gold-eagle/"
+    },
+    {
+      "name": "KickLLM pricing calculator",
+      "website": "kickllm.com",
+      "url": "https://kickllm.com/answers/claude-haiku-5-5-pricing.html",
+      "category": "More calculators",
+      "release_date_utc": "2026-10-20",
+      "checked_at": "2026-10-20T23:11:47.610497+00:00",
+      "http_status": 200,
+      "final_url": "https://kickllm.com/answers/claude-haiku-5-5-pricing.html"
+    },
+    {
+      "name": "Child and dependent care credit calculator",
+      "website": "taxbreakcalc.com",
+      "url": "https://taxbreakcalc.com/child-and-dependent-care-credit-calculator/",
+      "category": "Money and tax",
+      "release_date_utc": "2026-10-20",
+      "checked_at": "2026-10-20T23:11:48.025867+00:00",
+      "http_status": 200,
+      "final_url": "https://taxbreakcalc.com/child-and-dependent-care-credit-calculator/"
+    },
+    {
+      "name": "Speculative decoding speedup calculator",
+      "website": "ml0x.com",
+      "url": "https://ml0x.com/calculators/speculative-decoding-speedup-calculator/",
+      "category": "More calculators",
+      "release_date_utc": "2026-10-19",
+      "checked_at": "2026-10-20T23:11:48.097243+00:00",
+      "http_status": 200,
+      "final_url": "https://ml0x.com/calculators/speculative-decoding-speedup-calculator/"
+    },
+    {
+      "name": "Altman Z-score calculator",
+      "website": "deepvalueradar.com",
+      "url": "https://deepvalueradar.com/altman-z-score-calculator/",
+      "category": "Money and tax",
+      "release_date_utc": "2026-10-19",
+      "checked_at": "2026-10-20T23:11:48.258865+00:00",
+      "http_status": 200,
+      "final_url": "https://deepvalueradar.com/altman-z-score-calculator/"
+    },
+    {
+      "name": "Yeast conversion calculator",
+      "website": "ingredientcalculator.com",
+      "url": "https://ingredientcalculator.com/yeast-conversion-calculator",
+      "category": "More calculators",
+      "release_date_utc": "2026-10-19",
+      "checked_at": "2026-10-20T23:11:48.446083+00:00",
+      "http_status": 200,
+      "final_url": "https://ingredientcalculator.com/yeast-conversion-calculator"
+    },
+    {
+      "name": "AI Overviews opt-out guide",
+      "website": "seeninaianswers.com",
+      "url": "https://seeninaianswers.com/how-to-opt-out-of-ai-overviews/",
+      "category": "Learning and guides",
+      "release_date_utc": "2026-10-19",
+      "checked_at": "2026-10-20T23:11:48.477015+00:00",
+      "http_status": 200,
+      "final_url": "https://seeninaianswers.com/how-to-opt-out-of-ai-overviews/"
+    },
+    {
+      "name": "DeFi bug bounty economics",
+      "website": "scanthechain.com",
+      "url": "https://scanthechain.com/defi-bug-bounty-economics.html",
+      "category": "Search and code",
+      "release_date_utc": "2026-10-10",
+      "checked_at": "2026-10-20T23:11:48.767524+00:00",
+      "http_status": 200,
+      "final_url": "https://scanthechain.com/defi-bug-bounty-economics.html"
+    },
+    {
+      "name": "HTTP header checker",
+      "website": "aiwebsitepipeline.com",
+      "url": "https://aiwebsitepipeline.com/http-header-checker.html",
+      "category": "Search and code",
+      "release_date_utc": "2026-10-10",
+      "checked_at": "2026-10-20T23:11:48.854924+00:00",
+      "http_status": 200,
+      "final_url": "https://aiwebsitepipeline.com/http-header-checker.html"
+    },
+    {
+      "name": "ClaudFlow pricing calculator",
+      "website": "claudflow.com",
+      "url": "https://claudflow.com/tools/claude-haiku-5-5-pricing-calculator/",
+      "category": "More calculators",
+      "release_date_utc": "2026-10-10",
+      "checked_at": "2026-10-20T23:11:48.872319+00:00",
+      "http_status": 200,
+      "final_url": "https://claudflow.com/tools/claude-haiku-5-5-pricing-calculator/"
+    },
+    {
+      "name": "CTR by position calculator",
+      "website": "toolsthatrank.com",
+      "url": "https://toolsthatrank.com/ctr-by-position-calculator/",
+      "category": "Search and code",
+      "release_date_utc": "2026-10-10",
+      "checked_at": "2026-10-20T23:11:48.898567+00:00",
+      "http_status": 200,
+      "final_url": "https://toolsthatrank.com/ctr-by-position-calculator/"
+    },
+    {
+      "name": "Unreported qualified overtime guide",
+      "website": "examnoovertimetax.lipmichal.workers.dev",
+      "url": "https://examnoovertimetax.lipmichal.workers.dev/employer-did-not-report-qualified-overtime/",
+      "category": "Money and tax",
+      "release_date_utc": "2026-10-10",
+      "checked_at": "2026-10-20T23:11:49.387553+00:00",
+      "http_status": 200,
+      "final_url": "https://examnoovertimetax.lipmichal.workers.dev/employer-did-not-report-qualified-overtime/"
+    },
+    {
+      "name": "Cambridge English scale converter",
+      "website": "englishlearner.org",
+      "url": "https://englishlearner.org/tools/cambridge-english-scale-converter/",
+      "category": "Learning and guides",
+      "release_date_utc": "2026-10-20",
+      "checked_at": "2026-10-20T23:11:49.537027+00:00",
+      "http_status": 200,
+      "final_url": "https://englishlearner.org/tools/cambridge-english-scale-converter/"
+    },
+    {
+      "name": "Vyper compiler bugs by version",
+      "website": "scanthechain.com",
+      "url": "https://scanthechain.com/vyper-compiler-bugs-by-version.html",
+      "category": "Search and code",
+      "release_date_utc": "2026-10-20",
+      "checked_at": "2026-10-20T23:11:49.630235+00:00",
+      "http_status": 200,
+      "final_url": "https://scanthechain.com/vyper-compiler-bugs-by-version.html"
+    },
+    {
+      "name": "llms.txt validator",
+      "website": "aiwebsitepipeline.com",
+      "url": "https://aiwebsitepipeline.com/llms-txt-validator.html",
+      "category": "Search and code",
+      "release_date_utc": "2026-10-20",
+      "checked_at": "2026-10-20T23:11:49.686462+00:00",
+      "http_status": 200,
+      "final_url": "https://aiwebsitepipeline.com/llms-txt-validator.html"
+    },
+    {
+      "name": "Search Console export planner",
+      "website": "toolsthatrank.com",
+      "url": "https://toolsthatrank.com/search-console-export-limits/",
+      "category": "Search and code",
+      "release_date_utc": "2026-10-20",
+      "checked_at": "2026-10-20T23:11:49.774796+00:00",
+      "http_status": 200,
+      "final_url": "https://toolsthatrank.com/search-console-export-limits/"
+    },
+    {
+      "name": "Comp time and overtime tax guide",
+      "website": "examnoovertimetax.lipmichal.workers.dev",
+      "url": "https://examnoovertimetax.lipmichal.workers.dev/comp-time-overtime-tax-deduction/",
+      "category": "Money and tax",
+      "release_date_utc": "2026-10-20",
+      "checked_at": "2026-10-20T23:11:50.191347+00:00",
+      "http_status": 200,
+      "final_url": "https://examnoovertimetax.lipmichal.workers.dev/comp-time-overtime-tax-deduction/"
+    }
+  ]
+}
