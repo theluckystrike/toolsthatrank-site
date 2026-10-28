@@ -33,4 +33,25 @@ Allow: /
 User-agent: Amazonbot
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
 Sitemap: https://toolsthatrank.com/sitemap.xml

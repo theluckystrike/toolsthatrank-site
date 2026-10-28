@@ -324,7 +324,7 @@ table.data td.grp{border-left:1px solid var(--line2)}
    "description": "Enter days, search types and rows per day. See the Search Console API requests at 25,000 rows each, the 50,000 row daily cap per type and the time at 1,200 QPM.",
    "inLanguage": "en",
    "datePublished": "2026-10-20",
-   "dateModified": "2026-10-20",
+   "dateModified": "2026-10-28",
    "author": {
     "@id": "https://toolsthatrank.com/search-console-export-limits/#author"
    },
@@ -337,7 +337,6 @@ table.data td.grp{border-left:1px solid var(--line2)}
    "@id": "https://toolsthatrank.com/search-console-export-limits/#author",
    "name": "Michael Lip",
    "url": "https://github.com/theluckystrike",
-   "description": "Builds and operates ToolsThatRank.",
    "jobTitle": "Independent full-stack consultant"
   },
   {
@@ -423,6 +422,8 @@ table.data td.grp{border-left:1px solid var(--line2)}
   <p class="crumb"><a href="/">ToolsThatRank</a> / API limits</p>
   <p class="kicker">Planner from Google's published limits</p>
   <h1>Search Console API row limit planner</h1>
+  <p class="qas" style="margin:16px 0 0;font-size:16px;line-height:1.6;color:var(--body);max-width:62ch">One API request returns at most 25,000 rows, and Google exposes at most 50,000 rows per day per search type. The interface export stops at 1,000 rows. The per-site and per-user quotas are 1,200 queries per minute each. Plan the export from those limits.</p>
+<p class="stamp" style="margin:6px 0 0;font-size:13px;color:var(--faint)">Updated 2026-10-28</p>
   <p class="lede">Enter the days of data, the number of search types and the rows that you
     expect per day for each type. The planner shows the number of searchanalytics.query
     requests at 25,000 rows per request. It flags a day above the 50,000 row maximum, and it
@@ -432,7 +433,8 @@ table.data td.grp{border-left:1px solid var(--line2)}
     The interface export stops at 1,000 rows. One API request returns at most 25,000 rows.
     The API exposes at most 50,000 rows of data per day per search type. The per-site and
     per-user quotas are 1,200 queries per minute each. The four sources are linked at the
-    bottom of this page.</p>
+    bottom of this page. The API also returns fresh rows unless you set dataState,
+    which <a href="/search-console-datastate/">the dataState reference</a> explains.</p>
   <div class="tool" id="limits-tool">
     <div class="row">
       <label for="ex-days">Days of data
