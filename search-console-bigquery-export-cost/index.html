@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Search Console BigQuery export cost calculator · ToolsThatRank</title>
+<meta name="description" content="Enter export GiB per day, retention days, US or EU multi-region and query load. See the monthly BigQuery storage and query cost of a Search Console bulk data export.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="author" content="Michael Lip">
+<meta name="date" content="2026-10-29">
+<link rel="canonical" href="https://toolsthatrank.com/search-console-bigquery-export-cost/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2786%27%3E%E2%97%88%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://toolsthatrank.com/search-console-bigquery-export-cost/">
+<meta property="og:site_name" content="ToolsThatRank">
+<meta property="og:title" content="Search Console BigQuery export cost calculator">
+<meta property="og:description" content="Enter export GiB per day, retention days, US or EU multi-region and query load. See the monthly BigQuery storage and query cost of a Search Console bulk data export.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://toolsthatrank.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://toolsthatrank.com/og.png">
+<meta name="twitter:title" content="Search Console BigQuery export cost calculator">
+<meta name="twitter:description" content="Enter export GiB per day, retention days, US or EU multi-region and query load. See the monthly BigQuery storage and query cost of a Search Console bulk data export.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --acc:#1D6B4F; --acc-br:#5FBE8E; --amber:#D9A441;
+  --ink:#16150F; --body:#4A4840; --mut:#6A6860; --faint:#6E6B61; --faint2:#6E6B61;
+  --line:#E2DFD5; --line2:#DAD7CC; --line3:#EDEBE3; --line4:#F1EFE8;
+  --dline:#302E24; --dline2:#262418; --dline3:#2A2820;
+  --paper:#F6F5F1; --white:#FFFFFF; --outer:#E8E6DE;
+  --sans:'IBM Plex Sans',system-ui,sans-serif; --mono:'IBM Plex Mono',monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--outer);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:var(--acc);text-decoration:none;border-bottom:1px solid rgba(29,107,79,.28)}
+a:hover{color:var(--ink);border-bottom-color:var(--ink)}
+button{font-family:inherit;cursor:pointer}
+button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--acc);outline-offset:2px;border-radius:3px}
+.cmd button:focus-visible{outline:2px solid var(--acc-br);outline-offset:-3px}
+::selection{background:#D8E7DE}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+img{max-width:100%;height:auto}
+
+.frame{width:100%;max-width:1180px;margin:0 auto;container-type:inline-size;background:var(--paper);
+  color:var(--ink);font:400 16px/1.6 var(--sans);border-left:1px solid var(--line2);border-right:1px solid var(--line2);min-height:100svh}
+.in{max-width:1080px;margin:0 auto;padding-left:20px;padding-right:20px}
+.sec{padding-top:clamp(44px,6cqw,88px);padding-bottom:clamp(44px,6cqw,88px)}
+.bt{border-top:1px solid var(--line)} .bb{border-bottom:1px solid var(--line)}
+.wht{background:var(--white)} .drk{background:var(--ink);color:#F6F5F1}
+
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:12px;top:12px;z-index:99;background:var(--white);padding:10px 14px;border:1px solid var(--acc)}
+
+header{position:sticky;top:0;z-index:40;background:rgba(246,245,241,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .in{padding-top:12px;padding-bottom:12px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px}
+.brand{display:flex;align-items:baseline;gap:7px;margin-right:auto;border:0}
+.brand .g{color:var(--acc);font-size:16px;line-height:1}
+.brand .n{font-size:16px;font-weight:600;letter-spacing:-.025em;color:var(--ink)}
+nav.top{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;font-family:var(--mono);font-size:12.5px}
+nav.top a{color:var(--mut);border-bottom:1px solid var(--line2);white-space:nowrap;padding:2px 0}
+nav.top a:hover{color:var(--ink)}
+
+h1{margin:0;font-size:clamp(34px,6.2cqw,66px);line-height:1.02;letter-spacing:-.038em;font-weight:600;max-width:16ch;text-wrap:balance}
+.lede{margin:clamp(18px,2.4cqw,26px) 0 0;font-size:clamp(16.5px,1.7cqw,20px);line-height:1.5;color:var(--body);max-width:50ch;text-wrap:pretty}
+h2{margin:0;font-size:clamp(24px,3.2cqw,36px);font-weight:600;letter-spacing:-.028em;line-height:1.1}
+h3{margin:0;font-size:17px;font-weight:600;letter-spacing:-.02em;line-height:1.25}
+.sub{margin:16px 0 0;font-size:16px;line-height:1.6;color:var(--mut);max-width:58ch}
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.hline{margin:16px 0 0;font-size:14px;line-height:1.6;color:var(--mut);max-width:60ch}
+
+.grid{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden}
+.g-stat{grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr))}
+.cell{background:var(--white);padding:clamp(18px,2.4cqw,26px) 18px}
+.big{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:clamp(26px,3.4cqw,38px);font-weight:600;letter-spacing:-.03em;line-height:1}
+.cap{margin-top:9px;font-size:12.5px;line-height:1.35;color:var(--mut)}
+.cell p{margin:8px 0 0;font-size:14px;line-height:1.55;color:var(--mut);text-wrap:pretty}
+.num{font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--faint)}
+
+.notes{margin-top:clamp(22px,3cqw,32px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px}
+.nt{background:var(--white);border:1px solid var(--line);border-radius:3px;padding:clamp(18px,2.4cqw,26px)}
+.nt p{margin:8px 0 0;font-size:14px;line-height:1.55;color:var(--mut);text-wrap:pretty}
+
+.body{margin-top:clamp(26px,3.4cqw,40px)}
+.body p{margin:14px 0 0;font-size:15px;line-height:1.65;color:var(--body);max-width:66ch;text-wrap:pretty}
+
+.disc{margin-top:clamp(26px,3.4cqw,40px);background:var(--white);border:1px solid var(--line);border-radius:3px;padding:clamp(18px,2.4cqw,26px)}
+.disc p{margin:8px 0 0;font-size:13.5px;line-height:1.55;color:var(--mut);max-width:64ch}
+.disc p:first-child{margin-top:0}
+
+.srcs{margin-top:clamp(22px,3cqw,32px);font-family:var(--mono);font-size:12.5px;line-height:2;color:var(--faint2)}
+
+code.k{font-family:var(--mono);font-size:14px;background:var(--line4);border:1px solid var(--line);border-radius:3px;padding:1px 5px}
+
+.tool{margin-top:clamp(22px,3cqw,32px);background:var(--white);border:1px solid var(--line);border-radius:3px;padding:clamp(18px,2.4cqw,26px)}
+.tool .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:14px}
+.tool label{display:flex;flex-direction:column;gap:6px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint2)}
+.tool input{font:500 15px/1.3 var(--mono);color:var(--ink);background:var(--paper);border:1px solid var(--line2);border-radius:3px;padding:11px 12px;min-height:44px}
+.tool input:focus{border-color:var(--acc);background:var(--white)}
+.tool select{font:500 15px/1.3 var(--mono);color:var(--ink);background:var(--paper);border:1px solid var(--line2);border-radius:3px;padding:11px 12px;min-height:44px}
+.tool .actions{display:flex;flex-wrap:wrap;gap:10px;align-items:end;margin-top:14px}
+.btn-p,.btn-s{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:3px;
+  font-size:15px;font-weight:500;border-bottom:0}
+.btn-p{background:var(--acc);color:#F6F5F1;border:1px solid var(--acc)}
+.btn-p:hover{background:#175840;color:#fff;border-color:#175840}
+.btn-s{background:transparent;color:var(--ink);border:1px solid var(--line2)}
+.btn-s:hover{border-color:var(--ink);color:var(--ink)}
+.toolerr{margin:12px 0 0;font-size:14px;line-height:1.5;color:#8A2E1B;background:#F7E8E4;border:1px solid #E5C4BF;border-radius:3px;padding:10px 12px}
+.toolout{margin-top:14px;border-top:1px solid var(--line3);padding-top:14px;font-size:15px;line-height:1.7;color:var(--body)}
+.toolout.empty{color:var(--faint)}
+.toolout p{margin:6px 0 0}
+.toolout .tl{margin:8px 0 0}
+.toolout b.hi{font-family:var(--mono);font-weight:600;color:var(--ink)}
+.crumb{margin:0;font-family:var(--mono);font-size:12.5px;color:var(--faint)}
+.crumb a{color:var(--mut)}
+
+table.data{width:100%;border-collapse:collapse;margin-top:clamp(18px,2.4cqw,26px);background:var(--white);border:1px solid var(--line);border-radius:3px;overflow:hidden;font-size:14px}
+table.data th,table.data td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line3)}
+table.data thead th{font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint2);background:var(--paper)}
+table.data td.m{font-family:var(--mono);font-variant-numeric:tabular-nums}
+table.data tr:last-child td{border-bottom:0}
+
+footer{margin-top:clamp(48px,6cqw,96px);border-top:1px solid var(--line);background:var(--white)}
+footer .in{padding-top:clamp(28px,3.5cqw,44px);padding-bottom:clamp(28px,3.5cqw,44px)}
+.fr{display:flex;flex-wrap:wrap;gap:20px 40px;align-items:flex-start}
+.fr .l{flex:1 1 220px;min-width:0}
+.fr p{margin:10px 0 0;font-size:12.5px;line-height:1.6;color:var(--faint2);max-width:42ch}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 28px;font-family:var(--mono);font-size:13px}
+footer nav a{color:var(--mut);border-bottom:1px solid var(--line2)}
+.copy{margin-top:24px;padding-top:16px;border-top:1px solid var(--line3);font-family:var(--mono);font-size:12px;color:var(--faint)}
+@media (pointer:coarse){nav.top a,footer nav a,.card .nm a{min-height:48px;display:inline-flex;align-items:center}summary{min-height:56px;align-items:center}}
+html{overflow-x:hidden}
+@media (max-width:520px){nav.top a:not([href^="#"]){display:none}nav.top{gap:4px 12px;font-size:12px}}
+.sec h1{font-size:clamp(29px,4.2cqw,46px);line-height:1.08;letter-spacing:-.032em;
+  max-width:24ch;margin:10px 0 0}
+@media print{header,#mrc-banner,.mrc{display:none!important}}
+@media (max-width:640px){
+  table.data thead th{font-size:13px}
+  p.kicker{font-size:12px}
+  .tool label{font-size:12px}
+  .crumb,.crumb a{font-size:12px}
+  footer small{font-size:12px}
+}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "https://toolsthatrank.com/search-console-bigquery-export-cost/#webpage",
+   "url": "https://toolsthatrank.com/search-console-bigquery-export-cost/",
+   "name": "Search Console BigQuery export cost calculator",
+   "description": "Enter export GiB per day, retention days, US or EU multi-region and query load. See the monthly BigQuery storage and query cost of a Search Console bulk data export.",
+   "inLanguage": "en",
+   "datePublished": "2026-10-29",
+   "dateModified": "2026-10-29",
+   "author": {
+    "@id": "https://toolsthatrank.com/search-console-bigquery-export-cost/#author"
+   },
+   "breadcrumb": {
+    "@id": "https://toolsthatrank.com/search-console-bigquery-export-cost/#breadcrumb"
+   }
+  },
+  {
+   "@type": "Person",
+   "@id": "https://toolsthatrank.com/search-console-bigquery-export-cost/#author",
+   "name": "Michael Lip",
+   "url": "https://github.com/theluckystrike",
+   "jobTitle": "Independent full-stack consultant"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://toolsthatrank.com/search-console-bigquery-export-cost/#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "ToolsThatRank",
+     "item": "https://toolsthatrank.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Search Console BigQuery export cost calculator",
+     "item": "https://toolsthatrank.com/search-console-bigquery-export-cost/"
+    }
+   ]
+  }
+ ]
+}
+</script>
+<script src="/site-analytics.js" defer></script>
+<style id="scta-css">
+/* Support CTA (tips). Outline buttons only: the filled green button stays on the paid pipeline. */
+[data-support-cta][hidden]{display:none!important}
+.scta{background:var(--white,#fff);border:1px solid var(--line,#E2DFD5);border-radius:4px;padding:16px 18px;margin-top:18px;color:var(--ink,#16150F);font:400 15px/1.55 var(--sans,'IBM Plex Sans',system-ui,sans-serif);text-align:left}
+.tool .scta,.wht .scta{background:var(--paper,#F6F5F1)}
+.scta-top{display:flex;align-items:center;gap:12px}
+.scta-top img{border-radius:50%;flex:none}
+.scta-h{font-size:15px;font-weight:600;margin:0;letter-spacing:-.01em}
+.scta p{margin:6px 0 0;font-size:14px;line-height:1.55;color:var(--mut,#6A6860);max-width:64ch}
+.scta-btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.scta-b{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--acc,#1D6B4F);color:var(--acc,#1D6B4F);background:transparent;border-radius:4px;padding:7px 12px;font-size:13px;text-decoration:none}
+.scta-b:hover{background:rgba(29,107,79,.08)}
+.scta-b small{font-weight:400;color:inherit;opacity:.75}
+.scta-b.alt{border-color:var(--line,#E2DFD5);color:var(--ink,#16150F)}
+.scta-b.alt:hover{background:rgba(0,0,0,.04)}
+.scta-b.quiet{border-color:var(--line,#E2DFD5);color:var(--mut,#6A6860)}
+.scta-b.quiet:hover{background:rgba(0,0,0,.04);color:var(--ink,#16150F)}
+.scta-why{font-size:12px;color:var(--mut,#6A6860);align-self:center}
+.scta a:focus-visible{outline:2px solid var(--acc,#1D6B4F);outline-offset:2px;border-radius:3px}
+.scta-foot{max-width:1080px;margin:clamp(40px,5cqw,72px) auto 0;padding:0 20px}
+.scta-foot .scta{max-width:760px;margin:0}
+@media (max-width:640px){.scta-foot{padding:0 14px}footer small,footer .support,footer .support a,.srcs small,a.scta-b small,.scta-foot a.scta-b small{font-size:12px}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="frame">
+<header>
+  <div class="in">
+    <a class="brand" href="/"><span class="g" aria-hidden="true">&#9672;</span><span class="n">ToolsThatRank</span></a>
+    <nav class="top" aria-label="Primary">
+      <a href="/#build">the pipeline</a>
+      <a href="/#proof">proof</a>
+      <a href="/#tools">shipped</a>
+      <a href="/#how">method</a>
+      <a href="/ctr-by-position/">position bands</a>
+      <a href="/zero-click-pages/">click coverage</a>
+      <a href="/search-console-hidden-queries/">hidden queries</a>
+      <a href="/how-long-to-rank/">time to rank</a>
+      <a class="gh" href="https://github.com/theluckystrike" target="_blank" rel="noopener">github <span aria-hidden="true">&#8599;</span></a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="in sec">
+  <p class="crumb"><a href="/">ToolsThatRank</a> / bulk data export</p>
+  <p class="kicker">Calculator from Google's published prices</p>
+  <h1>Search Console BigQuery export cost calculator</h1>
+  <p class="qas" style="margin:16px 0 0;font-size:16px;line-height:1.6;color:var(--body);max-width:62ch">The bulk data export itself is free: Google states there are no costs associated with Search Console to export the data. What you pay for is the BigQuery side. In the US and EU multi-regions, on-demand queries cost 6.25 dollars per TiB processed with the first 1 TiB per month free, and you pay for active logical storage at 0.02 dollars per GiB per month (0.01 dollars for long-term logical storage, after 90 days without a change) with the first 10 GiB free (prices fetched 2026-10-29). The 10 GiB free tier applies to active and long-term logical storage. Estimate both from those published prices. The free tiers apply per billing account, not per dataset or per table, and all other BigQuery use in that account shares them.</p>
+  <p class="stamp" style="margin:6px 0 0;font-size:13px;color:var(--faint)">Updated 2026-10-29 &middot; prices fetched 2026-10-29</p>
+  <p class="lede">Enter the GiB of new rows the export appends each day, how many days of daily
+    drops you keep, the dataset location, and how your queries use the data. The calculator
+    splits the dataset at the 90 day mark: partitions younger than 90 days bill at the active
+    logical rate, older ones at the long-term rate, which is about half. Query cost uses the
+    on-demand rate with the first 1 TiB per month free, rounds each query up to the nearest MB
+    and applies the 10 MB minimum per query.</p>
+  <p class="hline">By <a href="https://github.com/theluckystrike">Michael Lip</a>, an independent full-stack consultant who builds and runs ToolsThatRank.</p>
+  <p class="hline"><strong>The prices here are Google's published ones.</strong>
+    The export writes daily rows into BigQuery tables such as
+    <code class="k">searchdata_site_impression</code> and
+    <code class="k">searchdata_url_impression</code>, and it leaves out the text of anonymized queries.
+    The eight sources are linked at the bottom of this page. Search Console API row limits,
+    which do not affect the bulk export, are covered by <a href="/search-console-export-limits/">the row limit planner</a>.</p>
+  <div class="tool" id="cost-tool">
+    <div class="row">
+      <label for="bq-day-gib">New rows, GiB per day
+        <input id="bq-day-gib" inputmode="decimal" autocomplete="off" placeholder="e.g. 1">
+      </label>
+      <label for="bq-days">Retention, days
+        <input id="bq-days" inputmode="numeric" autocomplete="off" placeholder="e.g. 365">
+      </label>
+      <label for="bq-loc">Dataset location
+        <select id="bq-loc">
+          <option value="us" selected>US multi-region</option>
+          <option value="eu">Europe multi-region</option>
+        </select>
+      </label>
+      <label for="bq-qgib">GiB scanned per query
+        <input id="bq-qgib" inputmode="decimal" autocomplete="off" placeholder="e.g. 50">
+      </label>
+      <label for="bq-qnum">Queries per month
+        <input id="bq-qnum" inputmode="numeric" autocomplete="off" placeholder="e.g. 100">
+      </label>
+    </div>
+    <div class="actions">
+      <button class="btn-p" id="bq-calc" type="button">Calculate</button>
+      <button class="btn-s" id="bq-fill" type="button">Use the example: 1 GiB a day, 365 days, US, 50 GiB, 100 queries</button>
+    </div>
+    <p class="toolerr" id="bq-err" role="alert" hidden></p>
+    <div class="toolout empty" id="bq-out" aria-live="polite">Enter the daily GiB, retention days, location and query load, then press Calculate.</div>
+  </div>
+  <h2 style="margin-top:clamp(26px,3.4cqw,40px)">Notes from Google's pricing and export pages</h2>
+  <div class="notes">
+    <div class="nt"><h3>The export has no Search Console charge</h3>
+      <p>Google's Search Central blog post with BigQuery efficiency tips for bulk data exports states that there are no costs
+      associated with Search Console to export the data, and to read the BigQuery pricing
+      to understand what you will be billed for.</p></div>
+    <div class="nt"><h3>US and EU on-demand queries cost 6.25 dollars per TiB</h3>
+      <p>BigQuery on-demand pricing charges 6.25 dollars per TiB of data processed, and the
+      first 1 TiB of query data processed per month is free per billing account. Charges are
+      rounded up to the nearest MB, with at least 10 MB per query and at least 10 MB per table
+      that the query references. A LIMIT clause does not reduce the data billed; a WHERE
+      clause that limits the date range of the date-partitioned tables does. On-demand queries in the US
+      and EU multi-regions cost 6.25 dollars per TiB, fetched 2026-10-29.</p></div>
+    <div class="nt"><h3>US and EU active logical storage costs 0.02 dollars per GiB per month</h3>
+      <p>Active logical storage in the US multi-region is 0.02 dollars per GiB per month.
+      After 90 days without modification a partition
+      moves to long-term logical storage at 0.01 dollars per GiB per month in the US
+      multi-region, fetched 2026-10-29. Europe multi-region active logical storage costs
+      0.02 dollars per GiB per month and long-term 0.01 dollars, fetched 2026-10-29.
+      The pricing page lists the first 10 GiB as free each month on both the active and the
+      long-term logical storage rows.
+      1 TiB (1,024 GiB) of active logical storage for a full month in the US multi-region is
+      20.48 dollars before the 10 GiB free tier. Physical storage billing has other prices;
+      this estimate uses the logical rates. Google states that a dataset created without a
+      storage billing model uses logical billing by default.</p></div>
+    <div class="nt"><h3>Anonymized query text is not in the export</h3>
+      <p>Google's table reference states that when is_anonymized_query is true, the query field is a zero-length string. The efficiency post shows how to filter out these rows with <code class="k">WHERE query != ''</code>.</p></div>
+  </div>
+  <div class="body">
+    <h2>How the estimate is computed</h2>
+    <p>For storage, the calculator takes the GiB of new rows the export appends per day and
+    your retention window in days. Partitions younger than 90 days bill at the active logical
+    rate and older ones at the long-term logical rate, in the location you pick. The first
+    10 GiB of logical storage is free per month, per billing account. The calculator counts this 10 GiB once per month, as the free usage tier table of the pricing page lists it, and applies it to active storage first and then to long-term storage. The estimate
+    assumes that each daily partition is written once and not changed after that. Google states that Search Console can revise the saved data of a past day, but that this does not happen often. A changed partition bills at the active rate for the next 90 days.</p>
+    <p>For queries, the calculator multiplies the GiB scanned per query by the number of
+    queries per month, rounds each query up to the nearest MB, applies a 10 MB minimum per
+    query, converts to TiB, and charges the on-demand rate of 6.25 dollars per TiB with the
+    first 1 TiB per month free per billing account. Google also bills at least 10 MB for each
+    table that a query references; the calculator counts one table per query, so for a query
+    that reads both export tables, enter at least 0.0195 GiB, which the calculator rounds
+    up to 20 MB. The page uses
+    1 GiB = 2^30 bytes and 1 TiB = 1,024 GiB, as the pricing page defines them, and counts
+    1 MB as 1/1,024 GiB. Both rates are Google's published US and EU multi-region prices, fetched
+    2026-10-29, and may change; the pricing page linked below is the source of record. Physical storage
+    billing has other prices, and this page covers logical billing only.</p>
+    <h2 style="margin-top:clamp(26px,3.4cqw,40px)">Setup check list from Google's rules</h2>
+    <ul style="margin:14px 0 0;padding-left:20px;font-size:15px;line-height:1.65;color:var(--body);max-width:66ch">
+      <li>Search Console charges nothing for the export. BigQuery bills the storage and the queries.</li>
+      <li>The Cloud project must have a valid billing configuration, otherwise the write will fail.</li>
+      <li>Tables and partitions are retained forever by default, unless your Cloud project or organization sets a default. To limit storage, set a partition expiration. Make sure the expiration is 14 days or longer.</li>
+      <li>Do not set an expiration time on the table. A table expiration deletes the entire table.</li>
+      <li>Do not change the table schema. Google states that schema changes will cause the export to fail.</li>
+    </ul>
+    <p>Run this query to see the logical bytes of your own dataset by storage tier. Replace PROJECT_ID with your project ID. searchconsole is the default dataset name; replace it if you chose another name. A partition moves from ACTIVE to LONG_TERM after 90 days without a change.</p>
+    <pre style="margin:14px 0 0;overflow-x:auto;font:14px/1.5 var(--mono);background:var(--line4);border:1px solid var(--line);border-radius:3px;padding:12px">SELECT storage_tier, SUM(total_logical_bytes) AS logical_bytes
+FROM `PROJECT_ID.searchconsole.INFORMATION_SCHEMA.PARTITIONS`
+GROUP BY storage_tier;</pre>
+    <p>Google's efficiency post names several ways to control the bill. Among them: set a
+    partition expiration so that old date partitions are deleted automatically; pre-aggregate
+    each daily drop into one or more summary tables and point dashboards at those instead of
+    the raw tables; and restrict the bytes billed per query, so that a query whose estimated
+    bytes are over the limit fails without incurring a charge. The post also says to avoid
+    <code class="k">SELECT *</code>, to limit the date range with a
+    <code class="k">WHERE</code> clause on the date-partitioned tables, and to add known
+    filters early, for example <code class="k">WHERE query != ''</code> to drop anonymized
+    query rows. The pricing page states that on-demand queries are charged for the data
+    processed in the columns you select.</p>
+  </div>
+  <div class="disc">
+    <p>ToolsThatRank sells the pipeline that produced this page.</p>
+    <p>No ranking, traffic, or revenue outcome is promised, and no cost figure on this page is a quote or a bill.</p>
+    <p>The prices quoted are Google's published numbers and may change; the Google documentation
+      pages linked below are the source of record.</p>
+    <p>The example inputs are not data from a real property. Enter your own numbers.</p>
+  </div>
+  <div class="srcs">
+    <a href="https://cloud.google.com/bigquery/pricing" rel="nofollow noopener" target="_blank">Google Cloud BigQuery pricing (US and Europe multi-regions: active logical 0.02 dollars per GiB per month, long-term logical 0.01, first 10 GiB free; on-demand queries 6.25 dollars per TiB, first 1 TiB free; physical storage prices on the same page)</a><br>
+    <a href="https://support.google.com/webmasters/answer/12917991?hl=en" rel="nofollow noopener" target="_blank">Search Console table guidelines and reference (searchdata tables, data retention, anonymized query field)</a><br>
+    <a href="https://developers.google.com/search/blog/2023/02/bulk-data-export" rel="nofollow noopener" target="_blank">Google Search Central blog: bulk data export (daily export, searchdata tables, anonymized queries left out)</a><br>
+    <a href="https://developers.google.com/search/blog/2023/06/bigquery-efficiency-tips" rel="nofollow noopener" target="_blank">BigQuery efficiency tips (budget alerts, byte restrictions, pre-aggregation, partition expiration)</a><br>
+    <a href="https://support.google.com/webmasters/answer/12917675?hl=en" rel="nofollow noopener" target="_blank">Search Console help: start a new bulk data export (billing, dataset location, 14 day partition expiration, schema changes)</a><br>
+    <a href="https://cloud.google.com/bigquery/docs/information-schema-partitions" rel="nofollow noopener" target="_blank">BigQuery INFORMATION_SCHEMA.PARTITIONS view (total_logical_bytes, storage_tier, example query)</a><br>
+    <a href="https://support.google.com/webmasters/answer/12919198?hl=en" rel="nofollow noopener" target="_blank">Search Console help: manage and monitor bulk data exports (valid billing configuration, partition expiration too short)</a><br>
+    <a href="https://cloud.google.com/bigquery/docs/storage_overview" rel="nofollow noopener" target="_blank">BigQuery storage overview (logical billing is the default model)</a>
+   </div>
+</section>
+</main>
+<section class="scta-foot" data-support-cta="footer" aria-labelledby="scta-fh"><div class="scta"><div class="scta-top"><picture><source srcset="/assets/michael-128.webp" type="image/webp"><img src="/assets/michael-128.jpg" width="44" height="44" loading="lazy" decoding="async" alt="Michael Lip"></picture><h2 class="scta-h" id="scta-fh">Made by Michael, one person and a lot of coffee.</h2></div><p>If ToolsThatRank has helped you, you can buy me a coffee. It honestly makes my day, and I read every note that comes with one.</p><div class="scta-btns"><a class="scta-b" data-rail="paypal" href="https://paypal.me/najzzz/5USD" target="_blank" rel="noopener"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><path d="M6 2v2M10 2v2M14 2v2"/></svg><span>Buy me a coffee &middot; $5 <small>via PayPal</small></span></a><a class="scta-b alt" data-rail="bmc" href="https://buymeacoffee.com/michaellip" target="_blank" rel="noopener">Card, any amount or monthly</a><a class="scta-b quiet" data-rail="github" href="https://github.com/sponsors/theluckystrike" target="_blank" rel="noopener"><span>Sponsor on GitHub <small>monthly or one-time</small></span></a><a class="scta-why" href="/support/">Why I ask</a></div></div></section>
+<footer>
+  <div class="in">
+    <div class="fr">
+      <div class="l">
+        <div style="display:flex;align-items:baseline;gap:7px">
+          <span style="color:var(--acc);font-size:14px" aria-hidden="true">&#9672;</span>
+          <span style="font-size:14px;font-weight:600;letter-spacing:-.02em">ToolsThatRank</span>
+        </div>
+        <p>Prices on this page are quoted from Google's documentation. The calculator
+          recomputes each result in code.</p>
+        <p style="margin-top:8px">Support and refunds: <a href="mailto:support@toolsthatrank.com">support@toolsthatrank.com</a></p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="https://mcp.zovo.one">MCP servers for Claude</a>
+        <a href="/">home</a>
+        <a href="/#proof">proof</a>
+        <a href="/#how">method</a>
+        <a href="/privacy/">privacy</a>
+        <a href="/privacy/#analytics" data-mr-consent-open>cookie settings</a>
+        <a href="/terms/">terms</a>
+        <a href="mailto:support@toolsthatrank.com">support</a>
+        <a href="https://github.com/theluckystrike" target="_blank" rel="noopener">github</a>
+      <a href="/support/">why I ask for tips</a>
+</nav>
+    </div>
+    <div class="copy">&copy; 2026 toolsthatrank.com &middot; measured, not asserted</div>
+  </div>
+</footer>
+</div>
+<script>
+(function () {
+  'use strict';
+  var RATES = {
+    us: { label: 'US multi-region', act: 0.02, lt: 0.01 },
+    eu: { label: 'Europe multi-region', act: 0.02, lt: 0.01 }
+  };
+  var PRICE_PER_TIB = 6.25, FREE_TIB = 1, FREE_GIB = 10, LT_AFTER_DAYS = 90;
+  var MIN_QUERY_GIB = 10 / 1024; /* 10 MB minimum billed per query */
+  var PROMPT = 'Enter the daily GiB, retention days, location and query load, then press Calculate.';
+  var CHANGED = 'Values changed. Press Calculate to read the estimate again.';
+
+  function parseNum(raw) {
+    var s = String(raw == null ? '' : raw).replace(/\s/g, '');
+    if (/^\d{1,7}(\.\d{1,4})?$/.test(s)) { return Number(s); }
+    return NaN;
+  }
+  function fmt(v, d) {
+    return v.toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d });
+  }
+  function fmtIn(v) {
+    return v.toLocaleString('en-US', { maximumFractionDigits: 4 });
+  }
+  function money(v) {
+    if (v === 0) { return '0 dollars'; }
+    if (v < 0.005) { return 'less than 0.01 dollars'; }
+    return fmt(v, 2) + ' dollars';
+  }
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) { n.className = cls; }
+    if (text != null) { n.textContent = text; }
+    return n;
+  }
+  function line(parts) {
+    var p = el('p', 'tl');
+    parts.forEach(function (x) { p.appendChild(typeof x === 'string' ? document.createTextNode(x) : x); });
+    return p;
+  }
+
+  /* Storage: dailyGiB appended per day, kept for days, read once the retention window
+     is full. Partitions younger than 90 days bill
+     at the active logical rate, older ones at the long-term logical rate. The first
+     10 GiB of logical storage is free per month, per billing account, active first. */
+  function storageEstimate(dailyGiB, days, loc) {
+    var r = RATES[loc] || RATES.us;
+    var totalGib = dailyGiB * days;
+    var ltGib = dailyGiB * Math.max(0, days - LT_AFTER_DAYS);
+    var actGib = dailyGiB * Math.min(days, LT_AFTER_DAYS);
+    var freeAct = Math.min(FREE_GIB, actGib);
+    var freeLt = Math.min(FREE_GIB - freeAct, ltGib);
+    var actCost = (actGib - freeAct) * r.act;
+    var ltCost = (ltGib - freeLt) * r.lt;
+    return {
+      locLabel: r.label,
+      totalGib: totalGib,
+      actGib: actGib,
+      ltGib: ltGib,
+      freeGib: freeAct + freeLt,
+      actCost: actCost,
+      ltCost: ltCost,
+      monthly: actCost + ltCost
+    };
+  }
+
+  /* Queries: gibPerQuery scanned per query, queries per month, 10 MB minimum per
+     query, on-demand rate with the first 1 TiB per month free per billing account. */
+  function queryEstimate(gibPerQuery, queries) {
+    var gibEach = Math.max(Math.ceil(gibPerQuery * 1024) / 1024, MIN_QUERY_GIB); /* round up to whole MB */
+    var tibMonth = gibEach * queries / 1024;
+    var billable = Math.max(0, tibMonth - FREE_TIB);
+    return {
+      tib: tibMonth,
+      tibMonth: tibMonth,
+      freeTib: Math.min(tibMonth, FREE_TIB),
+      monthly: billable * PRICE_PER_TIB
+    };
+  }
+
+  function render(s, q, dailyGiB, days, gibPerQuery, queries) {
+    var out = document.getElementById('bq-out');
+    out.className = 'toolout';
+    out.textContent = '';
+    out.appendChild(line(['Storage: ', el('b', 'hi', fmtIn(dailyGiB) + ' GiB'),
+      ' of new rows per day kept for ', el('b', 'hi', fmt(days, 0) + ' days'),
+      ' holds about ', el('b', 'hi', fmt(s.totalGib, 1) + ' GiB'),
+      ' once the retention window is full, in the ', s.locLabel, '. Partitions past the 90 day mark bill at the long-term rate, so about ',
+      el('b', 'hi', fmt(s.actGib, 1) + ' GiB'), ' is active storage at 0.02 dollars per GiB per month and about ',
+      el('b', 'hi', fmt(s.ltGib, 1) + ' GiB'), ' is long-term storage at 0.01 dollars. The first 10 GiB of logical storage is free each month, so ',
+      el('b', 'hi', fmt(s.freeGib, 1) + ' GiB'), ' is not charged. Storage estimate: ',
+      el('b', 'hi', money(s.monthly)), ' per month.']));
+    out.appendChild(line(['Queries: ', el('b', 'hi', fmt(queries, 0) + ' queries'),
+      ' per month scanning ', el('b', 'hi', fmtIn(gibPerQuery) + ' GiB'),
+      ' each (rounded up to the nearest MB, 10 MB minimum per query) scan about ', el('b', 'hi', fmt(q.tibMonth, 3) + ' TiB'),
+      ' per month at 6.25 dollars per TiB. The first 1 TiB per month is free per billing account, so ',
+      el('b', 'hi', fmt(q.freeTib, 3) + ' TiB'), ' is not charged. Query estimate: ',
+      el('b', 'hi', money(q.monthly)), ' per month.']));
+    out.appendChild(line(['Total estimate: about ', el('b', 'hi', money(s.monthly + q.monthly)), ' per month.']));
+    if (days < 14) {
+      out.appendChild(line(['If you set a partition expiration, Google recommends 14 days or longer. The export cannot write to a partition that is about to expire or has already expired.']));
+    }
+    out.appendChild(line(['These are Google\'s published US and EU multi-region prices, fetched 2026-10-29, not a bill. The estimate assumes that each daily partition is written once and not changed after that; a changed partition bills at the active rate for the next 90 days. The retention days stand for your partition expiration. Pre-aggregated summary tables reduce the query cost. A bytes-billed restriction stops an over-budget query before it incurs a charge.']));
+  }
+
+  function wire() {
+    var dayIn = document.getElementById('bq-day-gib');
+    var daysIn = document.getElementById('bq-days');
+    var locIn = document.getElementById('bq-loc');
+    var qgibIn = document.getElementById('bq-qgib');
+    var qnumIn = document.getElementById('bq-qnum');
+    var out = document.getElementById('bq-out');
+    var err = document.getElementById('bq-err');
+    function reset(msg) { out.className = 'toolout empty'; out.textContent = msg; }
+    function fail(msg) { err.textContent = msg; err.hidden = false; }
+    function calc() {
+      err.hidden = true;
+      err.textContent = '';
+      reset(PROMPT);
+      var d = parseNum(dayIn.value), days = parseNum(daysIn.value);
+      var qg = parseNum(qgibIn.value), qn = parseNum(qnumIn.value);
+      if (!isFinite(d) || d <= 0 || d > 9999999) { fail('Enter the new rows per day as a number of GiB from 0.0001 to 9,999,999. Use digits and one decimal point with up to 4 decimals, without commas, for example 0.5.'); return; }
+      if (!isFinite(days) || days < 1 || Math.floor(days) !== days) { fail('Enter the retention as a whole number of days from 1 to 9,999,999, without commas, for example 365.'); return; }
+      if (!isFinite(qg) || qg < 0 || qg > 9999999) { fail('Enter the GiB scanned per query as a number from 0 to 9,999,999. Use digits and one decimal point with up to 4 decimals, without commas, for example 50. Queries below 10 MB are billed for 10 MB.'); return; }
+      if (!isFinite(qn) || qn < 0 || Math.floor(qn) !== qn) { fail('Enter the queries per month as a whole number from 0 to 9,999,999, without commas, for example 100.'); return; }
+      render(storageEstimate(d, days, locIn.value), queryEstimate(qg, qn), d, days, qg, qn);
+      if (out.scrollIntoView) { out.scrollIntoView({ block: 'nearest' }); }
+    }
+    document.getElementById('bq-calc').addEventListener('click', calc);
+    document.getElementById('bq-fill').addEventListener('click', function () {
+      dayIn.value = '1'; daysIn.value = '365'; locIn.value = 'us'; qgibIn.value = '50'; qnumIn.value = '100'; calc();
+    });
+    [dayIn, daysIn, locIn, qgibIn, qnumIn].forEach(function (inp) {
+      inp.addEventListener('input', function () {
+        if (out.className.indexOf('empty') < 0) { reset(CHANGED); }
+      });
+      inp.addEventListener('change', function () {
+        if (out.className.indexOf('empty') < 0) { reset(CHANGED); }
+      });
+    });
+    window.addEventListener('pageshow', function (e) {
+      if (e.persisted) { err.hidden = true; reset(PROMPT); }
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', wire);
+  } else {
+    wire();
+  }
+})();
+</script>
+<script src="/assets/js/ttr-ui.js" defer></script>
+</body>
+</html>

@@ -467,7 +467,7 @@ table.data td.grp{border-left:1px solid var(--line2)}
       per day per search type, sorted by clicks. This data limit is separate from the API usage
       quota. Google also states that the limit may not be reached in all cases. Google's
       <a href="https://developers.google.com/search/blog/2023/02/bulk-data-export" rel="nofollow noopener" target="_blank">bulk data export to BigQuery</a>
-      is not affected by this daily row limit, but it leaves out anonymized queries.</p></div>
+      is not affected by this daily row limit, but it leaves out anonymized queries. To estimate the BigQuery storage and query cost of that export, use the <a href="/search-console-bigquery-export-cost/">BigQuery export cost calculator</a>.</p></div>
     <div class="nt"><h3>Quotas are a ceiling, not a promise</h3>
       <p>The per-site quota and the per-user quota are each 1,200 queries per minute. The
       per-project quota is 40,000 queries per minute and 30,000,000 queries per day. A short-term
